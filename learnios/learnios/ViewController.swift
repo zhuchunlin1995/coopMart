@@ -18,8 +18,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Do any additional setup after loading the view, typically from a nib.
         tableView.dataSource = self
         tableView.delegate = self
-//        tableView.separatorStyle = .none
-//        tableView.rowHeight = 50.0
+        tableView.separatorStyle = .none
+        //make tableView black under the cell user is dragging
+        tableView.backgroundColor = UIColor.black
+        tableView.rowHeight = 50.0
         //in old version: registerClass
         //tells the tableView to use TableViewCell class defined by ys whenever it needs a cell with reuse identifier "cell"
         tableView.register(TableViewCell.self, forCellReuseIdentifier: "cell")
@@ -52,6 +54,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
         let item = toDoItems[indexPath.row]
+        //get rid of the highlighting that happens when select a table cell
+        cell.selectionStyle = .none
         cell.textLabel?.text = item.text
         cell.textLabel?.backgroundColor = UIColor.clear
         return cell
