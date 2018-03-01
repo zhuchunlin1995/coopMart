@@ -4,7 +4,7 @@
 //
 //  Created by 万琳莉 on 01/03/2018.
 //  Copyright © 2018 Linli. All rights reserved.
-//
+//  source: https://www.raywenderlich.com/77974/making-a-gesture-driven-to-do-list-app-like-clear-in-swift-part-1
 
 import UIKit
 
