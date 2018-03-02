@@ -9,11 +9,21 @@
 import UIKit
 import QuartzCore
 
+// A protocol that inform the TableViewCell uses to inform its delegate of state change
+protocol TableViewCellDelegate {
+    //indicate the given item has been deleted, it's a required method
+    //default argument not permitted in a protocol method
+    func toDoItemDeleted(todoItem: ToDoItem)
+}
+
 class TableViewCell: UITableViewCell {
     
     let gradientLayer = CAGradientLayer()
     var originalCenter = CGPoint()
     var deleteOnDragRelease = false
+    //optional declaration, if not init, the variable is inited as nil
+    var delegate: TableViewCellDelegate?
+    var toDoItem: ToDoItem?
     
     //required init is used when the view is created from the storyboead while override init is used when create the view programmatically
     required init(coder aDecoder: NSCoder) {
@@ -64,6 +74,14 @@ class TableViewCell: UITableViewCell {
             //the user might have dragged the cell more than halfway and then dragged it back, which is not seen as a selete operation
             if !deleteOnDragRelease {
                 UIView.animate(withDuration: 0.2, animations: {self.frame = originalFrame})
+            }
+            
+            //invoke the delegate method if the user has dragged the item far enough
+            if deleteOnDragRelease {
+                if delegate != nil && toDoItem != nil {
+                    //notify the delegate that this item should be deleted.todoItem is the label
+                    delegate!.toDoItemDeleted(todoItem: toDoItem!)
+                }
             }
         }
     }

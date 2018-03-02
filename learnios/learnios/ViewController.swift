@@ -9,7 +9,7 @@
 import UIKit
 //import Foundation
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, TableViewCellDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     var toDoItems = [ToDoItem]()
@@ -21,7 +21,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.separatorStyle = .none
         //make tableView black under the cell user is dragging
         tableView.backgroundColor = UIColor.black
-        tableView.rowHeight = 50.0
+        tableView.rowHeight = 100.0
         //in old version: registerClass
         //tells the tableView to use TableViewCell class defined by ys whenever it needs a cell with reuse identifier "cell"
         tableView.register(TableViewCell.self, forCellReuseIdentifier: "cell")
@@ -58,14 +58,32 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.selectionStyle = .none
         cell.textLabel?.text = item.text
         cell.textLabel?.backgroundColor = UIColor.clear
+        cell.delegate = self
+        cell.toDoItem = item
         return cell
+    }
+    
+    //Mark: -Table view delegate
+    //implementation for TableViewCellDelegate method toDoItemDeleted, to delete an item when notified
+    func toDoItemDeleted(todoItem toDoItem: ToDoItem) {
+        let index = (toDoItems as NSArray).index(of: toDoItem)
+        if index == NSNotFound {return}
+        
+        // removeAtIndex in the loop but keep it here for when indexOfObject works
+        toDoItems.remove(at: index)
+        
+        // use the UITableView to animate the removal of this row
+        tableView.beginUpdates()
+        let indexPathForRow = NSIndexPath(row: index, section: 0)
+        tableView.deleteRows(at: [indexPathForRow as IndexPath], with: .fade)
+        tableView.endUpdates()
     }
     
     //set background color of each row
     func colorForIndex(index: Int) -> UIColor {
         let itemCount = toDoItems.count - 1
         let val = (CGFloat(index) / CGFloat(itemCount)) * 0.6
-        return UIColor(red: val, green: 0.0, blue: 0.4, alpha: 1.0)
+        return UIColor(red: 1.0, green: val, blue: 0.0, alpha: 1.0)
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
