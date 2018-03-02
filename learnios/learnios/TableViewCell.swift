@@ -33,7 +33,7 @@ class TableViewCell: UITableViewCell {
         layer.insertSublayer(gradientLayer, at: 0)
         
         //add a pan gesture recognizer to custom table view cell nad sets the cell itself as the recognizer's delegate. Any pan events will be sent to handlePan
-        var recognizer = UIPanGestureRecognizer(target: self, action: "handlePan:")
+        let recognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
         recognizer.delegate = self
         addGestureRecognizer(recognizer)
     }
@@ -45,7 +45,7 @@ class TableViewCell: UITableViewCell {
     
 //    Here you add a CAGradientLayer property and create a four-step gradient within the init method. Notice that the gradient is a transparent white at the very top, and a transparent black at the very bottom. This will be overlaid on top of the existing color background, lightening the top and darkening the bottom, to create a neat bevel effect simulating a light source shining down from the top.
     
-    func handlePan(recognizer: UIPanGestureRecognizer) {
+    @objc func handlePan(recognizer: UIPanGestureRecognizer) {
         if recognizer.state == .began {
             //when the gesture beins, record the current center location
             originalCenter = center
