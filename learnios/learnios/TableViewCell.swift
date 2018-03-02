@@ -33,7 +33,7 @@ class TableViewCell: UITableViewCell {
         layer.insertSublayer(gradientLayer, at: 0)
         
         //add a pan gesture recognizer to custom table view cell nad sets the cell itself as the recognizer's delegate. Any pan events will be sent to handlePan
-        var recognizer = UIPanGestureRecognizer(target: self, action: "handlePan:")
+        let recognizer = UIPanGestureRecognizer(target: self, action: "handlePan:")
         recognizer.delegate = self
         addGestureRecognizer(recognizer)
     }
