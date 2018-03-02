@@ -31,6 +31,11 @@ class learniosUITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let tablesQuery = XCUIApplication().tables
+        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["to do 6"]/*[[".cells.staticTexts[\"to do 6\"]",".staticTexts[\"to do 6\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.swipeLeft()
+        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["to do 7"]/*[[".cells.staticTexts[\"to do 7\"]",".staticTexts[\"to do 7\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.swipeRight()
+        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["to do 8"]/*[[".cells.staticTexts[\"to do 8\"]",".staticTexts[\"to do 8\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.swipeLeft()
     }
     
 }
