@@ -9,7 +9,7 @@
 import UIKit
 //import Foundation
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, TableViewCellDelegate {
+class CartViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, TableViewCellDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     var toDoItems = [ToDoItem]()
@@ -61,6 +61,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.delegate = self
         cell.toDoItem = item
         return cell
+    }
+    @IBAction func cancelButtonTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     //Mark: -Table view delegate

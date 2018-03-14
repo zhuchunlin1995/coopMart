@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="ArA-f3-4Uj">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="razewarelogo" translatesAutoresizingMaskIntoConstraints="NO" id="Lxe-Pk-xqT">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Lxe-Pk-xqT" secondAttribute="trailing" id="1s6-qj-DNf"/>
+                <constraint firstItem="ArA-f3-4Uj" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="2Jy-eJ-yAO"/>
+                <constraint firstItem="ArA-f3-4Uj" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="65X-cf-CMz"/>
+                <constraint firstItem="Lxe-Pk-xqT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="9bL-GE-0eR"/>
+                <constraint firstItem="ArA-f3-4Uj" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="KW7-ys-NVh"/>
+                <constraint firstAttribute="bottom" secondItem="ArA-f3-4Uj" secondAttribute="bottom" id="YPS-hW-dcr"/>
+                <constraint firstItem="ArA-f3-4Uj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="a9e-Ng-tYQ"/>
+                <constraint firstAttribute="trailing" secondItem="ArA-f3-4Uj" secondAttribute="trailing" id="b6D-V6-Xe0"/>
+                <constraint firstItem="Lxe-Pk-xqT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mgq-tK-0eM"/>
+                <constraint firstItem="ArA-f3-4Uj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="qFq-S6-MbD"/>
+                <constraint firstAttribute="bottom" secondItem="Lxe-Pk-xqT" secondAttribute="bottom" id="vLY-a1-AG5"/>
+                <constraint firstItem="ArA-f3-4Uj" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="xQD-hV-ZHB"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="23" y="53"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="background" width="2208" height="2208"/>
+        <image name="razewarelogo" width="1024" height="1024"/>
+    </resources>
+</document>
