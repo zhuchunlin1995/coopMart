@@ -70,10 +70,10 @@
             </objects>
             <point key="canvasLocation" x="2141" y="-688"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="UPg-2L-K91">
             <objects>
-                <tabBarController id="KCb-3b-uCx" sceneMemberID="viewController">
+                <tabBarController id="KCb-3b-uCx" customClass="TabBarViewController" customModule="learnios" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ow3-p0-PAg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
