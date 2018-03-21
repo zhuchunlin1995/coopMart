@@ -1,0 +1,873 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		376D6B6CC10D2A3804064CE6 /* Pods_learnios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A619C5F8414063BBC041331 /* Pods_learnios.framework */; };
+		570E290AF63B1BB7AC0AF44B /* Pods_learniosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5575C76257F0B1B82A3D5E8 /* Pods_learniosUITests.framework */; };
+		B7075C092061E79E008C1BCF /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7075C082061E79E008C1BCF /* TabBarViewController.swift */; };
+		B7075C0B2061E8B1008C1BCF /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7075C0A2061E8B1008C1BCF /* LogInViewController.swift */; };
+		B7A2CF2D2062BF2D0053AB79 /* CardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A2CF2C2062BF2D0053AB79 /* CardViewCell.swift */; };
+		B7A2CF362062CBA80053AB79 /* MyListingDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A2CF352062CBA80053AB79 /* MyListingDataStore.swift */; };
+		B7D0DD0B2062D57A003761AC /* MyListingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D0DD0A2062D57A003761AC /* MyListingsViewController.swift */; };
+		B7D0DD0D2062DE82003761AC /* MyListingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D0DD0C2062DE82003761AC /* MyListingDetailViewController.swift */; };
+		B7F80A61205836D900AAF2E3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7F80A60205836D900AAF2E3 /* LaunchScreen.xib */; };
+		B7F80A6520583AED00AAF2E3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFA229F120487B4000AEAEAF /* Info.plist */; };
+		B7F80A672058455C00AAF2E3 /* ListingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F80A662058455C00AAF2E3 /* ListingModel.swift */; };
+		B7F80A6D2059414D00AAF2E3 /* ListingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F80A6C2059414D00AAF2E3 /* ListingViewCell.swift */; };
+		B7F80A6F205943AB00AAF2E3 /* ListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F80A6E205943AB00AAF2E3 /* ListingViewController.swift */; };
+		BFA229E620487B4000AEAEAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA229E520487B4000AEAEAF /* AppDelegate.swift */; };
+		BFA229E820487B4000AEAEAF /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA229E720487B4000AEAEAF /* CartViewController.swift */; };
+		BFA229EB20487B4000AEAEAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFA229E920487B4000AEAEAF /* Main.storyboard */; };
+		BFA229ED20487B4000AEAEAF /* Photos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFA229EC20487B4000AEAEAF /* Photos.xcassets */; };
+		BFA229FB20487B4000AEAEAF /* learniosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA229FA20487B4000AEAEAF /* learniosTests.swift */; };
+		BFA22A0620487B4000AEAEAF /* learniosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA22A0520487B4000AEAEAF /* learniosUITests.swift */; };
+		BFA22A1420487EAB00AEAEAF /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA22A1320487EAB00AEAEAF /* ToDoItem.swift */; };
+		BFA22A1620489F3800AEAEAF /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA22A1520489F3800AEAEAF /* TableViewCell.swift */; };
+		D119B18324DF5AD80621B110 /* Pods_learniosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A03A1C73086343C1ED9E00 /* Pods_learniosTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BFA229F720487B4000AEAEAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFA229DA20487B4000AEAEAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BFA229E120487B4000AEAEAF;
+			remoteInfo = learnios;
+		};
+		BFA22A0220487B4000AEAEAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFA229DA20487B4000AEAEAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BFA229E120487B4000AEAEAF;
+			remoteInfo = learnios;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		38575D3574EAF176445630FE /* Pods-learnios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-learnios.release.xcconfig"; path = "Pods/Target Support Files/Pods-learnios/Pods-learnios.release.xcconfig"; sourceTree = "<group>"; };
+		3A619C5F8414063BBC041331 /* Pods_learnios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_learnios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AFE6232DC15BA0095F1FC36 /* Pods-learnios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-learnios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-learnios/Pods-learnios.debug.xcconfig"; sourceTree = "<group>"; };
+		72B7C0DB514CC4551DF1BC33 /* Pods-learniosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-learniosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-learniosTests/Pods-learniosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		89A03A1C73086343C1ED9E00 /* Pods_learniosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_learniosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B704E47F74C228604FBB25F5 /* Pods-learniosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-learniosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-learniosUITests/Pods-learniosUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B7075C082061E79E008C1BCF /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		B7075C0A2061E8B1008C1BCF /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		B7A2CF2C2062BF2D0053AB79 /* CardViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewCell.swift; sourceTree = "<group>"; };
+		B7A2CF352062CBA80053AB79 /* MyListingDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListingDataStore.swift; sourceTree = "<group>"; };
+		B7D0DD0A2062D57A003761AC /* MyListingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyListingsViewController.swift; path = "/Users/guanmingqiao/Documents/GitHub/coopMart/learnios/learnios/View Controllers/MyListingsViewController.swift"; sourceTree = "<absolute>"; };
+		B7D0DD0C2062DE82003761AC /* MyListingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListingDetailViewController.swift; sourceTree = "<group>"; };
+		B7F80A60205836D900AAF2E3 /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+<<<<<<< HEAD
+		B7F80A63205839C200AAF2E3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../../../../../../Downloads/Starter_Project/Pinterest/Assets/Images.xcassets; sourceTree = "<group>"; };
+		B7F80A662058455C00AAF2E3 /* ListingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingModel.swift; sourceTree = "<group>"; };
+=======
+		B7F80A662058455C00AAF2E3 /* Listing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
+>>>>>>> ae2bc05ba64b75524720e3b6b70e7f1dd1267b18
+		B7F80A6C2059414D00AAF2E3 /* ListingViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingViewCell.swift; sourceTree = "<group>"; };
+		B7F80A6E205943AB00AAF2E3 /* ListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingViewController.swift; sourceTree = "<group>"; };
+		BFA229E220487B4000AEAEAF /* learnios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = learnios.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFA229E520487B4000AEAEAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BFA229E720487B4000AEAEAF /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		BFA229EA20487B4000AEAEAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BFA229EC20487B4000AEAEAF /* Photos.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Photos.xcassets; sourceTree = "<group>"; };
+		BFA229F120487B4000AEAEAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFA229F620487B4000AEAEAF /* learniosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = learniosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFA229FA20487B4000AEAEAF /* learniosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = learniosTests.swift; sourceTree = "<group>"; };
+		BFA229FC20487B4000AEAEAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFA22A0120487B4000AEAEAF /* learniosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = learniosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFA22A0520487B4000AEAEAF /* learniosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = learniosUITests.swift; sourceTree = "<group>"; };
+		BFA22A0720487B4000AEAEAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFA22A1320487EAB00AEAEAF /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
+		BFA22A1520489F3800AEAEAF /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		D75388532062D7CD00768855 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F5575C76257F0B1B82A3D5E8 /* Pods_learniosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_learniosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F790D3577AA7709A53C4BBC4 /* Pods-learniosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-learniosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-learniosTests/Pods-learniosTests.release.xcconfig"; sourceTree = "<group>"; };
+		FC051BC6479CBEB0B9AB5036 /* Pods-learniosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-learniosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-learniosUITests/Pods-learniosUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BFA229DF20487B4000AEAEAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376D6B6CC10D2A3804064CE6 /* Pods_learnios.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFA229F320487B4000AEAEAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D119B18324DF5AD80621B110 /* Pods_learniosTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFA229FE20487B4000AEAEAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				570E290AF63B1BB7AC0AF44B /* Pods_learniosUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8FE26B1BBDEAAD6DD9DAFAD2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A619C5F8414063BBC041331 /* Pods_learnios.framework */,
+				89A03A1C73086343C1ED9E00 /* Pods_learniosTests.framework */,
+				F5575C76257F0B1B82A3D5E8 /* Pods_learniosUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B7F80A57205834B200AAF2E3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B7F80A662058455C00AAF2E3 /* ListingModel.swift */,
+				B7A2CF352062CBA80053AB79 /* MyListingDataStore.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B7F80A59205834F700AAF2E3 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B7D0DD0C2062DE82003761AC /* MyListingDetailViewController.swift */,
+				B7D0DD0A2062D57A003761AC /* MyListingsViewController.swift */,
+				B7075C082061E79E008C1BCF /* TabBarViewController.swift */,
+				BFA229E720487B4000AEAEAF /* CartViewController.swift */,
+				B7F80A6E205943AB00AAF2E3 /* ListingViewController.swift */,
+				B7075C0A2061E8B1008C1BCF /* LogInViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		B7F80A5A2058350300AAF2E3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B7A2CF2C2062BF2D0053AB79 /* CardViewCell.swift */,
+				B7F80A6C2059414D00AAF2E3 /* ListingViewCell.swift */,
+				BFA22A1520489F3800AEAEAF /* TableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B7F80A5B2058350A00AAF2E3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BFA229F120487B4000AEAEAF /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B7F80A5C2058354500AAF2E3 /* Storyboards & Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				BFA229E920487B4000AEAEAF /* Main.storyboard */,
+				B7F80A60205836D900AAF2E3 /* LaunchScreen.xib */,
+			);
+			path = "Storyboards & Xibs";
+			sourceTree = "<group>";
+		};
+		B7F80A5D2058356C00AAF2E3 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				D75388532062D7CD00768855 /* Images.xcassets */,
+				BFA229EC20487B4000AEAEAF /* Photos.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		BFA229D920487B4000AEAEAF = {
+			isa = PBXGroup;
+			children = (
+				BFA229E420487B4000AEAEAF /* learnios */,
+				BFA229F920487B4000AEAEAF /* learniosTests */,
+				BFA22A0420487B4000AEAEAF /* learniosUITests */,
+				BFA229E320487B4000AEAEAF /* Products */,
+				CBC8F77DB305BCA6165B0FDF /* Pods */,
+				8FE26B1BBDEAAD6DD9DAFAD2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BFA229E320487B4000AEAEAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BFA229E220487B4000AEAEAF /* learnios.app */,
+				BFA229F620487B4000AEAEAF /* learniosTests.xctest */,
+				BFA22A0120487B4000AEAEAF /* learniosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BFA229E420487B4000AEAEAF /* learnios */ = {
+			isa = PBXGroup;
+			children = (
+				BFA229E520487B4000AEAEAF /* AppDelegate.swift */,
+				B7F80A57205834B200AAF2E3 /* Models */,
+				B7F80A5D2058356C00AAF2E3 /* Assets */,
+				B7F80A5C2058354500AAF2E3 /* Storyboards & Xibs */,
+				B7F80A5B2058350A00AAF2E3 /* Supporting Files */,
+				B7F80A5A2058350300AAF2E3 /* Views */,
+				B7F80A59205834F700AAF2E3 /* View Controllers */,
+				BFA22A1320487EAB00AEAEAF /* ToDoItem.swift */,
+			);
+			path = learnios;
+			sourceTree = "<group>";
+		};
+		BFA229F920487B4000AEAEAF /* learniosTests */ = {
+			isa = PBXGroup;
+			children = (
+				BFA229FA20487B4000AEAEAF /* learniosTests.swift */,
+				BFA229FC20487B4000AEAEAF /* Info.plist */,
+			);
+			path = learniosTests;
+			sourceTree = "<group>";
+		};
+		BFA22A0420487B4000AEAEAF /* learniosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BFA22A0520487B4000AEAEAF /* learniosUITests.swift */,
+				BFA22A0720487B4000AEAEAF /* Info.plist */,
+			);
+			path = learniosUITests;
+			sourceTree = "<group>";
+		};
+		CBC8F77DB305BCA6165B0FDF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5AFE6232DC15BA0095F1FC36 /* Pods-learnios.debug.xcconfig */,
+				38575D3574EAF176445630FE /* Pods-learnios.release.xcconfig */,
+				72B7C0DB514CC4551DF1BC33 /* Pods-learniosTests.debug.xcconfig */,
+				F790D3577AA7709A53C4BBC4 /* Pods-learniosTests.release.xcconfig */,
+				FC051BC6479CBEB0B9AB5036 /* Pods-learniosUITests.debug.xcconfig */,
+				B704E47F74C228604FBB25F5 /* Pods-learniosUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BFA229E120487B4000AEAEAF /* learnios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFA22A0A20487B4000AEAEAF /* Build configuration list for PBXNativeTarget "learnios" */;
+			buildPhases = (
+				9E6D6B00A91FFF6EBA987B36 /* [CP] Check Pods Manifest.lock */,
+				BFA229DE20487B4000AEAEAF /* Sources */,
+				BFA229DF20487B4000AEAEAF /* Frameworks */,
+				BFA229E020487B4000AEAEAF /* Resources */,
+				C7F370CE5488F45D4D89EC0A /* [CP] Embed Pods Frameworks */,
+				69A5675BBB3C73104EE1A6A7 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = learnios;
+			productName = learnios;
+			productReference = BFA229E220487B4000AEAEAF /* learnios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BFA229F520487B4000AEAEAF /* learniosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFA22A0D20487B4000AEAEAF /* Build configuration list for PBXNativeTarget "learniosTests" */;
+			buildPhases = (
+				17FEBC80C430F9FAC6D214FD /* [CP] Check Pods Manifest.lock */,
+				BFA229F220487B4000AEAEAF /* Sources */,
+				BFA229F320487B4000AEAEAF /* Frameworks */,
+				BFA229F420487B4000AEAEAF /* Resources */,
+				AC3796527DED5F365AEECDF2 /* [CP] Embed Pods Frameworks */,
+				B47B6D885BDC6C17C010D177 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BFA229F820487B4000AEAEAF /* PBXTargetDependency */,
+			);
+			name = learniosTests;
+			productName = learniosTests;
+			productReference = BFA229F620487B4000AEAEAF /* learniosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BFA22A0020487B4000AEAEAF /* learniosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFA22A1020487B4000AEAEAF /* Build configuration list for PBXNativeTarget "learniosUITests" */;
+			buildPhases = (
+				3019DC3529BC5237B0990A80 /* [CP] Check Pods Manifest.lock */,
+				BFA229FD20487B4000AEAEAF /* Sources */,
+				BFA229FE20487B4000AEAEAF /* Frameworks */,
+				BFA229FF20487B4000AEAEAF /* Resources */,
+				A98792CD865F0BAA0F269DED /* [CP] Embed Pods Frameworks */,
+				A674F497FD94314EF7CADDEE /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BFA22A0320487B4000AEAEAF /* PBXTargetDependency */,
+			);
+			name = learniosUITests;
+			productName = learniosUITests;
+			productReference = BFA22A0120487B4000AEAEAF /* learniosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFA229DA20487B4000AEAEAF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "";
+				TargetAttributes = {
+					BFA229E120487B4000AEAEAF = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					BFA229F520487B4000AEAEAF = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BFA229E120487B4000AEAEAF;
+					};
+					BFA22A0020487B4000AEAEAF = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BFA229E120487B4000AEAEAF;
+					};
+				};
+			};
+			buildConfigurationList = BFA229DD20487B4000AEAEAF /* Build configuration list for PBXProject "learnios" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BFA229D920487B4000AEAEAF;
+			productRefGroup = BFA229E320487B4000AEAEAF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BFA229E120487B4000AEAEAF /* learnios */,
+				BFA229F520487B4000AEAEAF /* learniosTests */,
+				BFA22A0020487B4000AEAEAF /* learniosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BFA229E020487B4000AEAEAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7F80A61205836D900AAF2E3 /* LaunchScreen.xib in Resources */,
+				BFA229ED20487B4000AEAEAF /* Photos.xcassets in Resources */,
+				B7F80A6520583AED00AAF2E3 /* Info.plist in Resources */,
+				BFA229EB20487B4000AEAEAF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFA229F420487B4000AEAEAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFA229FF20487B4000AEAEAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		17FEBC80C430F9FAC6D214FD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-learniosTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3019DC3529BC5237B0990A80 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-learniosUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		69A5675BBB3C73104EE1A6A7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-learnios/Pods-learnios-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E6D6B00A91FFF6EBA987B36 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-learnios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A674F497FD94314EF7CADDEE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-learniosUITests/Pods-learniosUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A98792CD865F0BAA0F269DED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-learniosUITests/Pods-learniosUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC3796527DED5F365AEECDF2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-learniosTests/Pods-learniosTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B47B6D885BDC6C17C010D177 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-learniosTests/Pods-learniosTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7F370CE5488F45D4D89EC0A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-learnios/Pods-learnios-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AnimatedCollectionViewLayout/AnimatedCollectionViewLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AnimatedCollectionViewLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-learnios/Pods-learnios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BFA229DE20487B4000AEAEAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7075C092061E79E008C1BCF /* TabBarViewController.swift in Sources */,
+				BFA229E820487B4000AEAEAF /* CartViewController.swift in Sources */,
+				B7A2CF2D2062BF2D0053AB79 /* CardViewCell.swift in Sources */,
+				B7075C0B2061E8B1008C1BCF /* LogInViewController.swift in Sources */,
+				BFA22A1620489F3800AEAEAF /* TableViewCell.swift in Sources */,
+				B7F80A672058455C00AAF2E3 /* ListingModel.swift in Sources */,
+				BFA229E620487B4000AEAEAF /* AppDelegate.swift in Sources */,
+				B7D0DD0B2062D57A003761AC /* MyListingsViewController.swift in Sources */,
+				B7F80A6F205943AB00AAF2E3 /* ListingViewController.swift in Sources */,
+				B7D0DD0D2062DE82003761AC /* MyListingDetailViewController.swift in Sources */,
+				BFA22A1420487EAB00AEAEAF /* ToDoItem.swift in Sources */,
+				B7A2CF362062CBA80053AB79 /* MyListingDataStore.swift in Sources */,
+				B7F80A6D2059414D00AAF2E3 /* ListingViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFA229F220487B4000AEAEAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFA229FB20487B4000AEAEAF /* learniosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFA229FD20487B4000AEAEAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFA22A0620487B4000AEAEAF /* learniosUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BFA229F820487B4000AEAEAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BFA229E120487B4000AEAEAF /* learnios */;
+			targetProxy = BFA229F720487B4000AEAEAF /* PBXContainerItemProxy */;
+		};
+		BFA22A0320487B4000AEAEAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BFA229E120487B4000AEAEAF /* learnios */;
+			targetProxy = BFA22A0220487B4000AEAEAF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BFA229E920487B4000AEAEAF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFA229EA20487B4000AEAEAF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BFA22A0820487B4000AEAEAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos11.2;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 armv7";
+			};
+			name = Debug;
+		};
+		BFA22A0920487B4000AEAEAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos11.2;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 armv7";
+			};
+			name = Release;
+		};
+		BFA22A0B20487B4000AEAEAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AFE6232DC15BA0095F1FC36 /* Pods-learnios.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 85C7V5K59R;
+				INFOPLIST_FILE = "$(SRCROOT)/learnios/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = T.learnios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		BFA22A0C20487B4000AEAEAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38575D3574EAF176445630FE /* Pods-learnios.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 85C7V5K59R;
+				INFOPLIST_FILE = "$(SRCROOT)/learnios/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = T.learnios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		BFA22A0E20487B4000AEAEAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72B7C0DB514CC4551DF1BC33 /* Pods-learniosTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = learniosTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = T.learniosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/learnios.app/learnios";
+			};
+			name = Debug;
+		};
+		BFA22A0F20487B4000AEAEAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F790D3577AA7709A53C4BBC4 /* Pods-learniosTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = learniosTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = T.learniosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/learnios.app/learnios";
+			};
+			name = Release;
+		};
+		BFA22A1120487B4000AEAEAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC051BC6479CBEB0B9AB5036 /* Pods-learniosUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = learniosUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = T.learniosUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = learnios;
+			};
+			name = Debug;
+		};
+		BFA22A1220487B4000AEAEAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B704E47F74C228604FBB25F5 /* Pods-learniosUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = learniosUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = T.learniosUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = learnios;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BFA229DD20487B4000AEAEAF /* Build configuration list for PBXProject "learnios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFA22A0820487B4000AEAEAF /* Debug */,
+				BFA22A0920487B4000AEAEAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFA22A0A20487B4000AEAEAF /* Build configuration list for PBXNativeTarget "learnios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFA22A0B20487B4000AEAEAF /* Debug */,
+				BFA22A0C20487B4000AEAEAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFA22A0D20487B4000AEAEAF /* Build configuration list for PBXNativeTarget "learniosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFA22A0E20487B4000AEAEAF /* Debug */,
+				BFA22A0F20487B4000AEAEAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFA22A1020487B4000AEAEAF /* Build configuration list for PBXNativeTarget "learniosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFA22A1120487B4000AEAEAF /* Debug */,
+				BFA22A1220487B4000AEAEAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFA229DA20487B4000AEAEAF /* Project object */;
+}

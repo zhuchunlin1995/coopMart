@@ -19,7 +19,7 @@ class ListingViewCell: UICollectionViewCell {
         containerView.layer.cornerRadius = 6
         containerView.layer.masksToBounds = true
     }
-    var listing: Listing? {
+    var listing: ListingModel? {
         didSet {
             if let listing = listing {
                 imageView.image = listing.image
