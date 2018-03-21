@@ -16,7 +16,7 @@ class TabBarViewController: UITabBarController {
     }
     func checkIfUserIsLoggedIn(){
         //check with firebase
-        perform(#selector(handleLogout), with: nil, afterDelay: 0)
+        //perform(#selector(handleLogout), with: nil, afterDelay: 0)
     }
     @objc func handleLogout() {
         // use firebase to sign out the current account

@@ -1,4 +1,5 @@
 PODS:
+  - AnimatedCollectionViewLayout (0.3.0)
   - Firebase (4.9.0):
     - Firebase/Core (= 4.9.0)
   - Firebase/Core (4.9.0):
@@ -23,9 +24,11 @@ PODS:
   - nanopb/encode (0.3.8)
 
 DEPENDENCIES:
+  - AnimatedCollectionViewLayout
   - Firebase
 
 SPEC CHECKSUMS:
+  AnimatedCollectionViewLayout: 504b992a4258eb39d2dd2b2b48e84b4b95860fd7
   Firebase: 632216af3ed7f31e3be34776947fdc7546cfb572
   FirebaseAnalytics: 388b630c15713f5dbf364071f5f3d6077fb52f4e
   FirebaseCore: 3bd047463058fa6b5d312c97502c52e45401cdfb
@@ -33,6 +36,6 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
 
-PODFILE CHECKSUM: 61227612899ffff92eae3b5fd493e8a3193ff583
+PODFILE CHECKSUM: f5a3beccb051fb8585c54cc12d46dbce65e050f0
 
 COCOAPODS: 1.4.0
