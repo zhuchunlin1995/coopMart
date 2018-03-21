@@ -62,7 +62,12 @@
 		B7D0DD0A2062D57A003761AC /* MyListingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyListingsViewController.swift; path = "/Users/guanmingqiao/Documents/GitHub/coopMart/learnios/learnios/View Controllers/MyListingsViewController.swift"; sourceTree = "<absolute>"; };
 		B7D0DD0C2062DE82003761AC /* MyListingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListingDetailViewController.swift; sourceTree = "<group>"; };
 		B7F80A60205836D900AAF2E3 /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+<<<<<<< HEAD
+		B7F80A63205839C200AAF2E3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../../../../../../Downloads/Starter_Project/Pinterest/Assets/Images.xcassets; sourceTree = "<group>"; };
 		B7F80A662058455C00AAF2E3 /* ListingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingModel.swift; sourceTree = "<group>"; };
+=======
+		B7F80A662058455C00AAF2E3 /* Listing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
+>>>>>>> ae2bc05ba64b75524720e3b6b70e7f1dd1267b18
 		B7F80A6C2059414D00AAF2E3 /* ListingViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingViewCell.swift; sourceTree = "<group>"; };
 		B7F80A6E205943AB00AAF2E3 /* ListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingViewController.swift; sourceTree = "<group>"; };
 		BFA229E220487B4000AEAEAF /* learnios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = learnios.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +84,7 @@
 		BFA22A0720487B4000AEAEAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFA22A1320487EAB00AEAEAF /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 		BFA22A1520489F3800AEAEAF /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		D75388532062D7CD00768855 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F5575C76257F0B1B82A3D5E8 /* Pods_learniosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_learniosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F790D3577AA7709A53C4BBC4 /* Pods-learniosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-learniosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-learniosTests/Pods-learniosTests.release.xcconfig"; sourceTree = "<group>"; };
 		FC051BC6479CBEB0B9AB5036 /* Pods-learniosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-learniosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-learniosUITests/Pods-learniosUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -174,6 +180,7 @@
 		B7F80A5D2058356C00AAF2E3 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				D75388532062D7CD00768855 /* Images.xcassets */,
 				BFA229EC20487B4000AEAEAF /* Photos.xcassets */,
 			);
 			path = Assets;
