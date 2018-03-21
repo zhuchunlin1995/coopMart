@@ -12,7 +12,6 @@
 		B7075C092061E79E008C1BCF /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7075C082061E79E008C1BCF /* TabBarViewController.swift */; };
 		B7075C0B2061E8B1008C1BCF /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7075C0A2061E8B1008C1BCF /* LogInViewController.swift */; };
 		B7F80A61205836D900AAF2E3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7F80A60205836D900AAF2E3 /* LaunchScreen.xib */; };
-		B7F80A64205839C200AAF2E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7F80A63205839C200AAF2E3 /* Images.xcassets */; };
 		B7F80A6520583AED00AAF2E3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFA229F120487B4000AEAEAF /* Info.plist */; };
 		B7F80A672058455C00AAF2E3 /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F80A662058455C00AAF2E3 /* Listing.swift */; };
 		B7F80A6D2059414D00AAF2E3 /* ListingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F80A6C2059414D00AAF2E3 /* ListingViewCell.swift */; };
@@ -55,7 +54,6 @@
 		B7075C082061E79E008C1BCF /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		B7075C0A2061E8B1008C1BCF /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		B7F80A60205836D900AAF2E3 /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
-		B7F80A63205839C200AAF2E3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../../../../../../Downloads/Starter_Project/Pinterest/Assets/Images.xcassets; sourceTree = "<group>"; };
 		B7F80A662058455C00AAF2E3 /* Listing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
 		B7F80A6C2059414D00AAF2E3 /* ListingViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingViewCell.swift; sourceTree = "<group>"; };
 		B7F80A6E205943AB00AAF2E3 /* ListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +71,7 @@
 		BFA22A0720487B4000AEAEAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFA22A1320487EAB00AEAEAF /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 		BFA22A1520489F3800AEAEAF /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		D75388532062D7CD00768855 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F5575C76257F0B1B82A3D5E8 /* Pods_learniosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_learniosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F790D3577AA7709A53C4BBC4 /* Pods-learniosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-learniosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-learniosTests/Pods-learniosTests.release.xcconfig"; sourceTree = "<group>"; };
 		FC051BC6479CBEB0B9AB5036 /* Pods-learniosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-learniosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-learniosUITests/Pods-learniosUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -164,7 +163,7 @@
 		B7F80A5D2058356C00AAF2E3 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				B7F80A63205839C200AAF2E3 /* Images.xcassets */,
+				D75388532062D7CD00768855 /* Images.xcassets */,
 				BFA229EC20487B4000AEAEAF /* Photos.xcassets */,
 			);
 			path = Assets;
@@ -355,7 +354,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7F80A61205836D900AAF2E3 /* LaunchScreen.xib in Resources */,
-				B7F80A64205839C200AAF2E3 /* Images.xcassets in Resources */,
 				BFA229ED20487B4000AEAEAF /* Photos.xcassets in Resources */,
 				B7F80A6520583AED00AAF2E3 /* Info.plist in Resources */,
 				BFA229EB20487B4000AEAEAF /* Main.storyboard in Resources */,
