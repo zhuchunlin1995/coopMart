@@ -92,7 +92,6 @@
         <!--My Listing-->
         <scene sceneID="SGB-9q-EFD">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Tt1-Eh-cSJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController title="My Listing" id="zIc-Pm-AYs" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="My Listings" id="oGU-Cs-aSj"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="J3d-T0-4Ps">
@@ -103,6 +102,7 @@
                         <segue destination="Zca-VJ-Fgq" kind="relationship" relationship="rootViewController" id="GTz-Vp-j8F"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tt1-Eh-cSJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-142" y="24"/>
         </scene>
