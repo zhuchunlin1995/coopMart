@@ -52,9 +52,6 @@ class LoginController: UIViewController, UIImagePickerControllerDelegate, UINavi
         }
     }
     
-    // helper method that handle login action when button is hit
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
     func handleLogin() {
         
         if self.emailTextField.text == "" || self.passwordTextField.text == "" {
@@ -70,7 +67,7 @@ class LoginController: UIViewController, UIImagePickerControllerDelegate, UINavi
             
         } else {
             
-            FIRAuth.auth()?.signIn(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!) { (user, error) in
+            Auth.auth().signIn(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!) { (user, error) in
                 
                 if error == nil {
                     
@@ -94,7 +91,6 @@ class LoginController: UIViewController, UIImagePickerControllerDelegate, UINavi
             }
         }
     }
-    }
     
     func handleRegister(){
         
@@ -115,14 +111,14 @@ class LoginController: UIViewController, UIImagePickerControllerDelegate, UINavi
         return view
     }()
     // instantiate components in the input container : email textbox
-    let emailTextField: UI、TextField = {
+    let emailTextField: UITextField = {
         let tf = UITextField()
         tf.placeholder = "Email Address: jd2920@columbia.edu"
         tf.translatesAutoresizingMaskIntoConstraints = false
         return tf
     }()
     // instantiate components in the input container : separator
-    let emailSeparatorView: mUIView = {
+    let emailSeparatorView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor(r: 220, g: 220, b: 220)
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -136,9 +132,9 @@ class LoginController: UIViewController, UIImagePickerControllerDelegate, UINavi
         tf.isSecureTextEntry = true
         return tf
     }()
-    
+
     // "let" is substituted by "lazy var" for access to using "self" in addGestureRecognizer
-    lazy var profileImageView: UIImageView = {
+    let profileImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "addProfile.png")
         imageView.translatesAutoresizingMaskIntoConstraints = false
