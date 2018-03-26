@@ -13,7 +13,6 @@
 		B7075C0B2061E8B1008C1BCF /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7075C0A2061E8B1008C1BCF /* LogInViewController.swift */; };
 		B7A2CF2D2062BF2D0053AB79 /* CardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A2CF2C2062BF2D0053AB79 /* CardViewCell.swift */; };
 		B7A2CF362062CBA80053AB79 /* MyListingDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A2CF352062CBA80053AB79 /* MyListingDataStore.swift */; };
-		B7D0DD0B2062D57A003761AC /* MyListingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D0DD0A2062D57A003761AC /* MyListingsViewController.swift */; };
 		B7D0DD0D2062DE82003761AC /* MyListingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D0DD0C2062DE82003761AC /* MyListingDetailViewController.swift */; };
 		B7F80A61205836D900AAF2E3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7F80A60205836D900AAF2E3 /* LaunchScreen.xib */; };
 		B7F80A6520583AED00AAF2E3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFA229F120487B4000AEAEAF /* Info.plist */; };
@@ -29,6 +28,8 @@
 		BFA22A1420487EAB00AEAEAF /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA22A1320487EAB00AEAEAF /* ToDoItem.swift */; };
 		BFA22A1620489F3800AEAEAF /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA22A1520489F3800AEAEAF /* TableViewCell.swift */; };
 		D119B18324DF5AD80621B110 /* Pods_learniosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A03A1C73086343C1ED9E00 /* Pods_learniosTests.framework */; };
+		D75388582064402200768855 /* MyListingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75388572064402200768855 /* MyListingsViewController.swift */; };
+		D753885A2064459700768855 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D75388592064459700768855 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +60,6 @@
 		B7075C0A2061E8B1008C1BCF /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		B7A2CF2C2062BF2D0053AB79 /* CardViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewCell.swift; sourceTree = "<group>"; };
 		B7A2CF352062CBA80053AB79 /* MyListingDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListingDataStore.swift; sourceTree = "<group>"; };
-		B7D0DD0A2062D57A003761AC /* MyListingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyListingsViewController.swift; path = "/Users/guanmingqiao/Documents/GitHub/coopMart/learnios/learnios/View Controllers/MyListingsViewController.swift"; sourceTree = "<absolute>"; };
 		B7D0DD0C2062DE82003761AC /* MyListingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListingDetailViewController.swift; sourceTree = "<group>"; };
 		B7F80A60205836D900AAF2E3 /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		B7F80A662058455C00AAF2E3 /* ListingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingModel.swift; sourceTree = "<group>"; };
@@ -79,6 +79,8 @@
 		BFA22A0720487B4000AEAEAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFA22A1320487EAB00AEAEAF /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 		BFA22A1520489F3800AEAEAF /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		D75388572064402200768855 /* MyListingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyListingsViewController.swift; sourceTree = "<group>"; };
+		D75388592064459700768855 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		F5575C76257F0B1B82A3D5E8 /* Pods_learniosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_learniosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F790D3577AA7709A53C4BBC4 /* Pods-learniosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-learniosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-learniosTests/Pods-learniosTests.release.xcconfig"; sourceTree = "<group>"; };
 		FC051BC6479CBEB0B9AB5036 /* Pods-learniosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-learniosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-learniosUITests/Pods-learniosUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -134,8 +136,8 @@
 		B7F80A59205834F700AAF2E3 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D75388572064402200768855 /* MyListingsViewController.swift */,
 				B7D0DD0C2062DE82003761AC /* MyListingDetailViewController.swift */,
-				B7D0DD0A2062D57A003761AC /* MyListingsViewController.swift */,
 				B7075C082061E79E008C1BCF /* TabBarViewController.swift */,
 				BFA229E720487B4000AEAEAF /* CartViewController.swift */,
 				B7F80A6E205943AB00AAF2E3 /* ListingViewController.swift */,
@@ -204,6 +206,7 @@
 		BFA229E420487B4000AEAEAF /* learnios */ = {
 			isa = PBXGroup;
 			children = (
+				D75388592064459700768855 /* GoogleService-Info.plist */,
 				BFA229E520487B4000AEAEAF /* AppDelegate.swift */,
 				B7F80A57205834B200AAF2E3 /* Models */,
 				B7F80A5D2058356C00AAF2E3 /* Assets */,
@@ -365,6 +368,7 @@
 			files = (
 				B7F80A61205836D900AAF2E3 /* LaunchScreen.xib in Resources */,
 				BFA229ED20487B4000AEAEAF /* Photos.xcassets in Resources */,
+				D753885A2064459700768855 /* GoogleService-Info.plist in Resources */,
 				B7F80A6520583AED00AAF2E3 /* Info.plist in Resources */,
 				BFA229EB20487B4000AEAEAF /* Main.storyboard in Resources */,
 			);
@@ -524,13 +528,17 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-learnios/Pods-learnios-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AnimatedCollectionViewLayout/AnimatedCollectionViewLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AnimatedCollectionViewLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -546,13 +554,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7075C092061E79E008C1BCF /* TabBarViewController.swift in Sources */,
+				D75388582064402200768855 /* MyListingsViewController.swift in Sources */,
 				BFA229E820487B4000AEAEAF /* CartViewController.swift in Sources */,
 				B7A2CF2D2062BF2D0053AB79 /* CardViewCell.swift in Sources */,
 				B7075C0B2061E8B1008C1BCF /* LogInViewController.swift in Sources */,
 				BFA22A1620489F3800AEAEAF /* TableViewCell.swift in Sources */,
 				B7F80A672058455C00AAF2E3 /* ListingModel.swift in Sources */,
 				BFA229E620487B4000AEAEAF /* AppDelegate.swift in Sources */,
-				B7D0DD0B2062D57A003761AC /* MyListingsViewController.swift in Sources */,
 				B7F80A6F205943AB00AAF2E3 /* ListingViewController.swift in Sources */,
 				B7D0DD0D2062DE82003761AC /* MyListingDetailViewController.swift in Sources */,
 				BFA22A1420487EAB00AEAEAF /* ToDoItem.swift in Sources */,

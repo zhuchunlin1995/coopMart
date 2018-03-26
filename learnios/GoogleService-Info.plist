@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>31471599462-rom72qcp4q0ihrfashg5cbo6fekc4qfc.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.31471599462-rom72qcp4q0ihrfashg5cbo6fekc4qfc</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBFKY5Wj3mfpMw_i_xwlFKDwaMZ9x0Ml5U</string>
+	<key>GCM_SENDER_ID</key>
+	<string>31471599462</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>T.learnios</string>
+	<key>PROJECT_ID</key>
+	<string>coopmart-1f06f</string>
+	<key>STORAGE_BUCKET</key>
+	<string>coopmart-1f06f.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:31471599462:ios:f4fe932e3667f21c</string>
+	<key>DATABASE_URL</key>
+	<string>https://coopmart-1f06f.firebaseio.com</string>
+</dict>
+</plist>
