@@ -18,8 +18,8 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="ArA-f3-4Uj">
                     <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="razewarelogo" translatesAutoresizingMaskIntoConstraints="NO" id="Lxe-Pk-xqT">
-                    <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="razewarelogo" translatesAutoresizingMaskIntoConstraints="NO" id="Lxe-Pk-xqT">
+                    <rect key="frame" x="-64" y="0.0" width="480" height="480"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
