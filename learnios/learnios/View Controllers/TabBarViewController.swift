@@ -17,6 +17,7 @@ class TabBarViewController: UITabBarController {
         checkIfUserIsLoggedIn()
     }
     func checkIfUserIsLoggedIn(){
+        print(Auth.auth().currentUser!.email)
         if Auth.auth().currentUser == nil{
             perform(#selector(handleLogout), with: nil, afterDelay: 0)
         }
