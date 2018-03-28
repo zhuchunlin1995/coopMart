@@ -75,8 +75,8 @@ class LoginController: UIViewController, UIImagePickerControllerDelegate, UINavi
                     print("You have successfully logged in")
                     
                     //Go to the HomeViewController if the login is sucessful
-                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
-                    self.present(vc!, animated: true, completion: nil)
+                    let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Home") as! UITabBarController
+                    self.present(vc, animated: true, completion: nil)
                     
                 } else {
                     
@@ -98,8 +98,8 @@ class LoginController: UIViewController, UIImagePickerControllerDelegate, UINavi
                 print("You have successfully signed up")
                 //Goes to the Setup page which lets the user take a photo for their profile picture and also chose a username
                 
-                let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
-                self.present(vc!, animated: true, completion: nil)
+                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Home") as! UITabBarController
+                self.present(vc, animated: true, completion: nil)
                 
             } else {
                 let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
@@ -131,7 +131,6 @@ class LoginController: UIViewController, UIImagePickerControllerDelegate, UINavi
         let tf = UITextField()
         tf.placeholder = "Email Address: jd2920@columbia.edu"
         tf.translatesAutoresizingMaskIntoConstraints = false
-        tf.autocapitalizationType = 
         return tf
     }()
     // instantiate components in the input container : separator

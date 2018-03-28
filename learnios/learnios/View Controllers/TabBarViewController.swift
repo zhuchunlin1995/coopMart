@@ -20,7 +20,6 @@ class TabBarViewController: UITabBarController {
     }
     @objc func handleLogout() {
          //use firebase to sign out the current account
-        
         let loginController = LoginController()        
         self.present(loginController, animated:true, completion: nil)
     }
