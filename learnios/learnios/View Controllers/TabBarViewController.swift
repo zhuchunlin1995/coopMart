@@ -17,13 +17,12 @@ class TabBarViewController: UITabBarController {
         checkIfUserIsLoggedIn()
     }
     func checkIfUserIsLoggedIn(){
-        print(Auth.auth().currentUser!.email)
-        if Auth.auth().currentUser == nil{
+        if (Auth.auth().currentUser?.uid == nil) {
             perform(#selector(handleLogout), with: nil, afterDelay: 0)
         }
     }
     @objc func handleLogout() {
-         //use firebase to sign out the current account
+        try! Auth.auth().signOut()
         let loginController = LoginController()        
         self.present(loginController, animated:true, completion: nil)
     }

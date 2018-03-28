@@ -83,6 +83,7 @@
                     <connections>
                         <segue destination="GSb-sI-2Xe" kind="relationship" relationship="viewControllers" id="ufI-rG-WNi"/>
                         <segue destination="zIc-Pm-AYs" kind="relationship" relationship="viewControllers" id="nzS-rs-deQ"/>
+                        <segue destination="JNv-jd-YkI" kind="relationship" relationship="viewControllers" id="1tC-TL-ZVw"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uxz-9v-tiC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -105,6 +106,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tt1-Eh-cSJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-142" y="24"/>
+        </scene>
+        <!--My Profile-->
+        <scene sceneID="VCD-IJ-naR">
+            <objects>
+                <viewController title="My Profile" id="JNv-jd-YkI" customClass="UserProfileViewController" customModule="learnios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UkZ-fD-16l">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f17-z1-Fdz">
+                                <rect key="frame" x="145" y="318" width="84" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Log Out"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="jqY-Zu-daQ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="My Profile" id="gwm-af-mR6"/>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="LogoutButton" destination="f17-z1-Fdz" id="oKu-yr-2Yv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4FX-PH-8fN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-143.19999999999999" y="838.83058470764627"/>
         </scene>
         <!--My Listing Detail View Controller-->
         <scene sceneID="WOJ-GH-Y5Z">
@@ -489,6 +518,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="LAn-fn-TYl"/>
+        <segue reference="0XB-Pe-EE3"/>
     </inferredMetricsTieBreakers>
 </document>
