@@ -28,14 +28,54 @@ class learniosUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testLogin() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let app = XCUIApplication()
+        let emailAddressJd2920ColumbiaEduTextField = app.textFields["Email Address: jd2920@columbia.edu"]
+        emailAddressJd2920ColumbiaEduTextField.tap()
+        emailAddressJd2920ColumbiaEduTextField.typeText("gq2135@columbia.edu")
         
-        let tablesQuery = XCUIApplication().tables
-        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["to do 6"]/*[[".cells.staticTexts[\"to do 6\"]",".staticTexts[\"to do 6\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.swipeLeft()
-        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["to do 7"]/*[[".cells.staticTexts[\"to do 7\"]",".staticTexts[\"to do 7\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.swipeRight()
-        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["to do 8"]/*[[".cells.staticTexts[\"to do 8\"]",".staticTexts[\"to do 8\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.swipeLeft()
+        let passwordSecureTextField = app.secureTextFields["Password"]
+        passwordSecureTextField.tap()
+        passwordSecureTextField.typeText("1996Abc0912def!")
+        app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .button)["Login"].tap()
+        app.collectionViews.children(matching: .cell).element(boundBy: 2).children(matching: .other).element.children(matching: .other).element.tap()
+        app.navigationBars["Listing"].buttons["Market Listings"].tap()
+        
+        let tabBarsQuery = app.tabBars
+        tabBarsQuery.buttons["My Listings"].tap()
+        tabBarsQuery.buttons["My Profile"].tap()
+        app.buttons["Log Out"].tap()
+        
+        let app2 = app
+        app2/*@START_MENU_TOKEN@*/.buttons["Register"]/*[[".segmentedControls.buttons[\"Register\"]",".buttons[\"Register\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.textFields["Name: John Dough"].tap()
     }
     
+    func testRegister() {
+        let app = XCUIApplication()
+        app/*@START_MENU_TOKEN@*/.buttons["Register"]/*[[".segmentedControls.buttons[\"Register\"]",".buttons[\"Register\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        
+        let nameJohnDoughTextField = app.textFields["Name: John Dough"]
+        nameJohnDoughTextField.tap()
+        nameJohnDoughTextField.typeText("Tim Cook")
+        
+        let emailAddressJd2920ColumbiaEduTextField = app.textFields["Email Address: jd2920@columbia.edu"]
+        emailAddressJd2920ColumbiaEduTextField.tap()
+        emailAddressJd2920ColumbiaEduTextField.tap()
+        emailAddressJd2920ColumbiaEduTextField.typeText("tc2009@columbia.edu")
+        
+        let passwordSecureTextField = app.secureTextFields["Password"]
+        passwordSecureTextField.tap()
+        passwordSecureTextField.tap()
+        passwordSecureTextField.typeText("appple")
+        
+        let registerButton = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .button)["Register"]
+        registerButton.tap()
+        
+        app.tabBars.buttons["My Profile"].tap()
+        app.buttons["Log Out"].tap()
+        
+    }
 }
