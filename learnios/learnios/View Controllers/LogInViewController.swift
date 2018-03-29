@@ -150,14 +150,14 @@ class LoginController: UIViewController, UIImagePickerControllerDelegate, UINavi
     }()
 
     // "let" is substituted by "lazy var" for access to using "self" in addGestureRecognizer
-    let profileImageView: UIImageView = {
+     lazy var profileImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "addProfile.png")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
         
         //this should be added to the image where user should click to add profile image
-        imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleSelectProfileImage)))
+        imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action:#selector(handleSelectProfileImage)))
         imageView.isUserInteractionEnabled = true
         //when log in, stay transparent
         imageView.alpha = 0.0
