@@ -26,7 +26,6 @@ class UserProfileViewController: UIViewController {
         MyName.text = "Linli"
         MyEmail.text = email
         MyLocation.text = "Columbia University"
-//        fillItems()
         let httpsReference = storage.reference(forURL: "gs://coopmart-1f06f.appspot.com/test1.jpeg")
         httpsReference.getData(maxSize: 10000 * 10000 * 10000){ data, error in
             if let error = error {
