@@ -9,7 +9,7 @@ target 'learnios' do
   pod 'Firebase/Auth'
   pod 'Firebase/Storage'
   pod 'AnimatedCollectionViewLayout'
-
+  pod 'Firebase/Firestore'
   # Pods for learnios
 
   target 'learniosTests' do
