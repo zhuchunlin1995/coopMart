@@ -23,7 +23,7 @@ class UserProfileViewController: UIViewController {
         let email = Auth.auth().currentUser?.email
         let docRef = db.collection("users").document(email!);
         //let URL = docRef.value(forKeyPath: "avatar")
-        MyName.text = String(0)
+//        MyName.text = String(0)
 ////        MyEmail.text = String(describing: email)
 //        MyEmail.text = "null"
 //        MyLocation.text = "null"
