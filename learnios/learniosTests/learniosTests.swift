@@ -10,7 +10,7 @@ import XCTest
 @testable import learnios
 
 class learniosTests: XCTestCase {
-    
+    var systemUnderTest: UIViewController!
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.

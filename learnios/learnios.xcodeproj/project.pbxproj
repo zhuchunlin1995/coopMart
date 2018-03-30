@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		376D6B6CC10D2A3804064CE6 /* Pods_learnios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A619C5F8414063BBC041331 /* Pods_learnios.framework */; };
 		570E290AF63B1BB7AC0AF44B /* Pods_learniosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5575C76257F0B1B82A3D5E8 /* Pods_learniosUITests.framework */; };
+		7A0F84F3206D886F00DD46EA /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F84F2206D886F00DD46EA /* LoginViewControllerTests.swift */; };
 		B7075C092061E79E008C1BCF /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7075C082061E79E008C1BCF /* TabBarViewController.swift */; };
 		B7075C0B2061E8B1008C1BCF /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7075C0A2061E8B1008C1BCF /* LogInViewController.swift */; };
 		B7A2CF2D2062BF2D0053AB79 /* CardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A2CF2C2062BF2D0053AB79 /* CardViewCell.swift */; };
@@ -33,6 +34,18 @@
 		D753885A2064459700768855 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D75388592064459700768855 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXBuildRule section */
+		7AF45E1C206D7B5700458B7C /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "";
+		};
+/* End PBXBuildRule section */
+
 /* Begin PBXContainerItemProxy section */
 		BFA229F720487B4000AEAEAF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -55,6 +68,7 @@
 		3A619C5F8414063BBC041331 /* Pods_learnios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_learnios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AFE6232DC15BA0095F1FC36 /* Pods-learnios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-learnios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-learnios/Pods-learnios.debug.xcconfig"; sourceTree = "<group>"; };
 		72B7C0DB514CC4551DF1BC33 /* Pods-learniosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-learniosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-learniosTests/Pods-learniosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7A0F84F2206D886F00DD46EA /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
 		89A03A1C73086343C1ED9E00 /* Pods_learniosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_learniosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B704E47F74C228604FBB25F5 /* Pods-learniosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-learniosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-learniosUITests/Pods-learniosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B7075C082061E79E008C1BCF /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -227,6 +241,7 @@
 			children = (
 				BFA229FA20487B4000AEAEAF /* learniosTests.swift */,
 				BFA229FC20487B4000AEAEAF /* Info.plist */,
+				7A0F84F2206D886F00DD46EA /* LoginViewControllerTests.swift */,
 			);
 			path = learniosTests;
 			sourceTree = "<group>";
@@ -268,6 +283,7 @@
 				69A5675BBB3C73104EE1A6A7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
+				7AF45E1C206D7B5700458B7C /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -330,7 +346,7 @@
 				TargetAttributes = {
 					BFA229E120487B4000AEAEAF = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					BFA229F520487B4000AEAEAF = {
 						CreatedOnToolsVersion = 9.2;
@@ -339,7 +355,7 @@
 					};
 					BFA22A0020487B4000AEAEAF = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						TestTargetID = BFA229E120487B4000AEAEAF;
 					};
 				};
@@ -577,6 +593,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A0F84F3206D886F00DD46EA /* LoginViewControllerTests.swift in Sources */,
 				BFA229FB20487B4000AEAEAF /* learniosTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -736,8 +753,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 85C7V5K59R;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/learnios/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = T.learnios;
@@ -755,8 +772,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 85C7V5K59R;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/learnios/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = T.learnios;
@@ -806,11 +823,14 @@
 			baseConfigurationReference = FC051BC6479CBEB0B9AB5036 /* Pods-learniosUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = learniosUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = T.learniosUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = learnios;
@@ -822,11 +842,14 @@
 			baseConfigurationReference = B704E47F74C228604FBB25F5 /* Pods-learniosUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = learniosUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = T.learniosUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = learnios;

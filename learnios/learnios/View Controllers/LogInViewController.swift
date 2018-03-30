@@ -46,14 +46,13 @@ class LoginController: UIViewController, UIImagePickerControllerDelegate, UINavi
     // handle the switch between login and register and call helper method respectively
     @objc func handleLoginRegister() {
         if loginRegisterSegmentedControl.selectedSegmentIndex == 0 {
-            handleLogin()
+            _ = handleLogin(test: false)
         } else {
-            handleRegister()
+            _ = handleRegister(test: false)
         }
     }
     
-    func handleLogin() {
-        
+    func handleLogin(test : Bool) -> String {
         if self.emailTextField.text == "" || self.passwordTextField.text == "" {
             
             //Alert to tell the user that there was an error because they didn't fill anything in the textfields because they didn't fill anything in
@@ -64,21 +63,20 @@ class LoginController: UIViewController, UIImagePickerControllerDelegate, UINavi
             alertController.addAction(defaultAction)
             
             self.present(alertController, animated: true, completion: nil)
-            
+            return "fail"
         } else {
-            
+            var result = ""
             Auth.auth().signIn(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!) { (user, error) in
-                
                 if error == nil {
-                    
                     //Print into the console if successfully logged in
                     print("You have successfully logged in")
                     
                     //Go to the HomeViewController if the login is sucessful
                     let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Home") as! UITabBarController
                     self.present(vc, animated: true, completion: nil)
+                    result = "success"
                     
-                } else {
+                 } else {
                     
                     //Tells the user that there is an error and then gets firebase to tell them the error
                     let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
@@ -87,12 +85,15 @@ class LoginController: UIViewController, UIImagePickerControllerDelegate, UINavi
                     alertController.addAction(defaultAction)
                     
                     self.present(alertController, animated: true, completion: nil)
+                    result = "failure"
                 }
             }
+            return result
         }
     }
     
-    func handleRegister() {
+    func handleRegister(test : Bool) -> String {
+        var result = ""
         Auth.auth().createUser(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!) { (user, error) in
             if error == nil {
                 print("You have successfully signed up")
@@ -100,6 +101,7 @@ class LoginController: UIViewController, UIImagePickerControllerDelegate, UINavi
                 
                 let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Home") as! UITabBarController
                 self.present(vc, animated: true, completion: nil)
+                result = "success"
                 
             } else {
                 let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
@@ -108,8 +110,10 @@ class LoginController: UIViewController, UIImagePickerControllerDelegate, UINavi
                 alertController.addAction(defaultAction)
                 
                 self.present(alertController, animated: true, completion: nil)
+                result = "failure"
             }
         }
+        return result
     }
     
     // instantiate components in the input container : name textbox
