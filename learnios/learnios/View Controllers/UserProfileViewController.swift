@@ -11,8 +11,26 @@ import FirebaseAuth
 
 class UserProfileViewController: UIViewController {
     @IBOutlet weak var LogoutButton: UIButton!
+    @IBOutlet weak var ProfilePicture: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        let db = Firestore.firestore()
+        let storage = Storage.storage()
+        let email = Auth.auth().currentUser?.email
+        let docRef = db.collection("users").document(email!);
+        //let URL = docRef.value(forKeyPath: "avatar")
+        
+        let httpsReference = storage.reference(forURL: "gs://coopmart-1f06f.appspot.com/test1.jpeg")
+        httpsReference.getData(maxSize: 10000 * 10000 * 10000){ data, error in
+            if let error = error {
+                print(error.localizedDescription)
+                self.ProfilePicture.image? = UIImage(named: "addProfile.png")!
+            } else {
+                // Data for "images/island.jpg" is returned
+                let image = UIImage(data: data!)
+                self.ProfilePicture.image = image!
+            }
+        }
         LogoutButton.addTarget(self, action: #selector(LogoutButtonTapped), for: .touchUpInside)
     }
      @objc func LogoutButtonTapped(sender: UIButton) {

@@ -115,13 +115,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f17-z1-Fdz">
-                                <rect key="frame" x="145" y="318" width="84" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addProfile" translatesAutoresizingMaskIntoConstraints="NO" id="eOT-Bi-zGm">
+                                <rect key="frame" x="51" y="75" width="273" height="444"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f17-z1-Fdz">
+                                <rect key="frame" x="145" y="20" width="84" height="30"/>
                                 <state key="normal" title="Log Out"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="f17-z1-Fdz" firstAttribute="leading" secondItem="jqY-Zu-daQ" secondAttribute="leading" constant="145" id="1uf-rH-Tdu"/>
+                            <constraint firstItem="eOT-Bi-zGm" firstAttribute="centerY" secondItem="jqY-Zu-daQ" secondAttribute="centerY" id="Czo-HB-vt1"/>
+                            <constraint firstItem="eOT-Bi-zGm" firstAttribute="leading" secondItem="jqY-Zu-daQ" secondAttribute="leading" constant="51" id="Fj4-b6-dRe"/>
+                            <constraint firstItem="f17-z1-Fdz" firstAttribute="centerX" secondItem="eOT-Bi-zGm" secondAttribute="centerX" id="Otw-O6-oIK"/>
+                            <constraint firstItem="eOT-Bi-zGm" firstAttribute="centerX" secondItem="jqY-Zu-daQ" secondAttribute="centerX" id="fGz-11-eaT"/>
+                            <constraint firstItem="eOT-Bi-zGm" firstAttribute="top" secondItem="jqY-Zu-daQ" secondAttribute="top" constant="55" id="oeM-8o-vmP"/>
+                            <constraint firstItem="eOT-Bi-zGm" firstAttribute="top" secondItem="f17-z1-Fdz" secondAttribute="bottom" constant="25" id="xHq-pl-AUb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="jqY-Zu-daQ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Profile" id="gwm-af-mR6"/>
@@ -129,6 +141,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="LogoutButton" destination="f17-z1-Fdz" id="oKu-yr-2Yv"/>
+                        <outlet property="ProfilePicture" destination="eOT-Bi-zGm" id="gD5-B4-XXt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4FX-PH-8fN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -517,6 +530,9 @@
             <point key="canvasLocation" x="1446.376811594203" y="-688.04347826086962"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="addProfile" width="125" height="125"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="0XB-Pe-EE3"/>
     </inferredMetricsTieBreakers>
