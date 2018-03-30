@@ -15,6 +15,7 @@ class UserProfileViewController: UIViewController {
     @IBOutlet weak var MyName: UILabel!
     @IBOutlet weak var MyEmail: UILabel!
     @IBOutlet weak var MyLocation: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let db = Firestore.firestore()
@@ -22,7 +23,7 @@ class UserProfileViewController: UIViewController {
         let email = Auth.auth().currentUser?.email
         let docRef = db.collection("users").document(email!);
         //let URL = docRef.value(forKeyPath: "avatar")
-//        MyName.text = "null"
+        MyName.text = String(0)
 ////        MyEmail.text = String(describing: email)
 //        MyEmail.text = "null"
 //        MyLocation.text = "null"
