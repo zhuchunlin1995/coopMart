@@ -21,6 +21,7 @@ class UserProfileViewController: UIViewController {
         let db = Firestore.firestore()
         let storage = Storage.storage()
         let email = Auth.auth().currentUser?.email
+        
         let docRef = db.collection("users").document(email!);
         //let URL = docRef.value(forKeyPath: "avatar")
         MyName.text = "Linli"

@@ -30,6 +30,7 @@
 		BFA22A1420487EAB00AEAEAF /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA22A1320487EAB00AEAEAF /* ToDoItem.swift */; };
 		BFA22A1620489F3800AEAEAF /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA22A1520489F3800AEAEAF /* TableViewCell.swift */; };
 		BFB82DB2206E785C003E8B18 /* ModifyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB82DB1206E785C003E8B18 /* ModifyProfileViewController.swift */; };
+		BFC318F4207AAF3100CCC402 /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC318F3207AAF3100CCC402 /* ChecklistItem.swift */; };
 		D119B18324DF5AD80621B110 /* Pods_learniosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A03A1C73086343C1ED9E00 /* Pods_learniosTests.framework */; };
 		D75388582064402200768855 /* MyListingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75388572064402200768855 /* MyListingsViewController.swift */; };
 		D753885A2064459700768855 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D75388592064459700768855 /* GoogleService-Info.plist */; };
@@ -97,6 +98,7 @@
 		BFA22A1320487EAB00AEAEAF /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 		BFA22A1520489F3800AEAEAF /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		BFB82DB1206E785C003E8B18 /* ModifyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyProfileViewController.swift; sourceTree = "<group>"; };
+		BFC318F3207AAF3100CCC402 /* ChecklistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
 		D75388572064402200768855 /* MyListingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyListingsViewController.swift; sourceTree = "<group>"; };
 		D75388592064459700768855 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		F5575C76257F0B1B82A3D5E8 /* Pods_learniosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_learniosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +164,7 @@
 				B7F80A6E205943AB00AAF2E3 /* ListingViewController.swift */,
 				B7075C0A2061E8B1008C1BCF /* LogInViewController.swift */,
 				B7DD3E82206C3CD000568C86 /* UserProfileViewController.swift */,
+				BFC318F3207AAF3100CCC402 /* ChecklistItem.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -594,6 +597,7 @@
 				B7075C0B2061E8B1008C1BCF /* LogInViewController.swift in Sources */,
 				BFA22A1620489F3800AEAEAF /* TableViewCell.swift in Sources */,
 				B7F80A672058455C00AAF2E3 /* ListingModel.swift in Sources */,
+				BFC318F4207AAF3100CCC402 /* ChecklistItem.swift in Sources */,
 				BFA229E620487B4000AEAEAF /* AppDelegate.swift in Sources */,
 				B7F80A6F205943AB00AAF2E3 /* ListingViewController.swift in Sources */,
 				B7DD3E83206C3CD000568C86 /* UserProfileViewController.swift in Sources */,
