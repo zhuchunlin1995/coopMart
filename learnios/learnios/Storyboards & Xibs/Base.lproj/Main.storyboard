@@ -402,7 +402,13 @@
                             <outlet property="delegate" destination="W5c-Zf-wlf" id="XoW-me-oJH"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Shopping cart" id="YP7-sj-DEq"/>
+                    <navigationItem key="navigationItem" title="Shopping cart" id="YP7-sj-DEq">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="BZP-uw-C5l">
+                            <connections>
+                                <segue destination="GSb-sI-2Xe" kind="show" id="lCr-zs-mN3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SEZ-gS-xsT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -578,5 +584,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="0XB-Pe-EE3"/>
+        <segue reference="lCr-zs-mN3"/>
     </inferredMetricsTieBreakers>
 </document>
