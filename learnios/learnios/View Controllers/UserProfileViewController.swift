@@ -22,22 +22,28 @@ class UserProfileViewController: UIViewController {
         let storage = Storage.storage()
         let email = Auth.auth().currentUser?.email
         let docRef = db.collection("users").document(email!);
-        //let URL = docRef.value(forKeyPath: "avatar")
-        MyName.text = "Linli"
-        MyEmail.text = email
-        MyLocation.text = "Columbia University"
-        let httpsReference = storage.reference(forURL: "gs://coopmart-1f06f.appspot.com/test1.jpeg")
-        httpsReference.getData(maxSize: 10000 * 10000 * 10000){ data, error in
-            if let error = error {
-                print(error.localizedDescription)
-                self.ProfilePicture.image? = UIImage(named: "addProfile.png")!
-            } else {
-                // Data for "images/island.jpg" is returned
-                let image = UIImage(data: data!)
-                self.ProfilePicture.image = image!
+        
+        docRef.getDocument { (document, error) in
+            guard let document = document, document.exists else {return}
+            let data = document.data()
+            self.MyName.text = data!["name"] as? String
+            self.MyEmail.text = email
+            self.MyLocation.text = data!["school"] as? String
+            let URL = data!["avatar"] as! String
+            let httpsReference = storage.reference(forURL: URL)
+            httpsReference.getData(maxSize: 10000 * 10000 * 10000){ data, error in
+                if let error = error {
+                    print(error.localizedDescription)
+                    self.ProfilePicture.image? = UIImage(named: "addProfile.png")!
+                } else {
+                    // Data for "images/island.jpg" is returned
+                    let image = UIImage(data: data!)
+                    self.ProfilePicture.image = image!
+                }
             }
+            self.LogoutButton.addTarget(self, action: #selector(self.LogoutButtonTapped), for: .touchUpInside)
         }
-        LogoutButton.addTarget(self, action: #selector(LogoutButtonTapped), for: .touchUpInside)
+        
     }
     
 //    func fillItems (){
