@@ -13,7 +13,6 @@
 		B7075C092061E79E008C1BCF /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7075C082061E79E008C1BCF /* TabBarViewController.swift */; };
 		B7075C0B2061E8B1008C1BCF /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7075C0A2061E8B1008C1BCF /* LogInViewController.swift */; };
 		B7A2CF2D2062BF2D0053AB79 /* CardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A2CF2C2062BF2D0053AB79 /* CardViewCell.swift */; };
-		B7A2CF362062CBA80053AB79 /* MyListingDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A2CF352062CBA80053AB79 /* MyListingDataStore.swift */; };
 		B7D0DD0D2062DE82003761AC /* MyListingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D0DD0C2062DE82003761AC /* MyListingDetailViewController.swift */; };
 		B7DD3E83206C3CD000568C86 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DD3E82206C3CD000568C86 /* UserProfileViewController.swift */; };
 		B7F553E9207AFBAE00A96D75 /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F553E8207AFBAE00A96D75 /* ConfirmationViewController.swift */; };
@@ -79,7 +78,6 @@
 		B7075C082061E79E008C1BCF /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		B7075C0A2061E8B1008C1BCF /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		B7A2CF2C2062BF2D0053AB79 /* CardViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewCell.swift; sourceTree = "<group>"; };
-		B7A2CF352062CBA80053AB79 /* MyListingDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListingDataStore.swift; sourceTree = "<group>"; };
 		B7D0DD0C2062DE82003761AC /* MyListingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListingDetailViewController.swift; sourceTree = "<group>"; };
 		B7DD3E82206C3CD000568C86 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		B7F553E8207AFBAE00A96D75 /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
@@ -153,8 +151,8 @@
 		B7F80A57205834B200AAF2E3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BFC318F3207AAF3100CCC402 /* ChecklistItem.swift */,
 				B7F80A662058455C00AAF2E3 /* ListingModel.swift */,
-				B7A2CF352062CBA80053AB79 /* MyListingDataStore.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -170,7 +168,6 @@
 				B7F80A6E205943AB00AAF2E3 /* ListingViewController.swift */,
 				B7075C0A2061E8B1008C1BCF /* LogInViewController.swift */,
 				B7DD3E82206C3CD000568C86 /* UserProfileViewController.swift */,
-				BFC318F3207AAF3100CCC402 /* ChecklistItem.swift */,
 				B7F553E8207AFBAE00A96D75 /* ConfirmationViewController.swift */,
 				B7F553EA207AFCA100A96D75 /* CameraViewController.swift */,
 			);
@@ -615,7 +612,6 @@
 				B7D0DD0D2062DE82003761AC /* MyListingDetailViewController.swift in Sources */,
 				BFA22A1420487EAB00AEAEAF /* ToDoItem.swift in Sources */,
 				BFB82DB2206E785C003E8B18 /* ModifyProfileViewController.swift in Sources */,
-				B7A2CF362062CBA80053AB79 /* MyListingDataStore.swift in Sources */,
 				B7F80A6D2059414D00AAF2E3 /* ListingViewCell.swift in Sources */,
 				B7F553EB207AFCA100A96D75 /* CameraViewController.swift in Sources */,
 			);

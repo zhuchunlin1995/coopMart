@@ -13,10 +13,13 @@ protocol ConfirmationViewControllerDelegate : class {
 }
 
 class ConfirmationViewController: UIViewController {
+    @IBOutlet weak var Description: UITextView!
     @IBOutlet weak var changePhoto: UIButton!
     @IBOutlet weak var usePhoto: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var price: UITextField!
+    @IBOutlet weak var Name: UITextField!
     var username: String?
     var index: Int?
     var imagePicker: UIImagePickerController!
@@ -26,6 +29,9 @@ class ConfirmationViewController: UIViewController {
     
     override func viewDidLoad() {
         super .viewDidLoad()
+        Description.textColor = .lightGray
+        Description.text = "Description of Your Item"
+        self.Description.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -128,5 +134,20 @@ extension UIImage {
         UIGraphicsEndImageContext()
         
         return rotateUpRightImage
+    }
+}
+
+extension ConfirmationViewController: UITextViewDelegate {
+    func textViewDidBeginEditing (_ textView: UITextView) {
+        if Description.textColor == .lightGray && Description.isFirstResponder {
+            Description.text = nil
+            Description.textColor = .black
+        }
+    }
+    func textViewDidEndEditing (_ textView: UITextView) {
+        if Description.text.isEmpty || Description.text == "" {
+            Description.textColor = .lightGray
+            Description.text = "Type your thoughts here..."
+        }
     }
 }
