@@ -21,31 +21,31 @@ class UserProfileViewController: UIViewController {
         let db = Firestore.firestore()
         let storage = Storage.storage()
         let email = Auth.auth().currentUser?.email
-        
         let docRef = db.collection("users").document(email!);
-        
-        self.LogoutButton.addTarget(self, action: #selector(self.LogoutButtonTapped), for: .touchUpInside)
-        
-        docRef.getDocument { (document, error) in
-            guard let document = document, document.exists else {return}
-            let data = document.data()
-            self.MyName.text = data!["name"] as? String
-            self.MyEmail.text = email
-            self.MyLocation.text = data!["school"] as? String
-            let URL = data!["avatar"] as! String
-            let httpsReference = storage.reference(forURL: URL)
-            httpsReference.getData(maxSize: 10000 * 10000 * 10000){ data, error in
-                if let error = error {
-                    print(error.localizedDescription)
-                    self.ProfilePicture.image? = UIImage(named: "addProfile.png")!
-                } else {
-                    // Data for "images/island.jpg" is returned
-                    let image = UIImage(data: data!)
-                    self.ProfilePicture.image = image!
-                }
+        //let URL = docRef.value(forKeyPath: "avatar")
+<<<<<<< HEAD
+        MyName.text = "Linli"
+        MyEmail.text = email
+        MyLocation.text = "Columbia University"
+=======
+//        MyName.text = String(0)
+////        MyEmail.text = String(describing: email)
+//        MyEmail.text = "null"
+//        MyLocation.text = "null"
+>>>>>>> 4ace2a88076d33c21a803426429cf540c71f9ad7
+//        fillItems()
+        let httpsReference = storage.reference(forURL: "gs://coopmart-1f06f.appspot.com/test1.jpeg")
+        httpsReference.getData(maxSize: 10000 * 10000 * 10000){ data, error in
+            if let error = error {
+                print(error.localizedDescription)
+                self.ProfilePicture.image? = UIImage(named: "addProfile.png")!
+            } else {
+                // Data for "images/island.jpg" is returned
+                let image = UIImage(data: data!)
+                self.ProfilePicture.image = image!
             }
         }
-        
+        LogoutButton.addTarget(self, action: #selector(LogoutButtonTapped), for: .touchUpInside)
     }
     
 //    func fillItems (){

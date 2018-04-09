@@ -34,11 +34,11 @@ class learniosUITests: XCTestCase {
         let app = XCUIApplication()
         let emailAddressJd2920ColumbiaEduTextField = app.textFields["Email Address: jd2920@columbia.edu"]
         emailAddressJd2920ColumbiaEduTextField.tap()
-        emailAddressJd2920ColumbiaEduTextField.typeText("gq2135@columbia.edu")
+        emailAddressJd2920ColumbiaEduTextField.typeText("tc209@columbia.edu")
         
         let passwordSecureTextField = app.secureTextFields["Password"]
         passwordSecureTextField.tap()
-        passwordSecureTextField.typeText("1996Abc0912def!")
+        passwordSecureTextField.typeText("appple")
         app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .button)["Login"].tap()
         app.collectionViews.children(matching: .cell).element(boundBy: 2).children(matching: .other).element.children(matching: .other).element.tap()
         app.navigationBars["Listing"].buttons["Market Listings"].tap()
@@ -64,7 +64,7 @@ class learniosUITests: XCTestCase {
         let emailAddressJd2920ColumbiaEduTextField = app.textFields["Email Address: jd2920@columbia.edu"]
         emailAddressJd2920ColumbiaEduTextField.tap()
         emailAddressJd2920ColumbiaEduTextField.tap()
-        emailAddressJd2920ColumbiaEduTextField.typeText("tc2009@columbia.edu")
+        emailAddressJd2920ColumbiaEduTextField.typeText("tc210@columbia.edu")
         
         let passwordSecureTextField = app.secureTextFields["Password"]
         passwordSecureTextField.tap()
@@ -78,4 +78,13 @@ class learniosUITests: XCTestCase {
         app.buttons["Log Out"].tap()
         
     }
+    func testListing() {
+        
+        let app = XCUIApplication()
+        app.tabBars.buttons["My Listings"].tap()
+        app.navigationBars["My Listings"].buttons["New"].tap()
+        app.sheets.buttons["Use Existing"].tap()
+        
+    }
 }
+
