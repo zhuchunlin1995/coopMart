@@ -33,7 +33,7 @@ class LoginControllerTests: XCTestCase {
         XCTAssertNotNil(systemUnderTest.loginRegisterButton)
         XCTAssertNotNil(systemUnderTest.nameTextField)
     }
-    func testSUT_TestLogin(){
+    func testSUT_TestLogin_WhenInputIsEmpty(){
         systemUnderTest.emailTextField.text = ""
         systemUnderTest.passwordTextField.text = ""
         let expectedReturn = "fail"
