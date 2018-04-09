@@ -147,7 +147,7 @@ extension ConfirmationViewController: UITextViewDelegate {
     func textViewDidEndEditing (_ textView: UITextView) {
         if Description.text.isEmpty || Description.text == "" {
             Description.textColor = .lightGray
-            Description.text = "Type your thoughts here..."
+            Description.text = "Description of Your Item"
         }
     }
 }

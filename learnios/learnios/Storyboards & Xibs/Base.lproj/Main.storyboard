@@ -1,22 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KCb-3b-uCx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KCb-3b-uCx">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="AvenirNext.ttc">
-            <string>AvenirNext-DemiBold</string>
-            <string>AvenirNext-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Listing-->
         <scene sceneID="l62-GP-36w">
@@ -220,7 +214,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="$100" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="nXG-Wx-Dbr">
-                                <rect key="frame" x="119" y="528" width="295" height="22"/>
+                                <rect key="frame" x="119" y="528" width="285" height="22"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -241,7 +235,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Rnc-t0-bhF">
-                                <rect key="frame" x="119" y="558" width="295" height="102"/>
+                                <rect key="frame" x="119" y="558" width="285" height="102"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="102" id="IJF-w0-7vG"/>
                                 </constraints>
@@ -255,7 +249,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Name of Product" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nLU-Up-oOi">
-                                <rect key="frame" x="119" y="498" width="295" height="22"/>
+                                <rect key="frame" x="119" y="498" width="285" height="22"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -267,7 +261,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="365-Vo-xaD" userLabel="Description TextView">
-                                <rect key="frame" x="120.66666666666669" y="560.33333333333337" width="292" height="99"/>
+                                <rect key="frame" x="120.66666666666669" y="560.33333333333337" width="282" height="99"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -312,7 +306,7 @@
                             <constraint firstItem="qgV-27-dSQ" firstAttribute="leading" secondItem="8DQ-9k-2Tu" secondAttribute="leading" id="pOj-Od-jvJ"/>
                             <constraint firstItem="TG4-02-4i3" firstAttribute="leading" secondItem="5YI-pR-7fc" secondAttribute="leadingMargin" constant="-20" id="sI4-LU-UV7"/>
                             <constraint firstItem="365-Vo-xaD" firstAttribute="height" secondItem="Rnc-t0-bhF" secondAttribute="height" constant="-3" id="tZQ-fu-zsk"/>
-                            <constraint firstItem="AzU-rj-jtl" firstAttribute="trailing" secondItem="nXG-Wx-Dbr" secondAttribute="trailing" id="xr2-Yu-ffi"/>
+                            <constraint firstItem="AzU-rj-jtl" firstAttribute="trailing" secondItem="nXG-Wx-Dbr" secondAttribute="trailing" constant="10" id="xr2-Yu-ffi"/>
                             <constraint firstItem="nLU-Up-oOi" firstAttribute="leading" secondItem="nXG-Wx-Dbr" secondAttribute="leading" id="xxP-pu-nI2"/>
                             <constraint firstItem="2F8-Rm-L4I" firstAttribute="height" secondItem="5YI-pR-7fc" secondAttribute="width" id="zSI-WM-2TN"/>
                         </constraints>
@@ -659,7 +653,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gw4-Bh-VKm" id="y8h-XK-jJQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="370" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="370" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jeA-sk-W9v">
