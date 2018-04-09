@@ -7,6 +7,8 @@
 
 import UIKit
 import AnimatedCollectionViewLayout
+import Firebase
+import FirebaseAuth
 
 class MyListingsViewController: UIViewController {
     
@@ -70,19 +72,16 @@ extension MyListingsViewController: UICollectionViewDataSource {
     }
     
     @objc func newPostingButtonTapped(sender: UIButton) {
-//        let listing = tableData[sender.tag]
-//        MyListingDataStore.sharedInstance.currentListing = listing
-//        
-//        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-//        let useExistingAction = UIAlertAction(title: "Use Existing", style: UIAlertActionStyle.default, handler: goToLibrary)
-//        let takePhotoAction = UIAlertAction(title: "Take Photo", style: UIAlertActionStyle.default, handler: takePhoto)
-//        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel)
-//
-//        alertController.addAction(useExistingAction)
-//        alertController.addAction(takePhotoAction)
-//        alertController.addAction(cancelAction)
-//
-//        self.present(alertController, animated: true, completion: nil)
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let useExistingAction = UIAlertAction(title: "Use Existing", style: UIAlertActionStyle.default, handler: goToLibrary)
+        let takePhotoAction = UIAlertAction(title: "Take Photo", style: UIAlertActionStyle.default, handler: takePhoto)
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel)
+
+        alertController.addAction(useExistingAction)
+        alertController.addAction(takePhotoAction)
+        alertController.addAction(cancelAction)
+
+        self.present(alertController, animated: true, completion: nil)
     }
 }
 
@@ -101,70 +100,73 @@ extension MyListingsViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-//extension MyListingsViewController: UINavigationControllerDelegate {
-//    func goToLibrary(alert: UIAlertAction) {
-//        imagePicker.delegate = self
-//        imagePicker.sourceType = .photoLibrary
-//        present(imagePicker, animated: true, completion: nil)
-//    }
-//    
-//    func takePhoto(alert: UIAlertAction) {
-//        let cameraVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CameraVC") as! CameraViewController
-//        cameraVC.delegate = self
-//        cameraVC.modalPresentationStyle = .overFullScreen
-//        present(cameraVC, animated: true, completion: nil)
-//    }
-//}
-//
-//extension MyListingsViewController: UIImagePickerControllerDelegate {
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-//        let confirmationVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ConfirmationVC") as! ConfirmationViewController
-//        confirmationVC.delegate = self
-//        
-//        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
-//            confirmationVC.image = image
-//        }
-//        else if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-//            confirmationVC.image = image
-//        }
-//        else {
-//            confirmationVC.didNotGetImage(error: Error.self as! Error)
-//        }
-//
-//        imagePicker.dismiss(animated: false, completion: nil)
-//        present(confirmationVC, animated: false, completion: nil)
-//    }
-//}
-//
-//extension MyListingsViewController: CameraViewControllerDelegate {
-//    func cameraViewController(_ cameraViewController: CameraViewController, didTakePhoto image: UIImage, filterIndex: Int) {
-//        let confirmationVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ConfirmationVC") as! ConfirmationViewController
-//        confirmationVC.image = image
-//        confirmationVC.delegate = self
-//        confirmationVC.modalPresentationStyle = .fullScreen
-//        confirmationVC.filterIndex = filterIndex
-//        cameraViewController.dismiss(animated: false, completion: nil)
-//        present(confirmationVC, animated: false, completion: nil)
-//    }
-//}
-//
-//extension MyListingsViewController: ConfirmationViewControllerDelegate {
-//    func didSelectLibrary(confirmationViewController: ConfirmationViewController) {
-//        confirmationViewController.delegate = self
-//        imagePicker = UIImagePickerController()
-//        imagePicker.delegate = self
-//        imagePicker.sourceType = .photoLibrary
-//
-//        confirmationViewController.dismiss(animated: false, completion: nil)
-//        present(imagePicker, animated: false, completion: nil)
-//    }
-//    
-//    func didSelectTakePhoto(confirmationViewController: ConfirmationViewController) {
-//        let cameraVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CameraVC") as! CameraViewController
-//        cameraVC.delegate = self
-//
-//        confirmationViewController.dismiss(animated: false, completion: nil)
-//        present(cameraVC, animated: false, completion: nil)
-//    }
-//}
+extension MyListingsViewController: UINavigationControllerDelegate {
+    func goToLibrary(alert: UIAlertAction) {
+        imagePicker.delegate = self
+        imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func takePhoto(alert: UIAlertAction) {
+        let cameraVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CameraVC") as! CameraViewController
+        cameraVC.delegate = self
+        cameraVC.modalPresentationStyle = .overFullScreen
+        present(cameraVC, animated: true, completion: nil)
+    }
+}
+
+extension MyListingsViewController: UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let confirmationVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ConfirmationVC") as! ConfirmationViewController
+        confirmationVC.delegate = self
+        confirmationVC.username = Auth.auth().currentUser?.email
+        confirmationVC.index = 1
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+            confirmationVC.image = image
+        }
+        else if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            confirmationVC.image = image
+        }
+        else {
+            confirmationVC.didNotGetImage(error: Error.self as! Error)
+        }
+
+        imagePicker.dismiss(animated: false, completion: nil)
+        present(confirmationVC, animated: false, completion: nil)
+    }
+}
+
+extension MyListingsViewController: CameraViewControllerDelegate {
+    func cameraViewController(_ cameraViewController: CameraViewController, didTakePhoto image: UIImage) {
+        let confirmationVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ConfirmationVC") as! ConfirmationViewController
+        confirmationVC.image = image
+        confirmationVC.username = Auth.auth().currentUser?.email
+        //Need to figure out a hash
+        confirmationVC.index = 1
+        confirmationVC.delegate = self
+        confirmationVC.modalPresentationStyle = .fullScreen
+        cameraViewController.dismiss(animated: false, completion: nil)
+        present(confirmationVC, animated: false, completion: nil)
+    }
+}
+
+extension MyListingsViewController: ConfirmationViewControllerDelegate {
+    func didSelectLibrary(confirmationViewController: ConfirmationViewController) {
+        confirmationViewController.delegate = self
+        imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = .photoLibrary
+
+        confirmationViewController.dismiss(animated: false, completion: nil)
+        present(imagePicker, animated: false, completion: nil)
+    }
+    
+    func didSelectTakePhoto(confirmationViewController: ConfirmationViewController) {
+        let cameraVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CameraVC") as! CameraViewController
+        cameraVC.delegate = self
+
+        confirmationViewController.dismiss(animated: false, completion: nil)
+        present(cameraVC, animated: false, completion: nil)
+    }
+}
 

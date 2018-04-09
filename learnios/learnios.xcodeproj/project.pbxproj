@@ -16,6 +16,9 @@
 		B7A2CF362062CBA80053AB79 /* MyListingDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A2CF352062CBA80053AB79 /* MyListingDataStore.swift */; };
 		B7D0DD0D2062DE82003761AC /* MyListingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D0DD0C2062DE82003761AC /* MyListingDetailViewController.swift */; };
 		B7DD3E83206C3CD000568C86 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DD3E82206C3CD000568C86 /* UserProfileViewController.swift */; };
+		B7F553E9207AFBAE00A96D75 /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F553E8207AFBAE00A96D75 /* ConfirmationViewController.swift */; };
+		B7F553EB207AFCA100A96D75 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F553EA207AFCA100A96D75 /* CameraViewController.swift */; };
+		B7F553ED207B00AF00A96D75 /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F553EC207B00AF00A96D75 /* ImageUtils.swift */; };
 		B7F80A61205836D900AAF2E3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7F80A60205836D900AAF2E3 /* LaunchScreen.xib */; };
 		B7F80A6520583AED00AAF2E3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFA229F120487B4000AEAEAF /* Info.plist */; };
 		B7F80A672058455C00AAF2E3 /* ListingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F80A662058455C00AAF2E3 /* ListingModel.swift */; };
@@ -79,6 +82,9 @@
 		B7A2CF352062CBA80053AB79 /* MyListingDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListingDataStore.swift; sourceTree = "<group>"; };
 		B7D0DD0C2062DE82003761AC /* MyListingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListingDetailViewController.swift; sourceTree = "<group>"; };
 		B7DD3E82206C3CD000568C86 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		B7F553E8207AFBAE00A96D75 /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
+		B7F553EA207AFCA100A96D75 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		B7F553EC207B00AF00A96D75 /* ImageUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
 		B7F80A60205836D900AAF2E3 /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		B7F80A662058455C00AAF2E3 /* ListingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingModel.swift; sourceTree = "<group>"; };
 		B7F80A6C2059414D00AAF2E3 /* ListingViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingViewCell.swift; sourceTree = "<group>"; };
@@ -165,6 +171,8 @@
 				B7075C0A2061E8B1008C1BCF /* LogInViewController.swift */,
 				B7DD3E82206C3CD000568C86 /* UserProfileViewController.swift */,
 				BFC318F3207AAF3100CCC402 /* ChecklistItem.swift */,
+				B7F553E8207AFBAE00A96D75 /* ConfirmationViewController.swift */,
+				B7F553EA207AFCA100A96D75 /* CameraViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -183,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				BFA229F120487B4000AEAEAF /* Info.plist */,
+				B7F553EC207B00AF00A96D75 /* ImageUtils.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -590,8 +599,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7F553ED207B00AF00A96D75 /* ImageUtils.swift in Sources */,
 				B7075C092061E79E008C1BCF /* TabBarViewController.swift in Sources */,
 				D75388582064402200768855 /* MyListingsViewController.swift in Sources */,
+				B7F553E9207AFBAE00A96D75 /* ConfirmationViewController.swift in Sources */,
 				BFA229E820487B4000AEAEAF /* CartViewController.swift in Sources */,
 				B7A2CF2D2062BF2D0053AB79 /* CardViewCell.swift in Sources */,
 				B7075C0B2061E8B1008C1BCF /* LogInViewController.swift in Sources */,
@@ -606,6 +617,7 @@
 				BFB82DB2206E785C003E8B18 /* ModifyProfileViewController.swift in Sources */,
 				B7A2CF362062CBA80053AB79 /* MyListingDataStore.swift in Sources */,
 				B7F80A6D2059414D00AAF2E3 /* ListingViewCell.swift in Sources */,
+				B7F553EB207AFCA100A96D75 /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
