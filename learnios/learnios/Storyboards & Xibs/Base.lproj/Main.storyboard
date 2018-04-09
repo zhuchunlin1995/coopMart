@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KCb-3b-uCx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KCb-3b-uCx">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-DemiBold</string>
+            <string>AvenirNext-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Listing-->
         <scene sceneID="l62-GP-36w">
@@ -151,7 +157,7 @@
         <!--Upload-A-Selfie!-->
         <scene sceneID="kkz-ug-jjc">
             <objects>
-                <viewController storyboardIdentifier="ConfirmationVC" id="6Ai-3E-8sM" customClass="ConfirmationViewController" customModule="Entourage" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConfirmationVC" id="6Ai-3E-8sM" customClass="ConfirmationViewController" customModule="learnios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SBj-kc-eDN"/>
                         <viewControllerLayoutGuide type="bottom" id="nbJ-XM-JNf"/>
@@ -241,7 +247,7 @@
         <!--Camera View Controller-->
         <scene sceneID="uLD-mo-1Aa">
             <objects>
-                <viewController storyboardIdentifier="CameraVC" id="ezf-vj-phy" userLabel="Camera View Controller" customClass="CameraViewController" customModule="Entourage" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CameraVC" id="ezf-vj-phy" userLabel="Camera View Controller" customClass="CameraViewController" customModule="learnios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="s2K-uZ-2YY"/>
                         <viewControllerLayoutGuide type="bottom" id="9ki-vo-qB7"/>
@@ -347,7 +353,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WR3-D2-ZEb">
-                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                                <rect key="frame" x="0.0" y="108" width="414" height="579"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Saw-T0-3O9" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1046.3333333333333"/>
@@ -586,7 +592,7 @@
                     <navigationItem key="navigationItem" title="Shopping cart" id="YP7-sj-DEq">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="BZP-uw-C5l">
                             <connections>
-                                <segue destination="GSb-sI-2Xe" kind="show" id="lCr-zs-mN3"/>
+                                <segue destination="KCb-3b-uCx" kind="show" id="fnf-gU-Pak"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -608,7 +614,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iRs-Q7-6dI">
-                                <rect key="frame" x="20" y="122" width="374" height="551"/>
+                                <rect key="frame" x="20" y="166" width="374" height="507"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="5x0-sz-os6" customClass="AnimatedCollectionViewLayout" customModule="AnimatedCollectionViewLayout">
                                     <size key="itemSize" width="343" height="528"/>
@@ -767,6 +773,5 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="0XB-Pe-EE3"/>
-        <segue reference="lCr-zs-mN3"/>
     </inferredMetricsTieBreakers>
 </document>
