@@ -181,8 +181,11 @@ class LoginController: UIViewController, UIImagePickerControllerDelegate, UINavi
     // switch between login and register
     lazy var loginRegisterSegmentedControl: UISegmentedControl = {
         let sc = UISegmentedControl(items: ["Login", "Register"])
+        let titleTextAttributes = [kCTForegroundColorAttributeName: UIColor.black]
+        sc.setTitleTextAttributes(titleTextAttributes, for: .selected)
         sc.translatesAutoresizingMaskIntoConstraints = false
         sc.tintColor = UIColor.white
+        sc.backgroundColor = UIColor.red
         sc.selectedSegmentIndex = 0
         sc.addTarget(self, action: #selector(handleLoginRegisterChange), for: .valueChanged)
         return sc
@@ -289,10 +292,10 @@ class LoginController: UIViewController, UIImagePickerControllerDelegate, UINavi
     func setupLogoHeaderView() {
         // Need x, y, width and height constraints
         logoHeaderView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        let logoHeaderViewTopHeader = logoHeaderView.topAnchor.constraint(equalTo: view.topAnchor)
+        let logoHeaderViewTopHeader = logoHeaderView.topAnchor.constraint(equalTo: view.topAnchor, constant: 50)
         logoHeaderViewTopHeader.isActive = true
-        logoHeaderView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-        logoHeaderView.heightAnchor.constraint(equalToConstant: 250).isActive = true
+        logoHeaderView.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        logoHeaderView.heightAnchor.constraint(equalToConstant: 200).isActive = true
     }
     
     func setupInputsContainterView() {

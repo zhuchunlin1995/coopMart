@@ -25,6 +25,7 @@ class MyListingsViewController: UIViewController {
         newPostingButton.addTarget(self, action: #selector(newPostingButtonTapped), for: .touchUpInside)
         tableData = ListingModel.myListings()
         setUpAnimatedCollectionViewLayout()
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -56,6 +57,7 @@ extension MyListingsViewController: UICollectionViewDataSource {
         cell.layer.borderColor = UIColor.black.cgColor
         
         cell.profileImageView.image = UIImage(named: "profilePageLogo")
+        cell.profileImageView.backgroundColor = UIColor.black
         cell.priceLabel.text = "100"
         cell.nameLabel.text = "Sample Product"
                 cell.descriptionTextView.text = "Sample Description"

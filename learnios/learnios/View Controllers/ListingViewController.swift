@@ -16,9 +16,15 @@ class ListingViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let patternImage = UIImage(named: "Pattern") {
-            view.backgroundColor = UIColor(patternImage: patternImage)
-        }
+        let background = UIImage(named: "Pattern")
+        var imageView : UIImageView!
+        imageView = UIImageView(frame: view.bounds)
+        imageView.contentMode =  UIViewContentMode.scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.image = background
+        imageView.center = view.center
+        view.addSubview(imageView)
+        self.view.sendSubview(toBack: imageView)
         tableData = ListingModel.allListings()
         collectionView?.backgroundColor = .clear
         collectionView?.contentInset = UIEdgeInsets(top: 23, left: 16, bottom: 10, right: 16)

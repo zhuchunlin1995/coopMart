@@ -32,12 +32,12 @@ struct ListingModel {
     
     static func myListings() -> [ListingModel] {
         // Temporary Dummy Data
-        let listing = [ListingModel(caption: "item1", comment: "comment1", price: "$100", image: UIImage(named: "cameraButton")!), ListingModel(caption: "item2", comment: "comment2", price: "$200", image: UIImage(named: "cameraButton")!), ListingModel(caption: "item3", comment: "comment3", price: "$300", image: UIImage(named: "cameraButton")!)]
+        let listing = [ListingModel(caption: "item1", comment: "comment1", price: "$100", image: UIImage(named: "razewareLogo")!), ListingModel(caption: "item2", comment: "comment2", price: "$200", image: UIImage(named: "razewareLogo")!), ListingModel(caption: "item3", comment: "comment3", price: "$300", image: UIImage(named: "razewareLogo")!)]
         return listing
     }
     
     static func allListings() -> [ListingModel] {
-        let listing = [ListingModel(caption: "item1", comment: "comment1", price: "$100", image: UIImage(named: "cameraButton")!), ListingModel(caption: "item2", comment: "comment2", price: "$200", image: UIImage(named: "cameraButton")!), ListingModel(caption: "item3", comment: "comment3", price: "$300", image: UIImage(named: "cameraButton")!)]
+        let listing = [ListingModel(caption: "item1", comment: "comment1", price: "$100", image: UIImage(named: "razewareLogo")!), ListingModel(caption: "item2", comment: "comment2", price: "$200", image: UIImage(named: "razewareLogo")!), ListingModel(caption: "item3", comment: "comment3", price: "$300", image: UIImage(named: "razewareLogo")!)]
         return listing
     }
     
