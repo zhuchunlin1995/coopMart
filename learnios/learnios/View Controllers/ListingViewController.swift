@@ -36,9 +36,9 @@ class ListingViewController: UICollectionViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == segueIdentifer {
             guard let detailViewController = segue.destination as? MyListingDetailViewController else { return }
-            guard let cell = sender as? CardViewCell else { return }
+            guard let cell = sender as? ListingViewCell else { return }
             guard let indexPath = self.collectionView?.indexPath(for: cell) else { return }
-            let selectedProfile = tableData[indexPath.row]
+            let selectedProfile = tableData[indexPath.item]
             detailViewController.listing = selectedProfile
         }
     }

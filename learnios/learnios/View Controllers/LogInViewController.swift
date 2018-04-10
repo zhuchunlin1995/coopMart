@@ -184,8 +184,8 @@ class LoginController: UIViewController, UIImagePickerControllerDelegate, UINavi
         let titleTextAttributes = [kCTForegroundColorAttributeName: UIColor.black]
         sc.setTitleTextAttributes(titleTextAttributes, for: .selected)
         sc.translatesAutoresizingMaskIntoConstraints = false
-        sc.tintColor = UIColor.white
-        sc.backgroundColor = UIColor.red
+        sc.tintColor = UIColor.red
+        sc.backgroundColor = UIColor.white
         sc.selectedSegmentIndex = 0
         sc.addTarget(self, action: #selector(handleLoginRegisterChange), for: .valueChanged)
         return sc

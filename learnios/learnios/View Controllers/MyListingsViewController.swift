@@ -15,13 +15,21 @@ class MyListingsViewController: UIViewController {
     @IBOutlet weak var newPostingButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     var imagePicker = UIImagePickerController()
-    var searchController: UISearchController!
     let cellReuseIdentifer = "profileCell"
     let segueIdentifer = "profileSegue"
     var tableData: [ListingModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let background = UIImage(named: "Pattern")
+        var imageView : UIImageView!
+        imageView = UIImageView(frame: view.bounds)
+        imageView.contentMode =  UIViewContentMode.scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.image = background
+        imageView.center = view.center
+        view.addSubview(imageView)
+        self.view.sendSubview(toBack: imageView)
         newPostingButton.addTarget(self, action: #selector(newPostingButtonTapped), for: .touchUpInside)
         tableData = ListingModel.myListings()
         setUpAnimatedCollectionViewLayout()
@@ -33,7 +41,7 @@ class MyListingsViewController: UIViewController {
             guard let detailViewController = segue.destination as? MyListingDetailViewController else { return }
             guard let cell = sender as? CardViewCell else { return }
             guard let indexPath = self.collectionView.indexPath(for: cell) else { return }
-            let selectedProfile = tableData[indexPath.row]
+            let selectedProfile = tableData[indexPath.item]
             detailViewController.listing = selectedProfile
         }
     }
@@ -153,6 +161,10 @@ extension MyListingsViewController: CameraViewControllerDelegate {
 }
 
 extension MyListingsViewController: ConfirmationViewControllerDelegate {
+    func didSelectPostItem(confirmationViewController: ConfirmationViewController) {
+        self.viewDidLoad()
+    }
+    
     func didSelectLibrary(confirmationViewController: ConfirmationViewController) {
         confirmationViewController.delegate = self
         imagePicker = UIImagePickerController()

@@ -13,6 +13,7 @@ class ListingViewCell: UICollectionViewCell {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var captionLabel: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,6 +26,8 @@ class ListingViewCell: UICollectionViewCell {
                 imageView.image = listing.image
                 captionLabel.text = listing.caption
                 commentLabel.text = listing.comment
+                priceLabel.text =
+                    listing.price
             }
         }
     }

@@ -10,6 +10,7 @@ import UIKit
 protocol ConfirmationViewControllerDelegate : class {
     func didSelectLibrary(confirmationViewController: ConfirmationViewController)
     func didSelectTakePhoto(confirmationViewController: ConfirmationViewController)
+    func didSelectPostItem(confirmationViewController: ConfirmationViewController)
 }
 
 class ConfirmationViewController: UIViewController {
@@ -53,12 +54,14 @@ class ConfirmationViewController: UIViewController {
                 self.dismiss(animated: false, completion: {
                     self.imageView.image = nil
                     self.usePhoto.isEnabled = false
+                    self.delegate?.didSelectTakePhoto(confirmationViewController: self)
                 })
             })
         } else {
             dismiss(animated: false, completion: {
                 self.imageView.image = nil
                 self.usePhoto.isEnabled = false
+                self.delegate?.didSelectTakePhoto(confirmationViewController: self)
             })
         }
     }

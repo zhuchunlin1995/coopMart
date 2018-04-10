@@ -9,14 +9,11 @@ import Foundation
 import UIKit
 
 class ImageUtils {
-    static func imageFor(associate: UInt64) -> UIImage? {
-        return UIImage(named: "\(associate).png")
-    }
-    
+    // Need to add items to firebase here, then reloading in mylistingView will work
     static func saveCached(image: UIImage, username: String, index: Int) -> Bool {
         let fileManager = FileManager.default
         if let data = UIImagePNGRepresentation(image) {
-            let filename = getDocumentsDirectory().appending("/Selfie_\(String(username))_\(String(index)).png")
+            let filename = getDocumentsDirectory().appending("/Listing_\(String(username))_\(String(index)).png")
             fileManager.createFile(atPath: filename as String, contents: data, attributes: nil)
             print(filename)
             return true

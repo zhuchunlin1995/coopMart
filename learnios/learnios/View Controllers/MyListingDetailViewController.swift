@@ -18,7 +18,6 @@ class MyListingDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         displayInfo()
     }
     
