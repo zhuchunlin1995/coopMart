@@ -96,6 +96,12 @@ class LoginController: UIViewController, UIImagePickerControllerDelegate, UINavi
         var result = ""
         Auth.auth().createUser(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!) { (user, error) in
             if error == nil {
+                let db = Firestore.firestore();
+                db.collection("users").document(self.emailTextField.text!).setData([
+                    "name":self.nameTextField.text!,
+                    "avatar": "https://firebasestorage.googleapis.com/v0/b/coopmart-1f06f.appspot.com/o/test1.jpeg?alt=media&token=6a301007-1f1c-4360-bf2c-dca1591a642f",
+                    "school": "middle of no where"])
+                
                 print("You have successfully signed up")
                 //Goes to the Setup page which lets the user take a photo for their profile picture and also chose a username
                 
