@@ -56,11 +56,11 @@ extension MyListingsViewController: UICollectionViewDataSource {
         cell.layer.borderWidth = 2
         cell.layer.borderColor = UIColor.black.cgColor
         
-        cell.profileImageView.image = UIImage(named: "profilePageLogo")
+        cell.profileImageView.image = tableData[indexPath.item].image
         cell.profileImageView.backgroundColor = UIColor.black
-        cell.priceLabel.text = "100"
-        cell.nameLabel.text = "Sample Product"
-                cell.descriptionTextView.text = "Sample Description"
+        cell.priceLabel.text = tableData[indexPath.item].price
+        cell.nameLabel.text = tableData[indexPath.item].caption
+        cell.descriptionTextView.text = tableData[indexPath.item].comment
         
         cell.button.tag = indexPath.row
         cell.button.addTarget(self, action: #selector(deleteButtonTapped), for: .touchUpInside)

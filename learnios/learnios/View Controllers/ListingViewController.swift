@@ -16,6 +16,9 @@ class ListingViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let layout = collectionView?.collectionViewLayout as? PinterestLayout {
+            layout.delegate = self
+        }
         let background = UIImage(named: "Pattern")
         var imageView : UIImageView!
         imageView = UIImageView(frame: view.bounds)
@@ -64,5 +67,13 @@ extension ListingViewController: UICollectionViewDelegateFlowLayout {
         return CGSize(width: itemSize, height: itemSize)
     }
     
+}
+
+extension ListingViewController: PinterestLayoutDelegate {
+    func collectionView(_ collectionView: UICollectionView,
+                        heightForPhotoAtIndexPath indexPath:IndexPath) -> CGFloat {
+        
+        return tableData[indexPath.item].image.size.height
+    }
 }
 

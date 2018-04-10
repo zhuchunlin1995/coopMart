@@ -13,6 +13,7 @@
 		B7075C092061E79E008C1BCF /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7075C082061E79E008C1BCF /* TabBarViewController.swift */; };
 		B7075C0B2061E8B1008C1BCF /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7075C0A2061E8B1008C1BCF /* LogInViewController.swift */; };
 		B7A2CF2D2062BF2D0053AB79 /* CardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A2CF2C2062BF2D0053AB79 /* CardViewCell.swift */; };
+		B7CB440B207C4CAB00B9469F /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CB440A207C4CAB00B9469F /* PinterestLayout.swift */; };
 		B7D0DD0D2062DE82003761AC /* MyListingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D0DD0C2062DE82003761AC /* MyListingDetailViewController.swift */; };
 		B7DD3E83206C3CD000568C86 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DD3E82206C3CD000568C86 /* UserProfileViewController.swift */; };
 		B7F553E9207AFBAE00A96D75 /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F553E8207AFBAE00A96D75 /* ConfirmationViewController.swift */; };
@@ -78,6 +79,7 @@
 		B7075C082061E79E008C1BCF /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		B7075C0A2061E8B1008C1BCF /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		B7A2CF2C2062BF2D0053AB79 /* CardViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewCell.swift; sourceTree = "<group>"; };
+		B7CB440A207C4CAB00B9469F /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
 		B7D0DD0C2062DE82003761AC /* MyListingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListingDetailViewController.swift; sourceTree = "<group>"; };
 		B7DD3E82206C3CD000568C86 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		B7F553E8207AFBAE00A96D75 /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +150,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B7CB4409207C4ADE00B9469F /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				B7CB440A207C4CAB00B9469F /* PinterestLayout.swift */,
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
 		B7F80A57205834B200AAF2E3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +197,7 @@
 		B7F80A5B2058350A00AAF2E3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B7CB4409207C4ADE00B9469F /* Layouts */,
 				BFA229F120487B4000AEAEAF /* Info.plist */,
 				B7F553EC207B00AF00A96D75 /* ImageUtils.swift */,
 			);
@@ -358,6 +369,7 @@
 				TargetAttributes = {
 					BFA229E120487B4000AEAEAF = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Manual;
 					};
 					BFA229F520487B4000AEAEAF = {
@@ -613,6 +625,7 @@
 				BFA22A1420487EAB00AEAEAF /* ToDoItem.swift in Sources */,
 				BFB82DB2206E785C003E8B18 /* ModifyProfileViewController.swift in Sources */,
 				B7F80A6D2059414D00AAF2E3 /* ListingViewCell.swift in Sources */,
+				B7CB440B207C4CAB00B9469F /* PinterestLayout.swift in Sources */,
 				B7F553EB207AFCA100A96D75 /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -779,6 +792,7 @@
 			baseConfigurationReference = 5AFE6232DC15BA0095F1FC36 /* Pods-learnios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
@@ -788,6 +802,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = T.learnios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -798,6 +813,7 @@
 			baseConfigurationReference = 38575D3574EAF176445630FE /* Pods-learnios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
