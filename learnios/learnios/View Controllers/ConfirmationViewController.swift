@@ -74,6 +74,7 @@ class ConfirmationViewController: UIViewController {
         }
         let uncroppedImage = photo.rotateUpRightOrientedImage()
         self.imageView.image = uncroppedImage
+        //ImageUtils.cropToBounds(image: uncroppedImage, width: Double(view.frame.size.width), height: Double(view.frame.size.width))
     }
     
     func imageFailedtoPresent() {
