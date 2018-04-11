@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseStorage
 
 class LoginController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     // restrict to only portrait version on iphone devices
@@ -96,10 +97,28 @@ class LoginController: UIViewController, UIImagePickerControllerDelegate, UINavi
         var result = ""
         Auth.auth().createUser(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!) { (user, error) in
             if error == nil {
+                
+                //upload profile picture
+                let storageRef = Storage.storage().reference()
+                let uploadData = UIImagePNGRepresentation(self.profileImageView.image!)
+                let imagePath = "profileImage/\(self.emailTextField.text!)/userPic.jpg"
+                let metadata = StorageMetadata()
+                metadata.contentType = "image/jpeg"
+                let imageRef = storageRef.child(imagePath)
+                imageRef.putData(uploadData!, metadata: metadata, completion: {
+                    (metadata, error) in
+                    if error != nil {
+                        print("error")
+                        return
+                    }
+                    })
+            
+                
+                // upload baisc user infor to database
                 let db = Firestore.firestore();
                 db.collection("users").document(self.emailTextField.text!).setData([
                     "name":self.nameTextField.text!,
-                    "avatar": "https://firebasestorage.googleapis.com/v0/b/coopmart-1f06f.appspot.com/o/test1.jpeg?alt=media&token=6a301007-1f1c-4360-bf2c-dca1591a642f",
+                    "avatar":"gs://coopmart-1f06f.appspot.com/\(imageRef.fullPath)",
                     "school": "middle of no where"])
                 
                 print("You have successfully signed up")
