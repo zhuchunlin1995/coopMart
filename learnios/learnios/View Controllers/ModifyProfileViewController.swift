@@ -79,10 +79,8 @@ class ModifyProfileViewController: UIViewController {
     //        return view
     //    }()
     
-//    @objc func LogoutButtonTapped(sender: UIButton) {
-//        try! Auth.auth().signOut()
-//        let loginController = LoginController()
-//        self.present(loginController, animated:true, completion: nil)
-//    }
+    @objc func updateButtonTapped(sender: UIButton) {
+        
+    }
 }
 
