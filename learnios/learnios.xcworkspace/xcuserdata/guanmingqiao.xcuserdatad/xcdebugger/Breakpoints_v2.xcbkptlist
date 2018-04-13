@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "learnios/View Controllers/MyListingsViewController.swift"
-            timestampString = "545021074.496819"
+            timestampString = "545287206.858595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>

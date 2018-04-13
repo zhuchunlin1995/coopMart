@@ -12,8 +12,8 @@ class ListingViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var captionLabel: UILabel!
-    @IBOutlet weak var commentLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var descriptionView: UITextView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,7 +25,7 @@ class ListingViewCell: UICollectionViewCell {
             if let listing = listing {
                 imageView.image = listing.image
                 captionLabel.text = listing.caption
-                commentLabel.text = listing.comment
+                descriptionView.text = listing.comment
                 priceLabel.text =
                     listing.price
             }

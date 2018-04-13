@@ -26,6 +26,7 @@ class ListingViewController: UICollectionViewController {
         imageView.clipsToBounds = true
         imageView.image = background
         imageView.center = view.center
+        imageView.clipsToBounds = true
         view.addSubview(imageView)
         self.view.sendSubview(toBack: imageView)
         tableData = ListingModel.allListings()
