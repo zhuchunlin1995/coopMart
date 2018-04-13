@@ -20,11 +20,20 @@ class UserProfileViewController: UIViewController {
         super.viewDidLoad()
         let background = UIImage(named: "Pattern")
         var imageView : UIImageView!
+        ProfilePicture.layer.cornerRadius = 90
+        ProfilePicture.layer.masksToBounds = true
+        ProfilePicture.layer.borderWidth = 2
+        ProfilePicture.layer.borderColor = UIColor.white.cgColor
         imageView = UIImageView(frame: view.bounds)
         imageView.contentMode =  UIViewContentMode.scaleAspectFill
         imageView.clipsToBounds = true
         imageView.image = background
         imageView.center = view.center
+        imageView.layer.cornerRadius = 100
+        imageView.layer.masksToBounds = true
+        imageView.layer.borderWidth = 2
+        imageView.layer.borderColor = UIColor.white.cgColor
+        imageView.clipsToBounds = true
         view.addSubview(imageView)
         self.view.sendSubview(toBack: imageView)
         let db = Firestore.firestore()

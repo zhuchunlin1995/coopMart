@@ -34,7 +34,7 @@ class learniosUITests: XCTestCase {
         let app = XCUIApplication()
         let emailAddressJd2920ColumbiaEduTextField = app.textFields["Email Address: jd2920@columbia.edu"]
         emailAddressJd2920ColumbiaEduTextField.tap()
-        emailAddressJd2920ColumbiaEduTextField.typeText("tc209@columbia.edu")
+        emailAddressJd2920ColumbiaEduTextField.typeText("tc000@columbia.edu")
         
         let passwordSecureTextField = app.secureTextFields["Password"]
         passwordSecureTextField.tap()
@@ -64,7 +64,7 @@ class learniosUITests: XCTestCase {
         let emailAddressJd2920ColumbiaEduTextField = app.textFields["Email Address: jd2920@columbia.edu"]
         emailAddressJd2920ColumbiaEduTextField.tap()
         emailAddressJd2920ColumbiaEduTextField.tap()
-        emailAddressJd2920ColumbiaEduTextField.typeText("tc210@columbia.edu")
+        emailAddressJd2920ColumbiaEduTextField.typeText("tc000@columbia.edu")
         
         let passwordSecureTextField = app.secureTextFields["Password"]
         passwordSecureTextField.tap()
@@ -78,13 +78,43 @@ class learniosUITests: XCTestCase {
         app.buttons["Log Out"].tap()
         
     }
-    func testListing() {
-        
+    func testMarketListing() {
+    
         let app = XCUIApplication()
+        let emailAddressJd2920ColumbiaEduTextField = app.textFields["Email Address: jd2920@columbia.edu"]
+        emailAddressJd2920ColumbiaEduTextField.tap()
+        emailAddressJd2920ColumbiaEduTextField.typeText("tc000@columbia.edu")
+        
+        let passwordSecureTextField = app.secureTextFields["Password"]
+        passwordSecureTextField.tap()
+        passwordSecureTextField.tap()
+        passwordSecureTextField.typeText("appple")
+        app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .button)["Login"].tap()
+        app.tabBars.buttons["Market Listings"].tap()
+        app.navigationBars["Market Listings"].buttons["CartButton"].tap()
+        
+        let tablesQuery = app.tables
+        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Brush my teeth"]/*[[".cells.staticTexts[\"Brush my teeth\"]",".staticTexts[\"Brush my teeth\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Walk the dog"]/*[[".cells.staticTexts[\"Walk the dog\"]",".staticTexts[\"Walk the dog\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.navigationBars["Shopping cart"].buttons["Cancel"].tap()
+    }
+    func testMyListing() {
+        let app = XCUIApplication()
+        let emailAddressJd2920ColumbiaEduTextField = app.textFields["Email Address: jd2920@columbia.edu"]
+        emailAddressJd2920ColumbiaEduTextField.tap()
+        emailAddressJd2920ColumbiaEduTextField.typeText("tc000@columbia.edu")
+        
+        let passwordSecureTextField = app.secureTextFields["Password"]
+        passwordSecureTextField.tap()
+        passwordSecureTextField.tap()
+        passwordSecureTextField.typeText("appple")
+        app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .button)["Login"].tap()
         app.tabBars.buttons["My Listings"].tap()
+        app.collectionViews.cells.otherElements.containing(.image, identifier:"01").element.tap()
+        app.navigationBars["My Listing"].buttons["My Listings"].tap()
         app.navigationBars["My Listings"].buttons["New"].tap()
         app.sheets.buttons["Use Existing"].tap()
-        
     }
 }
+
 

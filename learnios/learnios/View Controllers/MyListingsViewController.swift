@@ -28,6 +28,7 @@ class MyListingsViewController: UIViewController {
         imageView.clipsToBounds = true
         imageView.image = background
         imageView.center = view.center
+        imageView.clipsToBounds = true
         view.addSubview(imageView)
         self.view.sendSubview(toBack: imageView)
         newPostingButton.addTarget(self, action: #selector(newPostingButtonTapped), for: .touchUpInside)

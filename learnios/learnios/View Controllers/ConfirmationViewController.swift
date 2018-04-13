@@ -98,8 +98,10 @@ class ConfirmationViewController: UIViewController {
     }
     
     func didNotSaveImage(handler: ((UIAlertAction) -> Void)?){
-        let alertController = UIAlertController(title: "Something Went Wrong", message: "There was an issue with saving your photo. Please try again.", preferredStyle: .alert)
-        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: handler)
+        let alertController = UIAlertController(title: "Something Went Wrong",
+                                                message: "There was an issue with saving your photo. Please try again.", preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title:
+            "OK", style: .default, handler: handler)
         alertController.addAction(defaultAction)
         
         present(alertController, animated: true, completion: nil)
