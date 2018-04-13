@@ -7,15 +7,16 @@
 
 import Foundation
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class ImageUtils {
     // Need to add items to firebase here, then reloading in mylistingView will work
-    static func saveCached(image: UIImage, username: String, index: Int) -> Bool {
+    static func saveCached(image: UIImage, name: String?, price: String?, description: String?) -> Bool {
+        let email = Auth.auth().currentUser?.email
         let fileManager = FileManager.default
         if let data = UIImagePNGRepresentation(image) {
-            let filename = getDocumentsDirectory().appending("/Listing_\(String(username))_\(String(index)).png")
-            fileManager.createFile(atPath: filename as String, contents: data, attributes: nil)
-            print(filename)
+            // Save Image and name and price and description
             return true
         }
         return false

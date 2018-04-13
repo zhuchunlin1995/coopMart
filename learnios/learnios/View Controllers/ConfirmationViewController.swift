@@ -21,8 +21,6 @@ class ConfirmationViewController: UIViewController {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var price: UITextField!
     @IBOutlet weak var Name: UITextField!
-    var username: String?
-    var index: Int?
     var imagePicker: UIImagePickerController!
     var profilesData: [Int]!
     var image: UIImage?
@@ -49,7 +47,7 @@ class ConfirmationViewController: UIViewController {
     }
     
     @IBAction func usePhotoButtonTapped(_ sender: UIButton) {
-        if (!ImageUtils.saveCached(image: self.image!, username: self.username!, index: self.index!) || !ImageUtils.saveToPhotosAlbum(image: image)) {
+        if (!ImageUtils.saveCached(image: self.image!, name: self.Name.text?, price: self.price.text?, description: self.Description.text?) || !ImageUtils.saveToPhotosAlbum(image: image)) {
             didNotSaveImage(handler: { (_) in
                 self.dismiss(animated: false, completion: {
                     self.imageView.image = nil
@@ -77,6 +75,7 @@ class ConfirmationViewController: UIViewController {
         }
         let uncroppedImage = photo.rotateUpRightOrientedImage()
         self.imageView.image = uncroppedImage
+        
         //ImageUtils.cropToBounds(image: uncroppedImage, width: Double(view.frame.size.width), height: Double(view.frame.size.width))
     }
     

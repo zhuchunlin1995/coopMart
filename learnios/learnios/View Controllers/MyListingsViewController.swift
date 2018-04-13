@@ -150,9 +150,6 @@ extension MyListingsViewController: CameraViewControllerDelegate {
     func cameraViewController(_ cameraViewController: CameraViewController, didTakePhoto image: UIImage) {
         let confirmationVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ConfirmationVC") as! ConfirmationViewController
         confirmationVC.image = image
-        confirmationVC.username = Auth.auth().currentUser?.email
-        //Need to figure out a hash
-        confirmationVC.index = 1
         confirmationVC.delegate = self
         confirmationVC.modalPresentationStyle = .fullScreen
         cameraViewController.dismiss(animated: false, completion: nil)
