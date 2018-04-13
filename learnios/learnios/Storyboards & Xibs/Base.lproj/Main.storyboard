@@ -87,7 +87,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="JNv-jd-YkI" kind="show" id="Rb7-mg-HTP"/>
+                                    <segue destination="KCb-3b-uCx" kind="presentation" id="e3a-02-Gt5"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="addProfile" translatesAutoresizingMaskIntoConstraints="NO" id="B2F-0L-wH8">
@@ -860,7 +860,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="profileCell" id="9ow-yp-VtB" customClass="CardViewCell" customModule="learnios" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="11.666666666666666" width="343" height="528"/>
+                                        <rect key="frame" x="0.0" y="-35" width="343" height="528"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="528"/>
@@ -1008,8 +1008,7 @@
         <image name="yellow_button" width="350" height="144"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ntw-Dq-BF9"/>
         <segue reference="LAn-fn-TYl"/>
-        <segue reference="Rb7-mg-HTP"/>
+        <segue reference="e3a-02-Gt5"/>
     </inferredMetricsTieBreakers>
 </document>
