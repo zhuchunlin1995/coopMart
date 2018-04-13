@@ -12,14 +12,36 @@ import FirebaseAuth
 
 class ImageUtils {
     // Need to add items to firebase here, then reloading in mylistingView will work
-    static func saveCached(image: UIImage, name: String?, price: String?, description: String?) -> Bool {
+    static func saveCached(image: UIImage, name: String!, price: String!, description: String!) -> Bool {
+        //upload item pictures
         let email = Auth.auth().currentUser?.email
-        let fileManager = FileManager.default
-        if let data = UIImagePNGRepresentation(image) {
-            // Save Image and name and price and description
-            return true
-        }
-        return false
+        let storageRef = Storage.storage().reference()
+        let uploadData = UIImagePNGRepresentation(image)
+        let imagePath = "itemsImages/\(String(email!))/\(String(name)).jpg"
+        let metadata = StorageMetadata()
+        metadata.contentType = "image/jpeg"
+        let imageRef = storageRef.child(imagePath)
+        imageRef.putData(uploadData!, metadata: metadata, completion: {
+            (metadata, error) in
+            if error != nil {
+                print("error")
+                return
+            }
+        })
+        
+        let db = Firestore.firestore();
+        let id = "itemsImages\(String(email!))\(String(name)).jpg"
+        db.collection("items").document(id).setData([
+            "URL":"gs://coopmart-1f06f.appspot.com/\(imageRef.fullPath)",
+            "name":name,
+            "price":price,
+            "description":description
+            ])
+        
+     
+        
+        
+        return true
     }
     
     static func saveToPhotosAlbum(image: UIImage?) -> Bool {
