@@ -6,9 +6,9 @@
 //
 
 import XCTest
-
-class ListViewControllertest: AUAudioUnitBus {
-    
+@testable import learnios
+class ListViewControllertest: XCTestCase {
+    var systemUnderTest: ListingViewController!
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
