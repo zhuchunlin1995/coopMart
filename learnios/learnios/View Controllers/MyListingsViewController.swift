@@ -129,8 +129,6 @@ extension MyListingsViewController: UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let confirmationVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ConfirmationVC") as! ConfirmationViewController
         confirmationVC.delegate = self
-        confirmationVC.username = Auth.auth().currentUser?.email
-        confirmationVC.index = 1
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             confirmationVC.image = image
         }

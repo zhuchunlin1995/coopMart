@@ -47,7 +47,7 @@ class ConfirmationViewController: UIViewController {
     }
     
     @IBAction func usePhotoButtonTapped(_ sender: UIButton) {
-        if (!ImageUtils.saveCached(image: self.image!, name: self.Name.text?, price: self.price.text?, description: self.Description.text?) || !ImageUtils.saveToPhotosAlbum(image: image)) {
+        if (!ImageUtils.saveCached(image: self.image!, name: self.Name.text, price: self.price.text, description: self.Description.text) || !ImageUtils.saveToPhotosAlbum(image: image)) {
             didNotSaveImage(handler: { (_) in
                 self.dismiss(animated: false, completion: {
                     self.imageView.image = nil
