@@ -12,9 +12,9 @@ import FirebaseAuth
 class ModifyProfileViewController: UIViewController {
 //    @IBOutlet weak var LogoutButton: UIButton!
     @IBOutlet weak var mProfilePicture: UIImageView!
-    @IBOutlet weak var mMyName: UILabel!
-    @IBOutlet weak var mMyEmail: UILabel!
-    @IBOutlet weak var mMyLocation: UILabel!
+    @IBOutlet weak var mMyName: UITextField!
+    @IBOutlet weak var mMyEmail: UITextField!
+    @IBOutlet weak var mMyLocation: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
