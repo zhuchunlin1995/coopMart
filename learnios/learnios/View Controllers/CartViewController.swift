@@ -45,7 +45,26 @@ class CartViewController: UITableViewController {
     }
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        let background = UIImage(named: "Pattern")
+        var imageView : UIImageView!
+//        mProfilePicture.layer.cornerRadius = 90
+//        mProfilePicture.layer.masksToBounds = true
+//        mProfilePicture.layer.borderWidth = 2
+//        mProfilePicture.layer.borderColor = UIColor.white.cgColor
+        imageView = UIImageView(frame: view.bounds)
+        imageView.contentMode =  UIViewContentMode.scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.image = background
+        imageView.center = view.center
+        imageView.layer.cornerRadius = 100
+        imageView.layer.masksToBounds = true
+        imageView.layer.borderWidth = 2
+        imageView.layer.borderColor = UIColor.white.cgColor
+        imageView.clipsToBounds = true
+        view.addSubview(imageView)
+        self.view.sendSubview(toBack: imageView)
         // Do any additional setup after loading the view, typically from a nib.
         navigationController?.navigationBar.prefersLargeTitles = true
     }

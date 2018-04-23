@@ -87,6 +87,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="updateButtonTapped:" destination="TNC-4C-dsa" eventType="touchUpInside" id="rcr-dg-7c9"/>
                                     <segue destination="KCb-3b-uCx" kind="presentation" id="e3a-02-Gt5"/>
                                 </connections>
                             </button>
@@ -142,6 +143,14 @@
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Sg-DC-Qh5">
+                                <rect key="frame" x="305" y="20" width="57" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Go back"/>
+                                <connections>
+                                    <segue destination="KCb-3b-uCx" kind="show" id="iHx-Su-abY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="5qn-X4-cDl"/>
@@ -585,12 +594,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Saw-T0-3O9" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1046.3333333333333"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yme-RE-XkI">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="410"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="410" id="qbi-7n-vrd"/>
-                                                </constraints>
-                                            </imageView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jXl-ys-KY3">
                                                 <rect key="frame" x="0.0" y="412.00000000000006" width="414" height="634.33333333333348"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -628,6 +631,12 @@
                                                     <constraint firstItem="JID-xp-34F" firstAttribute="trailing" secondItem="aOk-UH-H83" secondAttribute="trailing" id="qBn-h6-KMB"/>
                                                 </constraints>
                                             </view>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yme-RE-XkI">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="410"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="410" id="qbi-7n-vrd"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -831,6 +840,7 @@
                                 <segue destination="KCb-3b-uCx" kind="presentation" modalTransitionStyle="partialCurl" id="aal-Vg-WPS"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="checkout" id="3ac-PX-kPe"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SEZ-gS-xsT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -860,7 +870,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="profileCell" id="9ow-yp-VtB" customClass="CardViewCell" customModule="learnios" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-35" width="343" height="528"/>
+                                        <rect key="frame" x="0.0" y="11.666666666666666" width="343" height="528"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="528"/>
@@ -1008,7 +1018,7 @@
         <image name="yellow_button" width="350" height="144"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LAn-fn-TYl"/>
-        <segue reference="e3a-02-Gt5"/>
+        <segue reference="0XB-Pe-EE3"/>
+        <segue reference="iHx-Su-abY"/>
     </inferredMetricsTieBreakers>
 </document>

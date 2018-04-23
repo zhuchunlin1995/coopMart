@@ -15,6 +15,7 @@ class ModifyProfileViewController: UIViewController {
     @IBOutlet weak var mMyName: UITextField!
     @IBOutlet weak var mMyEmail: UITextField!
     @IBOutlet weak var mMyLocation: UITextField!
+    var mURL = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +52,7 @@ class ModifyProfileViewController: UIViewController {
             self.mMyEmail.text = email
             self.mMyLocation.text = data!["school"] as? String
             let URL = data!["avatar"] as! String
+            self.mURL = URL
             let httpsReference = storage.reference(forURL: URL)
             httpsReference.getData(maxSize: 10000 * 10000 * 10000){ data, error in
                 if let error = error {
@@ -78,9 +80,26 @@ class ModifyProfileViewController: UIViewController {
     //        view.layer.masksToBounds = true
     //        return view
     //    }()
-    
-    @objc func updateButtonTapped(sender: UIButton) {
+    @IBAction func updateButtonTapped(_ sender: UIButton) {
+        let db = Firestore.firestore()
+        let storage = Storage.storage()
+        let email = Auth.auth().currentUser?.email
+//        let data = document.data()
         
+        let docRef = db.collection("users").document(email!);
+        
+        guard let modifyName = mMyName.text, !modifyName.isEmpty else {return}
+        guard let modifyLocation = mMyLocation.text, !modifyLocation.isEmpty else {return}
+//        guard let modifyAvatar = data!["avatar"] as! String
+        let dataToSave: [String: Any] = ["avatar": mURL,"name": modifyName, "school": modifyLocation]
+        docRef.setData(dataToSave) { (error) in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+            } else {
+                print("New profile has been saved!")
+            }
+        }
     }
+    
 }
 
