@@ -14,6 +14,15 @@ class ListingViewController: UICollectionViewController {
         return .lightContent
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        NotificationCenter.default.addObserver(self, selector: #selector(loadList), name: NSNotification.Name(rawValue: "load"), object: nil)
+    }
+    
+    @objc func loadList(){
+        //load data here
+        self.viewDidLoad()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if let layout = collectionView?.collectionViewLayout as? PinterestLayout {

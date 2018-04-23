@@ -34,7 +34,6 @@ class MyListingsViewController: UIViewController {
         newPostingButton.addTarget(self, action: #selector(newPostingButtonTapped), for: .touchUpInside)
         tableData = ListingModel.myListings()
         setUpAnimatedCollectionViewLayout()
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -73,14 +72,6 @@ extension MyListingsViewController: UICollectionViewDataSource {
         
         cell.button.tag = indexPath.row
         cell.button.addTarget(self, action: #selector(deleteButtonTapped), for: .touchUpInside)
-        
-//        let db = Firestore.firestore();
-//    db.collection("items").document(tableData[indexPath.item].caption).setData([
-//        "price":tableData[indexPath.item].price,
-//        "description":tableData[indexPath.item].comment,
-//        "image": tableData[indexPath.item].image,
-//        ])
-        
         
         return cell
     }
@@ -169,6 +160,7 @@ extension MyListingsViewController: CameraViewControllerDelegate {
 extension MyListingsViewController: ConfirmationViewControllerDelegate {
     func didSelectPostItem(confirmationViewController: ConfirmationViewController) {
         self.viewDidLoad()
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
     }
     
     func didSelectLibrary(confirmationViewController: ConfirmationViewController) {
