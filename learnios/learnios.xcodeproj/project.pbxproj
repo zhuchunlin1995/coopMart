@@ -144,13 +144,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7AE2D1A02080EB6E004AEB66 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		8FE26B1BBDEAAD6DD9DAFAD2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -275,7 +268,6 @@
 			isa = PBXGroup;
 			children = (
 				7AE2D1A12080EBCE004AEB66 /* ListViewControllertest.swift */,
-				7AE2D1A02080EB6E004AEB66 /* New Group */,
 				BFA229FA20487B4000AEAEAF /* learniosTests.swift */,
 				BFA229FC20487B4000AEAEAF /* Info.plist */,
 				7A0F84F2206D886F00DD46EA /* LoginViewControllerTests.swift */,
