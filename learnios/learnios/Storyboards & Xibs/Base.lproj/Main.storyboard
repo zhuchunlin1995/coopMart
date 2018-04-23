@@ -160,11 +160,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSA-3f-1Bl">
+                                <rect key="frame" x="20" y="48" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="change photo"/>
+                                <connections>
+                                    <action selector="changePhotoButtonTapped:" destination="TNC-4C-dsa" eventType="touchUpInside" id="IVw-og-Quj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="5qn-X4-cDl"/>
                     </view>
                     <connections>
+                        <outlet property="changePhotoButtonTapped" destination="BSA-3f-1Bl" id="hCJ-1r-0ph"/>
                         <outlet property="mMyEmail" destination="2I1-ai-so5" id="8cA-x1-abA"/>
                         <outlet property="mMyLocation" destination="rjE-U1-3Fd" id="hPO-39-pLt"/>
                         <outlet property="mMyName" destination="Cvo-hK-saD" id="BUM-fF-7Wd"/>
@@ -1047,6 +1056,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="0XB-Pe-EE3"/>
-        <segue reference="aal-Vg-WPS"/>
+        <segue reference="iHx-Su-abY"/>
     </inferredMetricsTieBreakers>
 </document>

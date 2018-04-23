@@ -78,6 +78,11 @@ class ModifyProfileViewController: UIViewController {
     //        view.layer.masksToBounds = true
     //        return view
     //    }()
+    
+    @IBAction func changePhotoButtonTapped(_ sender: UIButton) {
+    }
+    
+    
     @IBAction func updateButtonTapped(_ sender: UIButton) {
         let db = Firestore.firestore()
         let storage = Storage.storage()
