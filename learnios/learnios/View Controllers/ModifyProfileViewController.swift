@@ -15,7 +15,6 @@ class ModifyProfileViewController: UIViewController {
     @IBOutlet weak var mMyName: UITextField!
     @IBOutlet weak var mMyEmail: UITextField!
     @IBOutlet weak var mMyLocation: UITextField!
-    var mURL = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +51,6 @@ class ModifyProfileViewController: UIViewController {
             self.mMyEmail.text = email
             self.mMyLocation.text = data!["school"] as? String
             let URL = data!["avatar"] as! String
-            self.mURL = URL
             let httpsReference = storage.reference(forURL: URL)
             httpsReference.getData(maxSize: 10000 * 10000 * 10000){ data, error in
                 if let error = error {
@@ -85,20 +83,28 @@ class ModifyProfileViewController: UIViewController {
         let storage = Storage.storage()
         let email = Auth.auth().currentUser?.email
 //        let data = document.data()
-        
+
         let docRef = db.collection("users").document(email!);
-        
+
         guard let modifyName = mMyName.text, !modifyName.isEmpty else {return}
         guard let modifyLocation = mMyLocation.text, !modifyLocation.isEmpty else {return}
 //        guard let modifyAvatar = data!["avatar"] as! String
-        let dataToSave: [String: Any] = ["avatar": mURL,"name": modifyName, "school": modifyLocation]
-        docRef.setData(dataToSave) { (error) in
+        let dataToSave: [String: Any] = ["name": modifyName, "school": modifyLocation]
+        docRef.updateData(dataToSave) { (error) in
             if let error = error {
                 print("Error: \(error.localizedDescription)")
             } else {
                 print("New profile has been saved!")
             }
         }
+        
+        
+        let alertController = UIAlertController(title: nil, message: "Your new profile saved!", preferredStyle: .actionSheet)
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel)
+
+        alertController.addAction(okAction)
+        
+        self.present(alertController, animated: true, completion: nil)
     }
     
 }

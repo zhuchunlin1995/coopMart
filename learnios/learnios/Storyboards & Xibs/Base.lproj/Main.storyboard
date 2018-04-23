@@ -88,7 +88,6 @@
                                 </state>
                                 <connections>
                                     <action selector="updateButtonTapped:" destination="TNC-4C-dsa" eventType="touchUpInside" id="rcr-dg-7c9"/>
-                                    <segue destination="KCb-3b-uCx" kind="presentation" id="e3a-02-Gt5"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="addProfile" translatesAutoresizingMaskIntoConstraints="NO" id="B2F-0L-wH8">
@@ -829,7 +828,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jeA-sk-W9v">
-                                            <rect key="frame" x="13" y="11" width="390" height="21"/>
+                                            <rect key="frame" x="20" y="11" width="390" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -850,12 +849,31 @@
                                 <segue destination="KCb-3b-uCx" kind="presentation" modalTransitionStyle="partialCurl" id="aal-Vg-WPS"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="checkout" id="3ac-PX-kPe"/>
+                        <barButtonItem key="rightBarButtonItem" title="checkout" id="3ac-PX-kPe">
+                            <connections>
+                                <segue destination="eng-JX-MJq" kind="show" id="SMZ-Qa-FrW"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SEZ-gS-xsT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2301.449275362319" y="-711.68478260869574"/>
+        </scene>
+        <!--Check Out View Controller-->
+        <scene sceneID="Fbc-bu-WaP">
+            <objects>
+                <viewController id="eng-JX-MJq" customClass="CheckOutViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2U9-na-Qk8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="mqP-x7-k6e"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JYE-l6-0IQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3069" y="-705"/>
         </scene>
         <!--MyListings-->
         <scene sceneID="bnd-EX-YIe">
@@ -1029,6 +1047,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="0XB-Pe-EE3"/>
-        <segue reference="iHx-Su-abY"/>
+        <segue reference="aal-Vg-WPS"/>
     </inferredMetricsTieBreakers>
 </document>

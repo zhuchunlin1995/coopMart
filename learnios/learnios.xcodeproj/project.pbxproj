@@ -25,6 +25,7 @@
 		B7F80A672058455C00AAF2E3 /* ListingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F80A662058455C00AAF2E3 /* ListingModel.swift */; };
 		B7F80A6D2059414D00AAF2E3 /* ListingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F80A6C2059414D00AAF2E3 /* ListingViewCell.swift */; };
 		B7F80A6F205943AB00AAF2E3 /* ListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F80A6E205943AB00AAF2E3 /* ListingViewController.swift */; };
+		BF87A931208E205F00E62361 /* CheckOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF87A930208E205F00E62361 /* CheckOutViewController.swift */; };
 		BFA229E620487B4000AEAEAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA229E520487B4000AEAEAF /* AppDelegate.swift */; };
 		BFA229E820487B4000AEAEAF /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA229E720487B4000AEAEAF /* CartViewController.swift */; };
 		BFA229EB20487B4000AEAEAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFA229E920487B4000AEAEAF /* Main.storyboard */; };
@@ -91,6 +92,7 @@
 		B7F80A662058455C00AAF2E3 /* ListingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingModel.swift; sourceTree = "<group>"; };
 		B7F80A6C2059414D00AAF2E3 /* ListingViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingViewCell.swift; sourceTree = "<group>"; };
 		B7F80A6E205943AB00AAF2E3 /* ListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingViewController.swift; sourceTree = "<group>"; };
+		BF87A930208E205F00E62361 /* CheckOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutViewController.swift; sourceTree = "<group>"; };
 		BFA229E220487B4000AEAEAF /* learnios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = learnios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFA229E520487B4000AEAEAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFA229E720487B4000AEAEAF /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				D75388572064402200768855 /* MyListingsViewController.swift */,
+				BF87A930208E205F00E62361 /* CheckOutViewController.swift */,
 				B7D0DD0C2062DE82003761AC /* MyListingDetailViewController.swift */,
 				B7075C082061E79E008C1BCF /* TabBarViewController.swift */,
 				BFB82DB1206E785C003E8B18 /* ModifyProfileViewController.swift */,
@@ -635,6 +638,7 @@
 				B7D0DD0D2062DE82003761AC /* MyListingDetailViewController.swift in Sources */,
 				BFA22A1420487EAB00AEAEAF /* ToDoItem.swift in Sources */,
 				BFB82DB2206E785C003E8B18 /* ModifyProfileViewController.swift in Sources */,
+				BF87A931208E205F00E62361 /* CheckOutViewController.swift in Sources */,
 				B7F80A6D2059414D00AAF2E3 /* ListingViewCell.swift in Sources */,
 				B7CB440B207C4CAB00B9469F /* PinterestLayout.swift in Sources */,
 				B7F553EB207AFCA100A96D75 /* CameraViewController.swift in Sources */,
