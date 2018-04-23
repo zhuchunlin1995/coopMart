@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-class ModifyProfileViewController: UIViewController {
+class ModifyProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 //    @IBOutlet weak var LogoutButton: UIButton!
     @IBOutlet weak var mProfilePicture: UIImageView!
     @IBOutlet weak var mMyName: UITextField!
@@ -39,10 +39,10 @@ class ModifyProfileViewController: UIViewController {
         let db = Firestore.firestore()
         let storage = Storage.storage()
         let email = Auth.auth().currentUser?.email
+        mProfilePicture.addGestureRecognizer(UITapGestureRecognizer(target: self, action:#selector(handleSelectProfileImage)))
+        mProfilePicture.isUserInteractionEnabled = true
         
         let docRef = db.collection("users").document(email!);
-        
-//        self.LogoutButton.addTarget(self, action: #selector(self.LogoutButtonTapped), for: .touchUpInside)
         
         docRef.getDocument { (document, error) in
             guard let document = document, document.exists else {return}
@@ -64,6 +64,38 @@ class ModifyProfileViewController: UIViewController {
             }
         }
         
+    }
+    
+    @objc func handleSelectProfileImage(){
+        let picker = UIImagePickerController()
+        
+        picker.delegate = self
+        picker.allowsEditing = true
+        
+        present(picker, animated: true, completion: nil)
+    }
+    
+    // initiate the image picker
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        var selectedImageFromPicker: UIImage?
+        
+        if let editedImage = info["UIImagePickerControllerEditedImage"] as? UIImage {
+            selectedImageFromPicker = editedImage
+            
+        } else if let originalImage = info["UIImagePickerControllerOriginalImage"] as? UIImage {
+            selectedImageFromPicker = originalImage
+        }
+        
+        if let selectedImage = selectedImageFromPicker {
+            mProfilePicture.image = selectedImage
+        }
+        
+        dismiss(animated: true, completion: nil)
+    }
+    // handle cancelling from image picker and return to previous view
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
     }
     
     

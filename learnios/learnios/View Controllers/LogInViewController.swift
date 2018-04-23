@@ -29,6 +29,7 @@ class LoginController: UIViewController, UIImagePickerControllerDelegate, UINavi
         view.layer.masksToBounds = true
         return view
     }()
+    
     // instantiate a button for login or register
     let loginRegisterButton: UIButton = {
         let button = UIButton(type: .system)
