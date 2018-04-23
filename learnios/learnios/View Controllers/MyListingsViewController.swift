@@ -74,6 +74,14 @@ extension MyListingsViewController: UICollectionViewDataSource {
         cell.button.tag = indexPath.row
         cell.button.addTarget(self, action: #selector(deleteButtonTapped), for: .touchUpInside)
         
+//        let db = Firestore.firestore();
+//    db.collection("items").document(tableData[indexPath.item].caption).setData([
+//        "price":tableData[indexPath.item].price,
+//        "description":tableData[indexPath.item].comment,
+//        "image": tableData[indexPath.item].image,
+//        ])
+        
+        
         return cell
     }
     
@@ -87,6 +95,8 @@ extension MyListingsViewController: UICollectionViewDataSource {
         let useExistingAction = UIAlertAction(title: "Use Existing", style: UIAlertActionStyle.default, handler: goToLibrary)
         let takePhotoAction = UIAlertAction(title: "Take Photo", style: UIAlertActionStyle.default, handler: takePhoto)
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel)
+        
+
 
         alertController.addAction(useExistingAction)
         alertController.addAction(takePhotoAction)

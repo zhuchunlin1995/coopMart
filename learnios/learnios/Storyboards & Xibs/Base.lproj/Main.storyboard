@@ -374,16 +374,6 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4QS-kc-aTD">
-                                <rect key="frame" x="313" y="680" width="81" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Post Item">
-                                    <color key="titleColor" red="0.096906372001259206" green="0.82780774111675126" blue="0.12586963475552318" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <connections>
-                                    <action selector="usePhotoButtonTapped:" destination="6Ai-3E-8sM" eventType="touchUpInside" id="bD2-f4-pLQ"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="$100" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="nXG-Wx-Dbr">
                                 <rect key="frame" x="119" y="528" width="285" height="19"/>
                                 <nil key="textColor"/>
@@ -437,6 +427,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4QS-kc-aTD">
+                                <rect key="frame" x="313" y="680" width="81" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Post Item">
+                                    <color key="titleColor" red="0.096906372001259206" green="0.82780774111675126" blue="0.12586963475552318" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="usePhotoButtonTapped:" destination="6Ai-3E-8sM" eventType="touchUpInside" id="bD2-f4-pLQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -691,7 +691,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LJT-uY-eLU"/>
                     </view>
-                    <navigationItem key="navigationItem" id="7Jc-fb-n2L"/>
+                    <navigationItem key="navigationItem" id="7Jc-fb-n2L">
+                        <barButtonItem key="rightBarButtonItem" title="add to cart" id="sxM-7S-fOQ">
+                            <connections>
+                                <action selector="AddCartButtonTapped:" destination="GXG-BW-QHZ" id="ylZ-ud-AvM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="descriptionTextView" destination="jXl-ys-KY3" id="y4F-IP-U0D"/>
                         <outlet property="locationLabel" destination="JID-xp-34F" id="QMq-i1-12L"/>
