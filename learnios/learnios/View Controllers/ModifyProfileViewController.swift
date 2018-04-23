@@ -66,22 +66,6 @@ class ModifyProfileViewController: UIViewController {
         
     }
     
-    //    func fillItems (){
-    //        MyName.text = "Linli"
-    //    }
-    //    // instantiate a inputs container view
-    //    let inputsContainerView: UIView = {
-    //        let view = UIView()
-    //        view.backgroundColor = UIColor.white
-    //        view.translatesAutoresizingMaskIntoConstraints = false
-    //        view.layer.cornerRadius = 5
-    //        view.layer.masksToBounds = true
-    //        return view
-    //    }()
-    
-    @IBAction func changePhotoButtonTapped(_ sender: UIButton) {
-    }
-    
     
     @IBAction func updateButtonTapped(_ sender: UIButton) {
         let db = Firestore.firestore()
