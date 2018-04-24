@@ -58,9 +58,6 @@ class ListingViewController: UICollectionViewController {
                     print(URL)
                     let httpsReference = storage.reference(forURL: URL)
                     
-                        
-               
-                    
                     httpsReference.getData(maxSize: 10000 * 10000 * 10000){ imageData, error in
                         if let error = error {
                             print(error.localizedDescription)
@@ -73,7 +70,6 @@ class ListingViewController: UICollectionViewController {
                             self.collectionView?.reloadData()
                         }
                     }
-                   
                 }
             }
         }
