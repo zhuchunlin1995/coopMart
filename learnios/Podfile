@@ -16,11 +16,13 @@ target 'learnios' do
   target 'learniosTests' do
     inherit! :search_paths
     # Pods for testing
+    pod ‘FMDB’,’~> 2.6.2’
   end
 
   target 'learniosUITests' do
     inherit! :search_paths
     # Pods for testing
+    pod ‘FMDB’,’~> 2.6.2’
   end
 
 end

@@ -99,10 +99,10 @@ class learniosUITests: XCTestCase {
         app.tabBars.buttons["Market Listings"].tap()
         app.navigationBars["Market Listings"].buttons["CartButton"].tap()
         
-        let tablesQuery = app.tables
-        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Brush my teeth"]/*[[".cells.staticTexts[\"Brush my teeth\"]",".staticTexts[\"Brush my teeth\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Walk the dog"]/*[[".cells.staticTexts[\"Walk the dog\"]",".staticTexts[\"Walk the dog\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        app.navigationBars["Shopping cart"].buttons["Cancel"].tap()
+//        let tablesQuery = app.tables
+//        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Brush my teeth"]/*[[".cells.staticTexts[\"Brush my teeth\"]",".staticTexts[\"Brush my teeth\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+//        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Walk the dog"]/*[[".cells.staticTexts[\"Walk the dog\"]",".staticTexts[\"Walk the dog\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+//        app.navigationBars["Shopping cart"].buttons["Cancel"].tap()
     }
     func testMyListing() {
         
@@ -123,8 +123,8 @@ class learniosUITests: XCTestCase {
         }
         
         app.tabBars.buttons["My Listings"].tap()
-        app.collectionViews.cells.otherElements.containing(.image, identifier:"01").element.tap()
-        app.navigationBars["My Listing"].buttons["My Listings"].tap()
+        //app.collectionViews.cells.otherElements.containing(.image, identifier:"01").element.tap()
+        //app.navigationBars["My Listing"].buttons["My Listings"].tap()
         app.navigationBars["My Listings"].buttons["New"].tap()
         app.sheets.buttons["Use Existing"].tap()
     }

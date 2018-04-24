@@ -1159,11 +1159,9 @@
         <image name="yellow_button" width="350" height="144"/>
     </resources>
     <inferredMetricsTieBreakers>
-<<<<<<< HEAD
+
         <segue reference="fop-V8-s4W"/>
-=======
         <segue reference="35R-YM-jn3"/>
         <segue reference="aal-Vg-WPS"/>
->>>>>>> 0a316ad1445041258be9d06b080a4b63dde13f7e
     </inferredMetricsTieBreakers>
 </document>
