@@ -955,6 +955,7 @@
                                             <outlet property="nameLabel" destination="IN9-7t-mDl" id="MBc-yY-1qv"/>
                                             <outlet property="priceLabel" destination="dRV-Bx-Apc" id="yYq-U3-36b"/>
                                             <outlet property="profileImageView" destination="feE-Dl-Lxj" id="I7N-e7-cNM"/>
+                                            <segue destination="GXG-BW-QHZ" kind="show" identifier="profileSegue" id="35R-YM-jn3"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -1158,6 +1159,7 @@
         <image name="yellow_button" width="350" height="144"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="35R-YM-jn3"/>
         <segue reference="aal-Vg-WPS"/>
     </inferredMetricsTieBreakers>
 </document>

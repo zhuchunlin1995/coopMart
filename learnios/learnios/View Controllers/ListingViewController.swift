@@ -67,7 +67,9 @@ class ListingViewController: UICollectionViewController {
                             let item = ListingModel(caption: data["name"] as! String, email: data["email"] as! String, comment: data["description"] as! String, price: (data["price"] as? String)!, image: image!)
                             listings.append(item)
                             self.tableData = listings
-                            self.collectionView?.reloadData()
+                            if (self.tableData.count == querySnapshot!.documents.count){
+                                self.collectionView?.reloadData()
+                            }
                         }
                     }
                 }
