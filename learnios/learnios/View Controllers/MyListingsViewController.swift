@@ -25,7 +25,6 @@ class MyListingsViewController: UIViewController {
         self.hideKeyboardWhenTappedAround()
         let background = UIImage(named: "Pattern")
         var imageView : UIImageView!
-        // Load Data Here
         imageView = UIImageView(frame: view.bounds)
         imageView.contentMode =  UIViewContentMode.scaleAspectFill
         imageView.clipsToBounds = true
@@ -35,25 +34,11 @@ class MyListingsViewController: UIViewController {
         view.addSubview(imageView)
         self.view.sendSubview(toBack: imageView)
         newPostingButton.addTarget(self, action: #selector(newPostingButtonTapped), for: .touchUpInside)
-        reloadData()
-        setUpAnimatedCollectionViewLayout()
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == segueIdentifer {
-            guard let detailViewController = segue.destination as? MyListingDetailViewController else { return }
-            guard let cell = sender as? CardViewCell else { return }
-            guard let indexPath = self.collectionView.indexPath(for: cell) else { return }
-            let selectedProfile = tableData[indexPath.item]
-            detailViewController.listing = selectedProfile
-        }
-    }
-    func reloadData(){
         let email = Auth.auth().currentUser?.email
         let db = Firestore.firestore()
         let collectRef = db.collection("users").document(email!).collection("items");
         let storage = Storage.storage()
-        
+        setUpAnimatedCollectionViewLayout()
         // retrieve all items in the item collections
         collectRef.getDocuments(){ (querySnapshot, err) in
             if let err = err {
@@ -72,7 +57,7 @@ class MyListingsViewController: UIViewController {
                         } else {
                             // Data for "images/island.jpg" is returned
                             let image = UIImage(data: imageData!)
-                            let item = ListingModel(caption: data["name"] as! String, email: data["email"] as! String, comment: data["description"] as! String, price: (data["price"] as? String)!, image: image!)
+                            let item = ListingModel(caption: data["name"] as! String, email: data["email"] as! String, comment: data["description"] as! String, price: (data["price"] as? String)!, image: image!, url: (data["URL"] as? String)!)
                             listings.append(item)
                             self.tableData = listings
                             self.collectionView?.reloadData()
@@ -80,6 +65,16 @@ class MyListingsViewController: UIViewController {
                     }
                 }
             }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == segueIdentifer {
+            guard let detailViewController = segue.destination as? MyListingDetailViewController else { return }
+            guard let cell = sender as? CardViewCell else { return }
+            guard let indexPath = self.collectionView.indexPath(for: cell) else { return }
+            let selectedProfile = tableData[indexPath.item]
+            detailViewController.listing = selectedProfile
         }
     }
 }
@@ -101,11 +96,8 @@ extension MyListingsViewController: UICollectionViewDataSource {
         cell.layer.borderWidth = 2
         cell.layer.borderColor = UIColor.black.cgColor
         
-        cell.profileImageView.image = tableData[indexPath.item].image
+        cell.listing = tableData[indexPath.item]
         cell.profileImageView.backgroundColor = UIColor.black
-        cell.priceLabel.text = tableData[indexPath.item].price
-        cell.nameLabel.text = tableData[indexPath.item].caption
-        cell.descriptionTextView.text = tableData[indexPath.item].comment
         return cell
     }
     
@@ -114,9 +106,7 @@ extension MyListingsViewController: UICollectionViewDataSource {
         let useExistingAction = UIAlertAction(title: "Use Existing", style: UIAlertActionStyle.default, handler: goToLibrary)
         let takePhotoAction = UIAlertAction(title: "Take Photo", style: UIAlertActionStyle.default, handler: takePhoto)
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel)
-        
-
-
+    
         alertController.addAction(useExistingAction)
         alertController.addAction(takePhotoAction)
         alertController.addAction(cancelAction)
@@ -187,7 +177,7 @@ extension MyListingsViewController: CameraViewControllerDelegate {
 
 extension MyListingsViewController: ConfirmationViewControllerDelegate {
     func didSelectPostItem(confirmationViewController: ConfirmationViewController) {
-        reloadData()
+        self.viewDidLoad()
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
     }
     

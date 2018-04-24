@@ -2,7 +2,7 @@
 //  LoginViewControllerTests.swift
 //  learniosTests
 //
-//  Created by zyy on 3/29/18.
+//  Created by Jin Yan on 3/29/18.
 //
 import UIKit
 import Firebase
@@ -40,41 +40,110 @@ class LoginControllerTests: XCTestCase {
         systemUnderTest.emailTextField.text = ""
         systemUnderTest.passwordTextField.text = ""
         let expectedReturn = "fail"
-        let actualReturn = systemUnderTest.handleLogin(test: false)
-        XCTAssertEqual(expectedReturn, actualReturn)
+        
+        let ex = expectation(description: "")
+        let timeout = 15 as TimeInterval
+        _ = systemUnderTest.handleLogin(test: false) { (ret) in
+            ex.fulfill()
+            let  actualReturn = ret
+            XCTAssertEqual(expectedReturn, actualReturn)
+        }
+        waitForExpectations(timeout: timeout, handler: nil)
         
     }
     func testSUT_TestLogin_VaidInput(){
-    systemUnderTest.emailTextField.text = "jya2013jy@gmail.com"
-    systemUnderTest.passwordTextField.text = "123456"
-    let expectedReturn = "success"
-    let actualReturn = systemUnderTest.handleLogin(test: false)
-    XCTAssertEqual(expectedReturn, actualReturn)
-    
+        
+        let dbTool = DbTool.sharInstance
+        let ap = dbTool.getOneValidAccount()
+        print("account:\(ap.account),password:\(ap.password)")
+        systemUnderTest.emailTextField.text = ap.account;
+        systemUnderTest.passwordTextField.text = ap.password;
+        let expectedReturn = "success";
+        
+        let ex = expectation(description: "")
+        let timeout = 15 as TimeInterval
+        
+        _ = systemUnderTest.handleLogin(test: false) { (ret) in
+            let  actualReturn = ret
+            ex.fulfill()
+            XCTAssertEqual(expectedReturn, actualReturn)
+        }
+        waitForExpectations(timeout: timeout, handler: nil)
+        
     }
-
+    
     func testSUT_TestRegister_InvalidEmail(){
         systemUnderTest.emailTextField.text = ""
         systemUnderTest.passwordTextField.text = ""
-        let expectedReturn = ""
-        let actualReturn = systemUnderTest.handleRegister(test: false)
-        XCTAssertEqual(expectedReturn, actualReturn)
+        let expectedReturn = "failure"
+        
+        let ex = expectation(description: "")
+        let timeout = 15 as TimeInterval
+        
+        _ = systemUnderTest.handleRegister(test: false) { (ret) in
+            let  actualReturn = ret
+            ex.fulfill()
+            XCTAssertEqual(expectedReturn, actualReturn)
+        }
+        waitForExpectations(timeout: timeout, handler: nil)
     }
     func testSUT_TestRegister_ValidEmail(){
-        systemUnderTest.emailTextField.text = "zhuyingying2@gmail.com"
-        systemUnderTest.passwordTextField.text = "123456"
-        let expectedReturn = ""
-        let actualReturn = systemUnderTest.handleRegister(test: false)
-        XCTAssertEqual(expectedReturn, actualReturn)
+        // you need change a gmail if it test fail,because this gmail was registed
+        
+        let ap = AccountPassword.generateOne()
+        systemUnderTest.emailTextField.text = ap.account
+        systemUnderTest.passwordTextField.text = ap.password
+        
+        let expectedReturn = "success"
+        
+        let ex = expectation(description: "")
+        let timeout = 15 as TimeInterval
+        
+        _ = systemUnderTest.handleRegister(test: false) { (ret) in
+            let  actualReturn = ret
+            ex.fulfill()
+            XCTAssertEqual(expectedReturn, actualReturn)
+        }
+        waitForExpectations(timeout: timeout, handler: nil)
     }
-    func testSUT_TestRegister_Validpassord(){
-        systemUnderTest.emailTextField.text = "zhuyingying2@gmail.com"
-        systemUnderTest.passwordTextField.text = "1234"
-        let expectedReturn = "Fail"
-        let actualReturn = systemUnderTest.handleRegister(test: false)
-        XCTAssertEqual(expectedReturn, actualReturn)
+    func testSUT_TestRegister_InValidPassordword(){
+        
+        let ap = AccountPassword.generateOne()
+        systemUnderTest.emailTextField.text = ap.account
+        systemUnderTest.passwordTextField.text = "111"
+        let expectedReturn = "failure"
+        
+        let ex = expectation(description: "")
+        let timeout = 15 as TimeInterval
+        
+        _ = systemUnderTest.handleRegister(test: false) { (ret) in
+            let  actualReturn = ret
+            ex.fulfill()
+            XCTAssertEqual(expectedReturn, actualReturn)
+        }
+        waitForExpectations(timeout: timeout, handler: nil)
+    }
+    
+    func testSUT_TestRegister_DuplicationOfRegistration(){
+        
+        let dbTool = DbTool.sharInstance
+        let ap = dbTool.getOneValidAccount()
+        systemUnderTest.emailTextField.text = ap.account
+        systemUnderTest.passwordTextField.text = ap.password
+        let expectedReturn = "failure"
+        
+        let ex = expectation(description: "")
+        let timeout = 15 as TimeInterval
+        
+        _ = systemUnderTest.handleRegister(test: false) { (ret) in
+            let  actualReturn = ret
+            ex.fulfill()
+            XCTAssertEqual(expectedReturn, actualReturn)
+        }
+        waitForExpectations(timeout: timeout, handler: nil)
+    }
+    
+    
+    
 }
 
-
-
-}

@@ -9,7 +9,18 @@
 /* Begin PBXBuildFile section */
 		376D6B6CC10D2A3804064CE6 /* Pods_learnios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A619C5F8414063BBC041331 /* Pods_learnios.framework */; };
 		570E290AF63B1BB7AC0AF44B /* Pods_learniosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5575C76257F0B1B82A3D5E8 /* Pods_learniosUITests.framework */; };
+		7A0B903E208F3BDD00EEB3C1 /* FMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A0B903F208F3BDD00EEB3C1 /* FMDB.framework */; };
 		7A0F84F3206D886F00DD46EA /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F84F2206D886F00DD46EA /* LoginViewControllerTests.swift */; };
+		7A5B0D0A208F494E00129A79 /* RandomTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5B0D07208F494E00129A79 /* RandomTool.swift */; };
+		7A5B0D0B208F494E00129A79 /* RandomTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5B0D07208F494E00129A79 /* RandomTool.swift */; };
+		7A5B0D0C208F494E00129A79 /* RandomTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5B0D07208F494E00129A79 /* RandomTool.swift */; };
+		7A5B0D0D208F494E00129A79 /* Dbtool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5B0D08208F494E00129A79 /* Dbtool.swift */; };
+		7A5B0D0E208F494E00129A79 /* Dbtool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5B0D08208F494E00129A79 /* Dbtool.swift */; };
+		7A5B0D0F208F494E00129A79 /* Dbtool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5B0D08208F494E00129A79 /* Dbtool.swift */; };
+		7A5B0D10208F494E00129A79 /* AccountPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5B0D09208F494E00129A79 /* AccountPassword.swift */; };
+		7A5B0D11208F494E00129A79 /* AccountPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5B0D09208F494E00129A79 /* AccountPassword.swift */; };
+		7A5B0D12208F494E00129A79 /* AccountPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5B0D09208F494E00129A79 /* AccountPassword.swift */; };
+		7AAC3E9E208F325600C3B92A /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AAC3E9D208F325600C3B92A /* libsqlite3.tbd */; };
 		7AE2D1A22080EBCE004AEB66 /* ListViewControllertest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE2D1A12080EBCE004AEB66 /* ListViewControllertest.swift */; };
 		B7075C092061E79E008C1BCF /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7075C082061E79E008C1BCF /* TabBarViewController.swift */; };
 		B7075C0B2061E8B1008C1BCF /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7075C0A2061E8B1008C1BCF /* LogInViewController.swift */; };
@@ -78,7 +89,12 @@
 		3A619C5F8414063BBC041331 /* Pods_learnios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_learnios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AFE6232DC15BA0095F1FC36 /* Pods-learnios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-learnios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-learnios/Pods-learnios.debug.xcconfig"; sourceTree = "<group>"; };
 		72B7C0DB514CC4551DF1BC33 /* Pods-learniosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-learniosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-learniosTests/Pods-learniosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7A0B903F208F3BDD00EEB3C1 /* FMDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FMDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A0F84F2206D886F00DD46EA /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
+		7A5B0D07208F494E00129A79 /* RandomTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomTool.swift; sourceTree = "<group>"; };
+		7A5B0D08208F494E00129A79 /* Dbtool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dbtool.swift; sourceTree = "<group>"; };
+		7A5B0D09208F494E00129A79 /* AccountPassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountPassword.swift; sourceTree = "<group>"; };
+		7AAC3E9D208F325600C3B92A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		7AE2D1A12080EBCE004AEB66 /* ListViewControllertest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewControllertest.swift; sourceTree = "<group>"; };
 		89A03A1C73086343C1ED9E00 /* Pods_learniosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_learniosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B704E47F74C228604FBB25F5 /* Pods-learniosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-learniosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-learniosUITests/Pods-learniosUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +143,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A0B903E208F3BDD00EEB3C1 /* FMDB.framework in Frameworks */,
+				7AAC3E9E208F325600C3B92A /* libsqlite3.tbd in Frameworks */,
 				376D6B6CC10D2A3804064CE6 /* Pods_learnios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,9 +168,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7AAC3E92208F256100C3B92A /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				7A5B0D09208F494E00129A79 /* AccountPassword.swift */,
+				7A5B0D08208F494E00129A79 /* Dbtool.swift */,
+				7A5B0D07208F494E00129A79 /* RandomTool.swift */,
+			);
+			path = tools;
+			sourceTree = "<group>";
+		};
 		8FE26B1BBDEAAD6DD9DAFAD2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7A0B903F208F3BDD00EEB3C1 /* FMDB.framework */,
+				7AAC3E9D208F325600C3B92A /* libsqlite3.tbd */,
 				3A619C5F8414063BBC041331 /* Pods_learnios.framework */,
 				89A03A1C73086343C1ED9E00 /* Pods_learniosTests.framework */,
 				F5575C76257F0B1B82A3D5E8 /* Pods_learniosUITests.framework */,
@@ -260,6 +290,7 @@
 		BFA229E420487B4000AEAEAF /* learnios */ = {
 			isa = PBXGroup;
 			children = (
+				7AAC3E92208F256100C3B92A /* tools */,
 				D75388592064459700768855 /* GoogleService-Info.plist */,
 				BFA229E520487B4000AEAEAF /* AppDelegate.swift */,
 				B7F80A57205834B200AAF2E3 /* Models */,
@@ -318,7 +349,6 @@
 				BFA229DF20487B4000AEAEAF /* Frameworks */,
 				BFA229E020487B4000AEAEAF /* Resources */,
 				C7F370CE5488F45D4D89EC0A /* [CP] Embed Pods Frameworks */,
-				69A5675BBB3C73104EE1A6A7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 				7AF45E1C206D7B5700458B7C /* PBXBuildRule */,
@@ -338,8 +368,7 @@
 				BFA229F220487B4000AEAEAF /* Sources */,
 				BFA229F320487B4000AEAEAF /* Frameworks */,
 				BFA229F420487B4000AEAEAF /* Resources */,
-				AC3796527DED5F365AEECDF2 /* [CP] Embed Pods Frameworks */,
-				B47B6D885BDC6C17C010D177 /* [CP] Copy Pods Resources */,
+				88E0934BF9E742FC5E9DE289 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -359,8 +388,7 @@
 				BFA229FD20487B4000AEAEAF /* Sources */,
 				BFA229FE20487B4000AEAEAF /* Frameworks */,
 				BFA229FF20487B4000AEAEAF /* Resources */,
-				A98792CD865F0BAA0F269DED /* [CP] Embed Pods Frameworks */,
-				A674F497FD94314EF7CADDEE /* [CP] Copy Pods Resources */,
+				3E38EEDF7FD549E7684D92DD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -485,19 +513,40 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		69A5675BBB3C73104EE1A6A7 /* [CP] Copy Pods Resources */ = {
+		3E38EEDF7FD549E7684D92DD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-learniosUITests/Pods-learniosUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-learnios/Pods-learnios-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-learniosUITests/Pods-learniosUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88E0934BF9E742FC5E9DE289 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-learniosTests/Pods-learniosTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-learniosTests/Pods-learniosTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9E6D6B00A91FFF6EBA987B36 /* [CP] Check Pods Manifest.lock */ = {
@@ -518,66 +567,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A674F497FD94314EF7CADDEE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-learniosUITests/Pods-learniosUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A98792CD865F0BAA0F269DED /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-learniosUITests/Pods-learniosUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AC3796527DED5F365AEECDF2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-learniosTests/Pods-learniosTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B47B6D885BDC6C17C010D177 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-learniosTests/Pods-learniosTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C7F370CE5488F45D4D89EC0A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -587,6 +576,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-learnios/Pods-learnios-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AnimatedCollectionViewLayout/AnimatedCollectionViewLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
@@ -601,6 +591,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AnimatedCollectionViewLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
@@ -625,6 +616,7 @@
 			files = (
 				B7F553ED207B00AF00A96D75 /* ImageUtils.swift in Sources */,
 				B7075C092061E79E008C1BCF /* TabBarViewController.swift in Sources */,
+				7A5B0D0A208F494E00129A79 /* RandomTool.swift in Sources */,
 				D75388582064402200768855 /* MyListingsViewController.swift in Sources */,
 				B7F553E9207AFBAE00A96D75 /* ConfirmationViewController.swift in Sources */,
 				BF12A9E5208ECB5A003EB56D /* sendEmailViewController.swift in Sources */,
@@ -633,6 +625,8 @@
 				B7075C0B2061E8B1008C1BCF /* LogInViewController.swift in Sources */,
 				BFA22A1620489F3800AEAEAF /* TableViewCell.swift in Sources */,
 				B7F80A672058455C00AAF2E3 /* ListingModel.swift in Sources */,
+				7A5B0D0D208F494E00129A79 /* Dbtool.swift in Sources */,
+				7A5B0D10208F494E00129A79 /* AccountPassword.swift in Sources */,
 				BFC318F4207AAF3100CCC402 /* ChecklistItem.swift in Sources */,
 				BFA229E620487B4000AEAEAF /* AppDelegate.swift in Sources */,
 				BF12A9E1208EA233003EB56D /* CartItemModel.swift in Sources */,
@@ -654,7 +648,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A0F84F3206D886F00DD46EA /* LoginViewControllerTests.swift in Sources */,
+				7A5B0D0E208F494E00129A79 /* Dbtool.swift in Sources */,
+				7A5B0D11208F494E00129A79 /* AccountPassword.swift in Sources */,
 				7AE2D1A22080EBCE004AEB66 /* ListViewControllertest.swift in Sources */,
+				7A5B0D0B208F494E00129A79 /* RandomTool.swift in Sources */,
 				BFA229FB20487B4000AEAEAF /* learniosTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -663,6 +660,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A5B0D12208F494E00129A79 /* AccountPassword.swift in Sources */,
+				7A5B0D0F208F494E00129A79 /* Dbtool.swift in Sources */,
+				7A5B0D0C208F494E00129A79 /* RandomTool.swift in Sources */,
 				BFA22A0620487B4000AEAEAF /* learniosUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
