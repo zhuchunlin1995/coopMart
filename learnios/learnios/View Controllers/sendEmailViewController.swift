@@ -121,32 +121,15 @@ class sendEmailViewController: UIViewController {
         
         // Present the view controller modally.
         self.present(composeVC, animated: true, completion: nil)
+        
     }
     
-    func mailComposeController(controller: MFMailComposeViewController,
-                               didFinishWithResult result: MFMailComposeResult, error: NSError?) {
-        // Check the result or perform other tasks.
-        switch (result) {
-        case .cancelled:
-            self.dismiss(animated: false, completion: nil)
-        case .sent:
-            self.dismiss(animated: true, completion: nil)
-        case .failed:
-            self.dismiss(animated: true, completion: {
-                let sendMailErrorAlert = UIAlertController.init(title: "Failed",
-                                                                message: "Unable to send email. Please check your email " +
-                    "settings and try again.", preferredStyle: .alert)
-                sendMailErrorAlert.addAction(UIAlertAction.init(title: "OK",
-                                                                style: .default, handler: nil))
-                self.present(sendMailErrorAlert,
-                             animated: true, completion: nil)
-            })
-        default:
-            break;
-        }
-        // Dismiss the mail compose view controller.
-        controller.dismiss(animated: true, completion: nil)
+
+    
+    public func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
     }
+
 
 }
 
