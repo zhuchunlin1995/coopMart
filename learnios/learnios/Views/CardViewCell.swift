@@ -16,5 +16,16 @@ class CardViewCell: UICollectionViewCell {
     @IBOutlet weak var gradientView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var button: UIButton!
+    
+    var listing: ListingModel? {
+        didSet {
+            if let listing = listing {
+                profileImageView.image = listing.image
+                nameLabel.text = listing.caption
+                descriptionTextView.text = listing.comment
+                priceLabel.text =
+                    listing.price
+            }
+        }
+    }
 }

@@ -143,8 +143,7 @@ class ModifyProfileViewController: UIViewController, UIImagePickerControllerDele
                 return
             }
         })
-        
-        
+
         let alertController = UIAlertController(title: nil, message: "Your new profile saved!", preferredStyle: .actionSheet)
         let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel)
 

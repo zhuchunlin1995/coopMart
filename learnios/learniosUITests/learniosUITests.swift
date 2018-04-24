@@ -87,9 +87,9 @@ class learniosUITests: XCTestCase {
         if( emailTextField.exists){
             let dbTool = DbTool.sharInstance
             let ap = dbTool.getOneValidAccount()
-            
+        
             emailTextField.tap()
-            emailTextField.typeText(ap.acoount)
+            emailTextField.typeText(ap.account)
             let passwordField = app.secureTextFields["Password"]
             passwordField.tap()
             passwordField.typeText(ap.password)

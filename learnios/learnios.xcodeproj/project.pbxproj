@@ -11,9 +11,15 @@
 		570E290AF63B1BB7AC0AF44B /* Pods_learniosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5575C76257F0B1B82A3D5E8 /* Pods_learniosUITests.framework */; };
 		7A0B903E208F3BDD00EEB3C1 /* FMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A0B903F208F3BDD00EEB3C1 /* FMDB.framework */; };
 		7A0F84F3206D886F00DD46EA /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F84F2206D886F00DD46EA /* LoginViewControllerTests.swift */; };
-		7AAC3E94208F25F200C3B92A /* AccountPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAC3E93208F25F200C3B92A /* AccountPassword.swift */; };
-		7AAC3E98208F26D800C3B92A /* RandomTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAC3E97208F26D800C3B92A /* RandomTool.swift */; };
-		7AAC3E9C208F290200C3B92A /* Dbtool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAC3E9B208F290200C3B92A /* Dbtool.swift */; };
+		7A5B0D0A208F494E00129A79 /* RandomTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5B0D07208F494E00129A79 /* RandomTool.swift */; };
+		7A5B0D0B208F494E00129A79 /* RandomTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5B0D07208F494E00129A79 /* RandomTool.swift */; };
+		7A5B0D0C208F494E00129A79 /* RandomTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5B0D07208F494E00129A79 /* RandomTool.swift */; };
+		7A5B0D0D208F494E00129A79 /* Dbtool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5B0D08208F494E00129A79 /* Dbtool.swift */; };
+		7A5B0D0E208F494E00129A79 /* Dbtool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5B0D08208F494E00129A79 /* Dbtool.swift */; };
+		7A5B0D0F208F494E00129A79 /* Dbtool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5B0D08208F494E00129A79 /* Dbtool.swift */; };
+		7A5B0D10208F494E00129A79 /* AccountPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5B0D09208F494E00129A79 /* AccountPassword.swift */; };
+		7A5B0D11208F494E00129A79 /* AccountPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5B0D09208F494E00129A79 /* AccountPassword.swift */; };
+		7A5B0D12208F494E00129A79 /* AccountPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5B0D09208F494E00129A79 /* AccountPassword.swift */; };
 		7AAC3E9E208F325600C3B92A /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AAC3E9D208F325600C3B92A /* libsqlite3.tbd */; };
 		7AE2D1A22080EBCE004AEB66 /* ListViewControllertest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE2D1A12080EBCE004AEB66 /* ListViewControllertest.swift */; };
 		B7075C092061E79E008C1BCF /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7075C082061E79E008C1BCF /* TabBarViewController.swift */; };
@@ -85,9 +91,9 @@
 		72B7C0DB514CC4551DF1BC33 /* Pods-learniosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-learniosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-learniosTests/Pods-learniosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7A0B903F208F3BDD00EEB3C1 /* FMDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FMDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A0F84F2206D886F00DD46EA /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
-		7AAC3E93208F25F200C3B92A /* AccountPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPassword.swift; sourceTree = "<group>"; };
-		7AAC3E97208F26D800C3B92A /* RandomTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomTool.swift; sourceTree = "<group>"; };
-		7AAC3E9B208F290200C3B92A /* Dbtool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dbtool.swift; sourceTree = "<group>"; };
+		7A5B0D07208F494E00129A79 /* RandomTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomTool.swift; sourceTree = "<group>"; };
+		7A5B0D08208F494E00129A79 /* Dbtool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dbtool.swift; sourceTree = "<group>"; };
+		7A5B0D09208F494E00129A79 /* AccountPassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountPassword.swift; sourceTree = "<group>"; };
 		7AAC3E9D208F325600C3B92A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		7AE2D1A12080EBCE004AEB66 /* ListViewControllertest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewControllertest.swift; sourceTree = "<group>"; };
 		89A03A1C73086343C1ED9E00 /* Pods_learniosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_learniosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,9 +171,9 @@
 		7AAC3E92208F256100C3B92A /* tools */ = {
 			isa = PBXGroup;
 			children = (
-				7AAC3E93208F25F200C3B92A /* AccountPassword.swift */,
-				7AAC3E97208F26D800C3B92A /* RandomTool.swift */,
-				7AAC3E9B208F290200C3B92A /* Dbtool.swift */,
+				7A5B0D09208F494E00129A79 /* AccountPassword.swift */,
+				7A5B0D08208F494E00129A79 /* Dbtool.swift */,
+				7A5B0D07208F494E00129A79 /* RandomTool.swift */,
 			);
 			path = tools;
 			sourceTree = "<group>";
@@ -570,19 +576,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AAC3E98208F26D800C3B92A /* RandomTool.swift in Sources */,
 				B7F553ED207B00AF00A96D75 /* ImageUtils.swift in Sources */,
 				B7075C092061E79E008C1BCF /* TabBarViewController.swift in Sources */,
+				7A5B0D0A208F494E00129A79 /* RandomTool.swift in Sources */,
 				D75388582064402200768855 /* MyListingsViewController.swift in Sources */,
 				B7F553E9207AFBAE00A96D75 /* ConfirmationViewController.swift in Sources */,
 				BF12A9E5208ECB5A003EB56D /* sendEmailViewController.swift in Sources */,
 				BFA229E820487B4000AEAEAF /* CartViewController.swift in Sources */,
-				7AAC3E9C208F290200C3B92A /* Dbtool.swift in Sources */,
 				B7A2CF2D2062BF2D0053AB79 /* CardViewCell.swift in Sources */,
 				B7075C0B2061E8B1008C1BCF /* LogInViewController.swift in Sources */,
-				7AAC3E94208F25F200C3B92A /* AccountPassword.swift in Sources */,
 				BFA22A1620489F3800AEAEAF /* TableViewCell.swift in Sources */,
 				B7F80A672058455C00AAF2E3 /* ListingModel.swift in Sources */,
+				7A5B0D0D208F494E00129A79 /* Dbtool.swift in Sources */,
+				7A5B0D10208F494E00129A79 /* AccountPassword.swift in Sources */,
 				BFC318F4207AAF3100CCC402 /* ChecklistItem.swift in Sources */,
 				BFA229E620487B4000AEAEAF /* AppDelegate.swift in Sources */,
 				BF12A9E1208EA233003EB56D /* CartItemModel.swift in Sources */,
@@ -604,7 +610,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A0F84F3206D886F00DD46EA /* LoginViewControllerTests.swift in Sources */,
+				7A5B0D0E208F494E00129A79 /* Dbtool.swift in Sources */,
+				7A5B0D11208F494E00129A79 /* AccountPassword.swift in Sources */,
 				7AE2D1A22080EBCE004AEB66 /* ListViewControllertest.swift in Sources */,
+				7A5B0D0B208F494E00129A79 /* RandomTool.swift in Sources */,
 				BFA229FB20487B4000AEAEAF /* learniosTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -613,6 +622,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A5B0D12208F494E00129A79 /* AccountPassword.swift in Sources */,
+				7A5B0D0F208F494E00129A79 /* Dbtool.swift in Sources */,
+				7A5B0D0C208F494E00129A79 /* RandomTool.swift in Sources */,
 				BFA22A0620487B4000AEAEAF /* learniosUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

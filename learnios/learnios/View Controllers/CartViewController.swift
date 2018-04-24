@@ -26,7 +26,8 @@ class CartViewController: UITableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         let db = Firestore.firestore()
-        let collectRef = db.collection("items");
+        let curEmail = Auth.auth().currentUser?.email
+        let collectRef = db.collection("users").document(curEmail!).collection("cartList");
         let storage = Storage.storage()
         // retrieve all items in the item collections
         collectRef.getDocuments(){ (querySnapshot, err) in
@@ -37,9 +38,8 @@ class CartViewController: UITableViewController {
                 for document in querySnapshot!.documents {
                     let data = document.data()
                     let URL = data["URL"] as! String
-                    print(URL)
+                   
                     let httpsReference = storage.reference(forURL: URL)
-                    
                     
                     httpsReference.getData(maxSize: 10000 * 10000 * 10000){ imageData, error in
                         if let error = error {
@@ -47,13 +47,13 @@ class CartViewController: UITableViewController {
                         } else {
                             // Data for "images/island.jpg" is returned
                             let image = UIImage(data: imageData!)
-                            let item = CartItemModel(caption: data["name"] as! String, email: data["email"] as! String, comment: data["description"] as! String, price: (data["price"] as? String)!, image: UIImage(named: "02.png")!)
+                            let item = CartItemModel(caption: data["name"] as! String, email: data["email"] as! String, comment: data["description"] as! String, price: (data["price"] as? String)!, image: UIImage(named: "02.png")!, url: data["URL"] as! String)
                             listings.append(item)
+                            self.items = listings
+                            self.tableView?.reloadData()
                         }
                     }
                 }
-                self.items = listings
-                self.tableView?.reloadData()
             }
         }
         navigationController?.navigationBar.prefersLargeTitles = true
