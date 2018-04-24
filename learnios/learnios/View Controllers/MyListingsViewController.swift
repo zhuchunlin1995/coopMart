@@ -106,15 +106,7 @@ extension MyListingsViewController: UICollectionViewDataSource {
         cell.priceLabel.text = tableData[indexPath.item].price
         cell.nameLabel.text = tableData[indexPath.item].caption
         cell.descriptionTextView.text = tableData[indexPath.item].comment
-        
-        cell.button.tag = indexPath.row
-        cell.button.addTarget(self, action: #selector(deleteButtonTapped), for: .touchUpInside)
         return cell
-    }
-    
-    
-    @objc func deleteButtonTapped(sender: UIButton) {
-        // Delete Post in Database
     }
     
     @objc func newPostingButtonTapped(sender: UIButton) {
