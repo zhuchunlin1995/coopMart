@@ -44,6 +44,7 @@ class ListingViewController: UICollectionViewController {
         let db = Firestore.firestore()
         let collectRef = db.collection("items");
         let storage = Storage.storage()
+        
         // retrieve all items in the item collections
         collectRef.getDocuments(){ (querySnapshot, err) in
             if let err = err {
@@ -56,6 +57,11 @@ class ListingViewController: UICollectionViewController {
                     print(URL)
                     let httpsReference = storage.reference(forURL: URL)
                         
+                    let item = ListingModel(caption: data["name"] as! String, comment: data["description"] as! String, price: (data["price"] as? String)!, image: UIImage(named: "addProfile.png")!)
+                    listings.append(item)
+                    self.tableData = listings
+                    self.collectionView?.reloadData()
+                    
                     httpsReference.getData(maxSize: 10000 * 10000 * 10000){ imageData, error in
                         if let error = error {
                             print(error.localizedDescription)

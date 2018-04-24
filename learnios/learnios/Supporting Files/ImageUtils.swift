@@ -30,7 +30,7 @@ class ImageUtils {
         })
         
         let db = Firestore.firestore();
-        let id = "(String(email!))\(String(name)).jpg"
+        let id = "\(String(email!))\(String(name)).jpg"
         db.collection("items").document(id).setData([
             "URL":"gs://coopmart-1f06f.appspot.com/\(imageRef.fullPath)",
             "name":name,
@@ -39,7 +39,13 @@ class ImageUtils {
             "email": email!
             ])
         
-     
+        db.collection("users").document(email!).collection("items").document(id).setData(
+        ["URL":"gs://coopmart-1f06f.appspot.com/\(imageRef.fullPath)",
+        "name":name,
+        "price":price,
+        "description":description,
+        "email": email!
+            ])
         
         
         return true
