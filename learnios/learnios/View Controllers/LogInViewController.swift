@@ -270,7 +270,7 @@ class LoginController: UIViewController, UIImagePickerControllerDelegate, UINavi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.hideKeyboardWhenTappedAround()
         assignBackground()
         
         view.addSubview(inputsContainerView)

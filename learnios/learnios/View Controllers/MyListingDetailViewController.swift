@@ -20,6 +20,7 @@ class MyListingDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         displayInfo()
     }
     

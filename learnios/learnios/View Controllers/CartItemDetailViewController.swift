@@ -9,6 +9,10 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import Foundation
+import MessageUI
+
+
 
 class CartItemDetailViewController: UIViewController {
     
@@ -26,21 +30,10 @@ class CartItemDetailViewController: UIViewController {
     
     @IBAction func checkOutButtonTapped(_ sender: UIBarButtonItem) {
         guard let listing = listing else { return }
-        
-//        let cartItem: [String: Any] = [
-//            "name":listing.caption,
-//            "description": listing.comment,
-//            "price": listing.price,
-//            ]
-//
-//        let db = Firestore.firestore()
-//        db.collection("users").document((Auth.auth().currentUser?.email)!).collection("cartList").document(listing.caption).setData([
-//            "name":listing.caption,
-//            "description": listing.comment,
-//            "price": listing.price,
-//            ])
-        
     }
+    
+    
+    
     
     func displayInfo() {
         guard let listing = listing else { return }

@@ -9,6 +9,18 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
+//extension UIViewController {
+//    func hideKeyboardWhenTappedAround() {
+//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+//        tap.cancelsTouchesInView = false
+//        view.addGestureRecognizer(tap)
+//    }
+//
+//    @objc func dismissKeyboard() {
+//        view.endEditing(true)
+//    }
+//}
+
 class ModifyProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 //    @IBOutlet weak var LogoutButton: UIButton!
     @IBOutlet weak var mProfilePicture: UIImageView!
@@ -18,6 +30,7 @@ class ModifyProfileViewController: UIViewController, UIImagePickerControllerDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         let background = UIImage(named: "Pattern")
         var imageView : UIImageView!
         mProfilePicture.layer.cornerRadius = 90

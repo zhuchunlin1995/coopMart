@@ -21,6 +21,7 @@ class MyListingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         let background = UIImage(named: "Pattern")
         var imageView : UIImageView!
         // Load Data Here
