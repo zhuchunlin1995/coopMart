@@ -49,7 +49,7 @@ class CartViewController: UITableViewController {
                             let image = UIImage(data: imageData!)
                         }
                     }
-                    let item = CartItemModel(caption: data["name"] as! String, comment: data["description"] as! String, price: (data["price"] as? String)!, image: UIImage(named: "02.png")!)
+                    let item = CartItemModel(caption: data["name"] as! String, email: data["email"] as! String, comment: data["description"] as! String, price: (data["price"] as? String)!, image: UIImage(named: "addProfile.png")!)
                     listings.append(item)
                     self.items = listings
                     self.tableView?.reloadData()

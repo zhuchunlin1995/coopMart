@@ -99,8 +99,6 @@ extension UIViewController : MFMailComposeViewControllerDelegate {
 }
 
 
-
-
 class sendEmailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()

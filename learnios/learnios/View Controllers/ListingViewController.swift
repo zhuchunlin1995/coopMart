@@ -59,7 +59,7 @@ class ListingViewController: UICollectionViewController {
                     let httpsReference = storage.reference(forURL: URL)
                     
                         
-                    let item = ListingModel(caption: data["name"] as! String, comment: data["description"] as! String, price: (data["price"] as? String)!, image: UIImage(named: "addProfile.png")!)
+                    let item = ListingModel(caption: data["name"] as! String, email: data["email"] as! String, comment: data["description"] as! String, price: (data["price"] as? String)!, image: UIImage(named: "addProfile.png")!)
                     listings.append(item)
                     self.tableData = listings
                     self.collectionView?.reloadData()
@@ -70,11 +70,12 @@ class ListingViewController: UICollectionViewController {
                         } else {
                             // Data for "images/island.jpg" is returned
                             let image = UIImage(data: imageData!)
+                            listings.append(item)
+                            self.tableData = listings
                         }
                     }
-                    let item = ListingModel(caption: data["name"] as! String, comment: data["description"] as! String, price: (data["price"] as? String)!, image: UIImage(named: "02.png")!)
-                    listings.append(item)
-                    self.tableData = listings
+//                    let item = ListingModel(caption: data["name"] as! String, comment: data["description"] as! String, price: (data["price"] as? String)!, image: UIImage(named: "02.png")!)
+                    
                     self.collectionView?.reloadData()
                 }
             }
