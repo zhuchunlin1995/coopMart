@@ -7,39 +7,41 @@
 //
 
 import UIKit
+import AVFoundation
 //import Foundation
 
 class CartViewController: UITableViewController {
     //construct
-    var items = [ChecklistItem]()
+    let segueIdentifer = "cartSegue"
+    var items: [CartItemModel] = []
     //    var items: [ChecklistItem]
     //    items = [ChecklistItem]()
     //every object has an init method or initializer
     required init?(coder aDecoder: NSCoder) {
-        let row0item = ChecklistItem()
-        row0item.text = "Walk the dog"
-        row0item.checked = false
-        items.append(row0item)
-        
-        let row1item = ChecklistItem()
-        row1item.text = "Brush my teeth"
-        row1item.checked = true
-        items.append(row1item)
-        
-        let row2item = ChecklistItem()
-        row2item.text = "Learn iOS development"
-        row2item.checked = true
-        items.append(row2item)
-        
-        let row3item = ChecklistItem()
-        row3item.text = "Soccer practice"
-        row3item.checked = false
-        items.append(row3item)
-        
-        let row4item = ChecklistItem()
-        row4item.text = "Eat ice cream"
-        row4item.checked = true
-        items.append(row4item)
+//        let row0item = CartItemModel()
+//        row0item.text = "Walk the dog"
+//        row0item.checked = false
+//        items.append(row0item)
+//
+//        let row1item = ChecklistItem()
+//        row1item.text = "Brush my teeth"
+//        row1item.checked = true
+//        items.append(row1item)
+//
+//        let row2item = ChecklistItem()
+//        row2item.text = "Learn iOS development"
+//        row2item.checked = true
+//        items.append(row2item)
+//
+//        let row3item = ChecklistItem()
+//        row3item.text = "Soccer practice"
+//        row3item.checked = false
+//        items.append(row3item)
+//
+//        let row4item = ChecklistItem()
+//        row4item.text = "Eat ice cream"
+//        row4item.checked = true
+//        items.append(row4item)
         
         super.init(coder: aDecoder)
     }
@@ -47,22 +49,32 @@ class CartViewController: UITableViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        let background = UIImage(named: "Pattern")
-        var imageView : UIImageView!
-        imageView = UIImageView(frame: view.bounds)
-        imageView.contentMode =  UIViewContentMode.scaleAspectFill
-        imageView.clipsToBounds = true
-        imageView.image = background
-        imageView.center = view.center
-        imageView.layer.cornerRadius = 100
-        imageView.layer.masksToBounds = true
-        imageView.layer.borderWidth = 2
-        imageView.layer.borderColor = UIColor.white.cgColor
-        imageView.clipsToBounds = true
-        view.addSubview(imageView)
-        self.view.sendSubview(toBack: imageView)
+//        let background = UIImage(named: "Pattern")
+//        var imageView : UIImageView!
+//        imageView = UIImageView(frame: view.bounds)
+//        imageView.contentMode =  UIViewContentMode.scaleAspectFill
+//        imageView.clipsToBounds = true
+//        imageView.image = background
+//        imageView.center = view.center
+//        imageView.layer.cornerRadius = 100
+//        imageView.layer.masksToBounds = true
+//        imageView.layer.borderWidth = 2
+//        imageView.layer.borderColor = UIColor.white.cgColor
+//        imageView.clipsToBounds = true
+//        view.addSubview(imageView)
+//        self.view.sendSubview(toBack: imageView)
         // Do any additional setup after loading the view, typically from a nib.
-        navigationController?.navigationBar.prefersLargeTitles = true
+        items = CartItemModel.cartItems(); navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == segueIdentifer {
+            guard let detailViewController = segue.destination as? CartItemDetailViewController else { return }
+            guard let cell = sender as? UITableViewCell else { return }
+            guard let indexPath = self.tableView?.indexPath(for: cell) else { return }
+            let selectedProfile = items[indexPath.item]
+            detailViewController.listing = selectedProfile
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -95,7 +107,7 @@ class CartViewController: UITableViewController {
         if let cell = tableView.cellForRow(at: indexPath) {
             
             let item = items[indexPath.row]
-            item.toggleChecked()
+//            item.toggleChecked()
             configureCheckmark(for: cell, at: indexPath)
         }
         tableView.deselectRow(at: indexPath, animated: true)
@@ -116,29 +128,30 @@ class CartViewController: UITableViewController {
                             at indexPath: IndexPath) {
         let item = items[indexPath.row]
         
-        if item.checked {
-            cell.accessoryType = .checkmark
-        } else {
-            cell.accessoryType = .none
-        }
+//        if item.checked {
+//            cell.accessoryType = .checkmark
+//        } else {
+//            cell.accessoryType = .none
+//        }
     }
     
-    func configureText(for cell: UITableViewCell, with item: ChecklistItem) {
+    func configureText(for cell: UITableViewCell, with item: CartItemModel) {
         let label = cell.viewWithTag(1000) as! UILabel
-        label.text = item.text
+        label.text = item.caption
     }
     
     @IBAction func addItem() {
-        let newRowIndex = items.count
-        let item = ChecklistItem()
-        item.text = "I am a new row"
-        item.checked = false
-        items.append(item)
-        
-        //tell the table view about this new row so it can add a new cell for that row. Table views use index-paths to identify rows, so make an IndexPath object that points to the new row, using the row number from the newRowIndex variable
-        let indexPath = IndexPath(row: newRowIndex, section: 0)
-        let indexPaths = [indexPath]
-        tableView.insertRows(at: indexPaths, with: .automatic)
+//        let newRowIndex = items.count
+//        let item = CartItemModel()
+//        item.text = "I am a new row"
+//        item.checked = false
+//        items.append(item)
+//
+//        //tell the table view about this new row so it can add a new cell for that row. Table views use index-paths to identify rows, so make an IndexPath object that points to the new row, using the row number from the newRowIndex variable
+//        let indexPath = IndexPath(row: newRowIndex, section: 0)
+//        let indexPaths = [indexPath]
+//        tableView.insertRows(at: indexPaths, with: .automatic)
     }
+
 }
 
