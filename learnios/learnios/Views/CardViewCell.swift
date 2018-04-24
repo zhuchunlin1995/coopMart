@@ -16,5 +16,4 @@ class CardViewCell: UICollectionViewCell {
     @IBOutlet weak var gradientView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var button: UIButton!
 }
