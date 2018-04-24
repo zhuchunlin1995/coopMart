@@ -72,7 +72,7 @@ class CartViewController: UITableViewController {
             guard let detailViewController = segue.destination as? CartItemDetailViewController else { return }
             guard let cell = sender as? UITableViewCell else { return }
             guard let indexPath = self.tableView?.indexPath(for: cell) else { return }
-            let selectedProfile = items[indexPath.item]
+            let selectedProfile = items[indexPath.row]
             detailViewController.listing = selectedProfile
         }
     }

@@ -9,10 +9,10 @@ import UIKit
 
 struct CartItemModel {
     
-    var caption: String
-    var comment: String
-    var price: String
-    var image: UIImage
+    var caption: String?
+    var comment: String?
+    var price: String?
+    var image: UIImage?
     
     
     init(caption: String, comment: String, price: String, image: UIImage) {

@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KCb-3b-uCx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KCb-3b-uCx">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="AvenirNext.ttc">
-            <string>AvenirNext-DemiBold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Listing-->
         <scene sceneID="l62-GP-36w">
@@ -975,7 +970,6 @@
                                             <outlet property="nameLabel" destination="IN9-7t-mDl" id="MBc-yY-1qv"/>
                                             <outlet property="priceLabel" destination="dRV-Bx-Apc" id="yYq-U3-36b"/>
                                             <outlet property="profileImageView" destination="feE-Dl-Lxj" id="I7N-e7-cNM"/>
-                                            <segue destination="GXG-BW-QHZ" kind="show" identifier="profileSegue" id="0XB-Pe-EE3"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -1030,10 +1024,10 @@
             </objects>
             <point key="canvasLocation" x="1464" y="-712"/>
         </scene>
-        <!--Cart Items Detail View Controller-->
+        <!--Cart Item Detail View Controller-->
         <scene sceneID="TFW-ev-7SZ">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="AFc-ft-mu1" customClass="CartItemsDetailViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="AFc-ft-mu1" customClass="CartItemDetailViewController" customModule="learnios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="alx-ph-2a3"/>
                         <viewControllerLayoutGuide type="bottom" id="0s6-KF-8pH"/>
@@ -1130,6 +1124,12 @@
                     <navigationItem key="navigationItem" id="Stk-nN-HTO">
                         <barButtonItem key="rightBarButtonItem" title="checkout" id="tKW-G1-HsG"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="byO-tB-S8K" id="iRK-lE-u4g"/>
+                        <outlet property="locationLabel" destination="KML-c6-afg" id="eUe-Kr-Sb9"/>
+                        <outlet property="nameLabel" destination="0Q6-Ie-4tz" id="mKj-uZ-wtX"/>
+                        <outlet property="profileImageView" destination="HFO-4p-BhG" id="ClH-Be-EqD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="max-jM-ftl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1143,7 +1143,6 @@
         <image name="yellow_button" width="350" height="144"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LAn-fn-TYl"/>
         <segue reference="aal-Vg-WPS"/>
     </inferredMetricsTieBreakers>
 </document>
