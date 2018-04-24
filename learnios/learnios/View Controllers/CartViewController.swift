@@ -26,7 +26,8 @@ class CartViewController: UITableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         let db = Firestore.firestore()
-        let collectRef = db.collection("items");
+        let curEmail = Auth.auth().currentUser?.email
+        let collectRef = db.collection("users").document(curEmail!).collection("cartList");
         let storage = Storage.storage()
         // retrieve all items in the item collections
         collectRef.getDocuments(){ (querySnapshot, err) in
@@ -37,7 +38,7 @@ class CartViewController: UITableViewController {
                 for document in querySnapshot!.documents {
                     let data = document.data()
                     let URL = data["URL"] as! String
-                    print(URL)
+                   
                     let httpsReference = storage.reference(forURL: URL)
                     
                     
