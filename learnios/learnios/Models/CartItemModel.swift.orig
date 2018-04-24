@@ -31,6 +31,8 @@ struct CartItemModel {
         }
         self.init(caption: caption, email: email, comment: comment, price: price, image: image)
     }
+<<<<<<< HEAD
+=======
     
 //    static func cartItems() -> [CartItemModel] {
 //        // Temporary Dummy Data
@@ -38,4 +40,5 @@ struct CartItemModel {
 //        return listing
 //    }
     
+>>>>>>> 0f30a55eed3a6712f1f65063c389d8fa7935cc82
 }

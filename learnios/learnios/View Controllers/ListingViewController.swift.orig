@@ -45,6 +45,7 @@ class ListingViewController: UICollectionViewController {
         let db = Firestore.firestore()
         let collectRef = db.collection("items");
         let storage = Storage.storage()
+        
         // retrieve all items in the item collections
         collectRef.getDocuments(){ (querySnapshot, err) in
             if let err = err {
@@ -59,12 +60,13 @@ class ListingViewController: UICollectionViewController {
                     
 <<<<<<< HEAD
 =======
-                    let item = ListingModel(caption: data["name"] as! String, comment: data["description"] as! String, price: (data["price"] as? String)!, image: UIImage(named:"addProfile.png")!)
+                        
+                    let item = ListingModel(caption: data["name"] as! String, email: data["email"] as! String, comment: data["description"] as! String, price: (data["price"] as? String)!, image: UIImage(named: "addProfile.png")!)
                     listings.append(item)
                     self.tableData = listings
                     self.collectionView?.reloadData()
->>>>>>> 982045897357a2b0a7f5a824a1683c1dac036a94
-                        
+                    
+>>>>>>> 0f30a55eed3a6712f1f65063c389d8fa7935cc82
                     httpsReference.getData(maxSize: 10000 * 10000 * 10000){ imageData, error in
                         if let error = error {
                             print(error.localizedDescription)
@@ -72,18 +74,21 @@ class ListingViewController: UICollectionViewController {
                             // Data for "images/island.jpg" is returned
                             let image = UIImage(data: imageData!)
 <<<<<<< HEAD
-=======
-//                            let item = ListingModel(caption: data["name"] as! String, comment: data["description"] as! String, price: (data["price"] as? String)!, image: image!)
-//                            listings.append(item)
-//                            self.tableData = listings
-//                            self.collectionView?.reloadData()
->>>>>>> 982045897357a2b0a7f5a824a1683c1dac036a94
+                            let item = ListingModel(caption: data["name"] as! String, comment: data["description"] as! String, price: (data["price"] as? String)!, image: image!)
+                            listings.append(item)
+                            self.tableData = listings
+                            self.collectionView?.reloadData()
                         }
                     }
-                    let item = ListingModel(caption: data["name"] as! String, comment: data["description"] as! String, price: (data["price"] as? String)!, image: UIImage(named: "02.png")!)
-                    listings.append(item)
-                    self.tableData = listings
+=======
+                            listings.append(item)
+                            self.tableData = listings
+                        }
+                    }
+//                    let item = ListingModel(caption: data["name"] as! String, comment: data["description"] as! String, price: (data["price"] as? String)!, image: UIImage(named: "02.png")!)
+                    
                     self.collectionView?.reloadData()
+>>>>>>> 0f30a55eed3a6712f1f65063c389d8fa7935cc82
                 }
             }
         }
