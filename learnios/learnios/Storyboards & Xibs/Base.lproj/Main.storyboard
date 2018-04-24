@@ -145,7 +145,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Go back"/>
                                 <connections>
-                                    <segue destination="KCb-3b-uCx" kind="show" id="iHx-Su-abY"/>
+                                    <segue destination="KCb-3b-uCx" kind="show" id="fop-V8-s4W"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="note: users cannot modify email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lao-tS-wRQ">
@@ -794,13 +794,6 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Market Listings" id="eqj-GV-AE3">
-                        <barButtonItem key="leftBarButtonItem" title="CategoryButton" style="plain" id="RBE-48-1HG">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4uS-tL-Fr5">
-                                <rect key="frame" x="20" y="7" width="92" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Category"/>
-                            </button>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="CartButton" style="plain" id="aeB-eR-BbK" userLabel="CartButton">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uKh-NR-3IJ">
                                 <rect key="frame" x="302" y="7" width="92" height="30"/>
@@ -940,16 +933,6 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
-                                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ixv-dq-o3t">
-                                                    <rect key="frame" x="144.66666666666666" y="468" width="53" height="50"/>
-                                                    <accessibility key="accessibilityConfiguration" label="Take a selfie"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="ibV-Jr-8Wo"/>
-                                                    </constraints>
-                                                    <state key="normal" title="Delete">
-                                                        <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
-                                                </button>
                                             </subviews>
                                         </view>
                                         <constraints>
@@ -961,15 +944,12 @@
                                             <constraint firstAttribute="bottom" secondItem="TMi-ns-kqq" secondAttribute="bottom" constant="56" id="RuA-w9-fcI"/>
                                             <constraint firstItem="TMi-ns-kqq" firstAttribute="leading" secondItem="feE-Dl-Lxj" secondAttribute="leading" id="SiB-eq-wsF"/>
                                             <constraint firstItem="feE-Dl-Lxj" firstAttribute="top" secondItem="9ow-yp-VtB" secondAttribute="top" id="dvG-Fr-5PJ"/>
-                                            <constraint firstItem="Ixv-dq-o3t" firstAttribute="top" secondItem="TMi-ns-kqq" secondAttribute="bottom" constant="-4" id="fPH-Lp-PJw"/>
                                             <constraint firstItem="IN9-7t-mDl" firstAttribute="centerX" secondItem="feE-Dl-Lxj" secondAttribute="centerX" id="gFS-EH-t14"/>
                                             <constraint firstItem="feE-Dl-Lxj" firstAttribute="leading" secondItem="9ow-yp-VtB" secondAttribute="leading" id="i5n-OG-zwK"/>
-                                            <constraint firstItem="Ixv-dq-o3t" firstAttribute="centerX" secondItem="TMi-ns-kqq" secondAttribute="centerX" id="jgU-4n-6iU"/>
                                             <constraint firstItem="odg-Z1-hzt" firstAttribute="trailing" secondItem="feE-Dl-Lxj" secondAttribute="trailing" id="tPo-eq-b5S"/>
                                             <constraint firstItem="TMi-ns-kqq" firstAttribute="trailing" secondItem="feE-Dl-Lxj" secondAttribute="trailing" id="z8L-3H-6d3"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="button" destination="Ixv-dq-o3t" id="rag-mn-p7k"/>
                                             <outlet property="descriptionTextView" destination="TMi-ns-kqq" id="cSJ-6Q-m4p"/>
                                             <outlet property="gradientView" destination="odg-Z1-hzt" id="aYw-1S-PGe"/>
                                             <outlet property="nameLabel" destination="IN9-7t-mDl" id="MBc-yY-1qv"/>
@@ -1178,6 +1158,6 @@
         <image name="yellow_button" width="350" height="144"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aal-Vg-WPS"/>
+        <segue reference="fop-V8-s4W"/>
     </inferredMetricsTieBreakers>
 </document>
