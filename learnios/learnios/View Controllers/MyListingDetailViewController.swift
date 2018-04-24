@@ -38,7 +38,8 @@ class MyListingDetailViewController: UIViewController {
             "name":listing.caption,
             "description": listing.comment,
             "price": listing.price,
-            "email": listing.email
+            "email": listing.email,
+            "URL": listing.URL
         ])
         let optionMenu = UIAlertController(title: "Item added to the cart", message: nil, preferredStyle: .alert)
         let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)

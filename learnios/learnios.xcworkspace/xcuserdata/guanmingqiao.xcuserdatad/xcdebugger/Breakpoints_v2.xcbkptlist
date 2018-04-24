@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "learnios/View Controllers/MyListingDetailViewController.swift"
-            timestampString = "546256675.013049"
+            timestampString = "546259178.689703"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "14"
@@ -58,12 +58,12 @@
                   moduleName = "learnios"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/guanmingqiao/Documents/GitHub/coopMart/learnios/learnios/View%20Controllers/MyListingDetailViewController.swift"
-                  timestampString = "546256675.2366951"
+                  timestampString = "546258017.54169"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "14"
                   endingLineNumber = "14"
-                  offsetFromSymbolStart = "363">
+                  offsetFromSymbolStart = "477">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -73,12 +73,12 @@
                   moduleName = "learnios"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/guanmingqiao/Documents/GitHub/coopMart/learnios/learnios/View%20Controllers/MyListingDetailViewController.swift"
-                  timestampString = "546256675.23869"
+                  timestampString = "546258017.546061"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "14"
                   endingLineNumber = "14"
-                  offsetFromSymbolStart = "481">
+                  offsetFromSymbolStart = "598">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -88,12 +88,12 @@
                   moduleName = "learnios"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/guanmingqiao/Documents/GitHub/coopMart/learnios/learnios/View%20Controllers/MyListingDetailViewController.swift"
-                  timestampString = "546256675.240585"
+                  timestampString = "546258017.549188"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "14"
                   endingLineNumber = "14"
-                  offsetFromSymbolStart = "362">
+                  offsetFromSymbolStart = "462">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -103,12 +103,12 @@
                   moduleName = "learnios"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/guanmingqiao/Documents/GitHub/coopMart/learnios/learnios/View%20Controllers/MyListingDetailViewController.swift"
-                  timestampString = "546256675.242732"
+                  timestampString = "546258017.552158"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "14"
                   endingLineNumber = "14"
-                  offsetFromSymbolStart = "287">
+                  offsetFromSymbolStart = "387">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -120,13 +120,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "learnios/View Controllers/MyListingDetailViewController.swift"
-            timestampString = "546256675.013662"
+            timestampString = "546259178.690781"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "displayInfo()"
-            landmarkType = "7">
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "MyListingDetailViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
