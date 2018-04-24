@@ -114,7 +114,6 @@ class ModifyProfileViewController: UIViewController, UIImagePickerControllerDele
     
     @IBAction func updateButtonTapped(_ sender: UIButton) {
         let db = Firestore.firestore()
-        let storage = Storage.storage()
         let email = Auth.auth().currentUser?.email
 //        let data = document.data()
 
@@ -131,6 +130,22 @@ class ModifyProfileViewController: UIViewController, UIImagePickerControllerDele
                 print("New profile has been saved!")
             }
         }
+        
+        //upload profile picture
+        let storageRef = Storage.storage().reference()
+        let uploadData = UIImagePNGRepresentation(self.mProfilePicture.image!)
+        let imagePath = "profileImage/\(self.mMyEmail.text!)/userPic.jpg"
+        let metadata = StorageMetadata()
+        metadata.contentType = "image/jpeg"
+        let imageRef = storageRef.child(imagePath)
+        imageRef.putData(uploadData!, metadata: metadata, completion: {
+            (metadata, error) in
+            if error != nil {
+                print("error")
+                return
+            }
+        })
+        
         
         
         let alertController = UIAlertController(title: nil, message: "Your new profile saved!", preferredStyle: .actionSheet)
