@@ -25,7 +25,6 @@ class MyListingsViewController: UIViewController {
         self.hideKeyboardWhenTappedAround()
         let background = UIImage(named: "Pattern")
         var imageView : UIImageView!
-        // Load Data Here
         imageView = UIImageView(frame: view.bounds)
         imageView.contentMode =  UIViewContentMode.scaleAspectFill
         imageView.clipsToBounds = true
@@ -35,25 +34,11 @@ class MyListingsViewController: UIViewController {
         view.addSubview(imageView)
         self.view.sendSubview(toBack: imageView)
         newPostingButton.addTarget(self, action: #selector(newPostingButtonTapped), for: .touchUpInside)
-        reloadData()
-        setUpAnimatedCollectionViewLayout()
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == segueIdentifer {
-            guard let detailViewController = segue.destination as? MyListingDetailViewController else { return }
-            guard let cell = sender as? CardViewCell else { return }
-            guard let indexPath = self.collectionView.indexPath(for: cell) else { return }
-            let selectedProfile = tableData[indexPath.item]
-            detailViewController.listing = selectedProfile
-        }
-    }
-    func reloadData(){
         let email = Auth.auth().currentUser?.email
         let db = Firestore.firestore()
         let collectRef = db.collection("users").document(email!).collection("items");
         let storage = Storage.storage()
-        
+        setUpAnimatedCollectionViewLayout()
         // retrieve all items in the item collections
         collectRef.getDocuments(){ (querySnapshot, err) in
             if let err = err {
@@ -80,6 +65,16 @@ class MyListingsViewController: UIViewController {
                     }
                 }
             }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == segueIdentifer {
+            guard let detailViewController = segue.destination as? MyListingDetailViewController else { return }
+            guard let cell = sender as? CardViewCell else { return }
+            guard let indexPath = self.collectionView.indexPath(for: cell) else { return }
+            let selectedProfile = tableData[indexPath.item]
+            detailViewController.listing = selectedProfile
         }
     }
 }
@@ -182,7 +177,7 @@ extension MyListingsViewController: CameraViewControllerDelegate {
 
 extension MyListingsViewController: ConfirmationViewControllerDelegate {
     func didSelectPostItem(confirmationViewController: ConfirmationViewController) {
-        //self.viewDidLoad()
+        self.viewDidLoad()
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
     }
     

@@ -46,7 +46,6 @@ class CartViewController: UITableViewController {
                             print(error.localizedDescription)
                         } else {
                             // Data for "images/island.jpg" is returned
-                            let image = UIImage(data: imageData!)
                             let item = CartItemModel(caption: data["name"] as! String, email: data["email"] as! String, comment: data["description"] as! String, price: (data["price"] as? String)!, image: UIImage(named: "02.png")!, url: data["URL"] as! String)
                             listings.append(item)
                             self.items = listings
