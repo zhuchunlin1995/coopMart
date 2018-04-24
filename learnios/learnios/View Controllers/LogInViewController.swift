@@ -162,8 +162,11 @@ class LoginController: UIViewController, UIImagePickerControllerDelegate, UINavi
         let tf = UITextField()
         tf.placeholder = "Email Address: jd2920@columbia.edu"
         tf.translatesAutoresizingMaskIntoConstraints = false
+        tf.autocapitalizationType = .none
         return tf
+        
     }()
+    
     // instantiate components in the input container : separator
     let emailSeparatorView: UIView = {
         let view = UIView()

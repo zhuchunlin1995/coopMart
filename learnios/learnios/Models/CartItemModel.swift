@@ -29,11 +29,4 @@ struct CartItemModel {
         }
         self.init(caption: caption, comment: comment, price: price, image: image)
     }
-    
-    static func cartItems() -> [CartItemModel] {
-        // Temporary Dummy Data
-        let listing = [CartItemModel(caption: "abc", comment: "description1", price: "$100", image: UIImage(named: "01")!), CartItemModel(caption: "item2", comment: "comment2", price: "$200", image: UIImage(named: "02")!), CartItemModel(caption: "item3", comment: "comment3", price: "$300", image: UIImage(named: "03")!)]
-        return listing
-    }
-    
 }

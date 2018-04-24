@@ -66,19 +66,6 @@ class UserProfileViewController: UIViewController {
         
     }
     
-//    func fillItems (){
-//        MyName.text = "Linli"
-//    }
-//    // instantiate a inputs container view
-//    let inputsContainerView: UIView = {
-//        let view = UIView()
-//        view.backgroundColor = UIColor.white
-//        view.translatesAutoresizingMaskIntoConstraints = false
-//        view.layer.cornerRadius = 5
-//        view.layer.masksToBounds = true
-//        return view
-//    }()
-    
      @objc func LogoutButtonTapped(sender: UIButton) {
         try! Auth.auth().signOut()
         let loginController = LoginController()
