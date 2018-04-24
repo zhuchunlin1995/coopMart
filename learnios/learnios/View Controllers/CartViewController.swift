@@ -47,13 +47,13 @@ class CartViewController: UITableViewController {
                         } else {
                             // Data for "images/island.jpg" is returned
                             let image = UIImage(data: imageData!)
-                            let item = CartItemModel(caption: data["name"] as! String, comment: data["description"] as! String, price: (data["price"] as? String)!, image: UIImage(named: "02.png")!)
+                            let item = CartItemModel(caption: data["name"] as! String, email: data["email"] as! String, comment: data["description"] as! String, price: (data["price"] as? String)!, image: UIImage(named: "02.png")!)
                             listings.append(item)
-                            self.items = listings
-                            self.tableView?.reloadData()
                         }
                     }
                 }
+                self.items = listings
+                self.tableView?.reloadData()
             }
         }
         navigationController?.navigationBar.prefersLargeTitles = true

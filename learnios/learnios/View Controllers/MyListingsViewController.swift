@@ -34,8 +34,21 @@ class MyListingsViewController: UIViewController {
         imageView.clipsToBounds = true
         view.addSubview(imageView)
         self.view.sendSubview(toBack: imageView)
-        
-        
+        newPostingButton.addTarget(self, action: #selector(newPostingButtonTapped), for: .touchUpInside)
+        reloadData()
+        setUpAnimatedCollectionViewLayout()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == segueIdentifer {
+            guard let detailViewController = segue.destination as? MyListingDetailViewController else { return }
+            guard let cell = sender as? CardViewCell else { return }
+            guard let indexPath = self.collectionView.indexPath(for: cell) else { return }
+            let selectedProfile = tableData[indexPath.item]
+            detailViewController.listing = selectedProfile
+        }
+    }
+    func reloadData(){
         let email = Auth.auth().currentUser?.email
         let db = Firestore.firestore()
         let collectRef = db.collection("users").document(email!).collection("items");
@@ -53,11 +66,6 @@ class MyListingsViewController: UIViewController {
                     print(URL)
                     let httpsReference = storage.reference(forURL: URL)
                     
-                    let item = ListingModel(caption: data["name"] as! String,email: data["email"] as! String, comment: data["description"] as! String, price: (data["price"] as? String)!, image: UIImage(named: "addProfile.png")!)
-                    listings.append(item)
-                    self.tableData = listings
-                    self.collectionView?.reloadData()
-                    
                     httpsReference.getData(maxSize: 10000 * 10000 * 10000){ imageData, error in
                         if let error = error {
                             print(error.localizedDescription)
@@ -72,19 +80,6 @@ class MyListingsViewController: UIViewController {
                     }
                 }
             }
-        }
-        
-        newPostingButton.addTarget(self, action: #selector(newPostingButtonTapped), for: .touchUpInside)
-        setUpAnimatedCollectionViewLayout()
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == segueIdentifer {
-            guard let detailViewController = segue.destination as? MyListingDetailViewController else { return }
-            guard let cell = sender as? CardViewCell else { return }
-            guard let indexPath = self.collectionView.indexPath(for: cell) else { return }
-            let selectedProfile = tableData[indexPath.item]
-            detailViewController.listing = selectedProfile
         }
     }
 }
@@ -200,7 +195,7 @@ extension MyListingsViewController: CameraViewControllerDelegate {
 
 extension MyListingsViewController: ConfirmationViewControllerDelegate {
     func didSelectPostItem(confirmationViewController: ConfirmationViewController) {
-        self.viewDidLoad()
+        reloadData()
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
     }
     
