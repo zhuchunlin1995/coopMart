@@ -25,6 +25,8 @@
 		B7F80A672058455C00AAF2E3 /* ListingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F80A662058455C00AAF2E3 /* ListingModel.swift */; };
 		B7F80A6D2059414D00AAF2E3 /* ListingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F80A6C2059414D00AAF2E3 /* ListingViewCell.swift */; };
 		B7F80A6F205943AB00AAF2E3 /* ListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F80A6E205943AB00AAF2E3 /* ListingViewController.swift */; };
+		BF12A9E1208EA233003EB56D /* CartItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12A9E0208EA233003EB56D /* CartItemModel.swift */; };
+		BF12A9E3208EA725003EB56D /* CartItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12A9E2208EA725003EB56D /* CartItemDetailViewController.swift */; };
 		BF87A931208E205F00E62361 /* CheckOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF87A930208E205F00E62361 /* CheckOutViewController.swift */; };
 		BFA229E620487B4000AEAEAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA229E520487B4000AEAEAF /* AppDelegate.swift */; };
 		BFA229E820487B4000AEAEAF /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA229E720487B4000AEAEAF /* CartViewController.swift */; };
@@ -92,6 +94,8 @@
 		B7F80A662058455C00AAF2E3 /* ListingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingModel.swift; sourceTree = "<group>"; };
 		B7F80A6C2059414D00AAF2E3 /* ListingViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingViewCell.swift; sourceTree = "<group>"; };
 		B7F80A6E205943AB00AAF2E3 /* ListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingViewController.swift; sourceTree = "<group>"; };
+		BF12A9E0208EA233003EB56D /* CartItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemModel.swift; sourceTree = "<group>"; };
+		BF12A9E2208EA725003EB56D /* CartItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemDetailViewController.swift; sourceTree = "<group>"; };
 		BF87A930208E205F00E62361 /* CheckOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutViewController.swift; sourceTree = "<group>"; };
 		BFA229E220487B4000AEAEAF /* learnios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = learnios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFA229E520487B4000AEAEAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -144,13 +148,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7AE2D1A02080EB6E004AEB66 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		8FE26B1BBDEAAD6DD9DAFAD2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +171,7 @@
 			children = (
 				BFC318F3207AAF3100CCC402 /* ChecklistItem.swift */,
 				B7F80A662058455C00AAF2E3 /* ListingModel.swift */,
+				BF12A9E0208EA233003EB56D /* CartItemModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -192,6 +190,7 @@
 				B7DD3E82206C3CD000568C86 /* UserProfileViewController.swift */,
 				B7F553E8207AFBAE00A96D75 /* ConfirmationViewController.swift */,
 				B7F553EA207AFCA100A96D75 /* CameraViewController.swift */,
+				BF12A9E2208EA725003EB56D /* CartItemDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -275,7 +274,6 @@
 			isa = PBXGroup;
 			children = (
 				7AE2D1A12080EBCE004AEB66 /* ListViewControllertest.swift */,
-				7AE2D1A02080EB6E004AEB66 /* New Group */,
 				BFA229FA20487B4000AEAEAF /* learniosTests.swift */,
 				BFA229FC20487B4000AEAEAF /* Info.plist */,
 				7A0F84F2206D886F00DD46EA /* LoginViewControllerTests.swift */,
@@ -633,6 +631,7 @@
 				B7F80A672058455C00AAF2E3 /* ListingModel.swift in Sources */,
 				BFC318F4207AAF3100CCC402 /* ChecklistItem.swift in Sources */,
 				BFA229E620487B4000AEAEAF /* AppDelegate.swift in Sources */,
+				BF12A9E1208EA233003EB56D /* CartItemModel.swift in Sources */,
 				B7F80A6F205943AB00AAF2E3 /* ListingViewController.swift in Sources */,
 				B7DD3E83206C3CD000568C86 /* UserProfileViewController.swift in Sources */,
 				B7D0DD0D2062DE82003761AC /* MyListingDetailViewController.swift in Sources */,
@@ -641,6 +640,7 @@
 				BF87A931208E205F00E62361 /* CheckOutViewController.swift in Sources */,
 				B7F80A6D2059414D00AAF2E3 /* ListingViewCell.swift in Sources */,
 				B7CB440B207C4CAB00B9469F /* PinterestLayout.swift in Sources */,
+				BF12A9E3208EA725003EB56D /* CartItemDetailViewController.swift in Sources */,
 				B7F553EB207AFCA100A96D75 /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

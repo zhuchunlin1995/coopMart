@@ -52,14 +52,14 @@ class ConfirmationViewController: UIViewController {
                 self.dismiss(animated: false, completion: {
                     self.imageView.image = nil
                     self.usePhoto.isEnabled = false
-                    self.delegate?.didSelectTakePhoto(confirmationViewController: self)
+                    self.delegate?.didSelectPostItem(confirmationViewController: self)
                 })
             })
         } else {
             dismiss(animated: false, completion: {
                 self.imageView.image = nil
                 self.usePhoto.isEnabled = false
-                self.delegate?.didSelectTakePhoto(confirmationViewController: self)
+                self.delegate?.didSelectPostItem(confirmationViewController: self)
             })
         }
     }

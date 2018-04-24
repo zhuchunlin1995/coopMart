@@ -66,6 +66,9 @@ class ModifyProfileViewController: UIViewController, UIImagePickerControllerDele
         
     }
     
+<<<<<<< HEAD
+    @IBAction func changePhotoButtonTapped(_ sender: UIButton) {
+=======
     @objc func handleSelectProfileImage(){
         let picker = UIImagePickerController()
         
@@ -96,6 +99,7 @@ class ModifyProfileViewController: UIViewController, UIImagePickerControllerDele
     // handle cancelling from image picker and return to previous view
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
+>>>>>>> master
     }
     
     

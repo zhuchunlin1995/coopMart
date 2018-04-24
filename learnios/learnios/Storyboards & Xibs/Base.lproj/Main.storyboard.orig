@@ -1143,6 +1143,11 @@
         <image name="yellow_button" width="350" height="144"/>
     </resources>
     <inferredMetricsTieBreakers>
+<<<<<<< HEAD
+        <segue reference="LAn-fn-TYl"/>
+        <segue reference="iHx-Su-abY"/>
+=======
         <segue reference="aal-Vg-WPS"/>
+>>>>>>> master
     </inferredMetricsTieBreakers>
 </document>
