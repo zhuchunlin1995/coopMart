@@ -28,7 +28,6 @@ class DbTool:NSObject {
             do{
                 try db.executeUpdate(sql1, values: nil)
                 try db.executeUpdate(sqlinit, values: nil)
-                //print("数据库操作====" + tableName + "表创建成功！")
             }catch{
                 print(db.lastErrorMessage())
             }

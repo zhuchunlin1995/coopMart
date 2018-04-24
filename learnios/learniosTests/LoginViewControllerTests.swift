@@ -2,7 +2,7 @@
 //  LoginViewControllerTests.swift
 //  learniosTests
 //
-//  Created by zyy on 3/29/18.
+//  Created by Jin Yan on 3/29/18.
 //
 import UIKit
 import Firebase
