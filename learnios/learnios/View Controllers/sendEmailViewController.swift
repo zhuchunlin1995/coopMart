@@ -9,6 +9,18 @@ import UIKit
 import Foundation
 import MessageUI
 
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
+
 extension UIViewController : MFMailComposeViewControllerDelegate {
     
     func configuredMailComposeViewController(recipients : [String]?, subject :
@@ -88,9 +100,9 @@ extension UIViewController : MFMailComposeViewControllerDelegate {
 
 
 class sendEmailViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
 
         // Do any additional setup after loading the view.
     }
