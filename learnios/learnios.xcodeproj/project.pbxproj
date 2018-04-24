@@ -27,6 +27,7 @@
 		B7F80A6F205943AB00AAF2E3 /* ListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F80A6E205943AB00AAF2E3 /* ListingViewController.swift */; };
 		BF12A9E1208EA233003EB56D /* CartItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12A9E0208EA233003EB56D /* CartItemModel.swift */; };
 		BF12A9E3208EA725003EB56D /* CartItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12A9E2208EA725003EB56D /* CartItemDetailViewController.swift */; };
+		BF12A9E5208ECB5A003EB56D /* sendEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12A9E4208ECB5A003EB56D /* sendEmailViewController.swift */; };
 		BF87A931208E205F00E62361 /* CheckOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF87A930208E205F00E62361 /* CheckOutViewController.swift */; };
 		BFA229E620487B4000AEAEAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA229E520487B4000AEAEAF /* AppDelegate.swift */; };
 		BFA229E820487B4000AEAEAF /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA229E720487B4000AEAEAF /* CartViewController.swift */; };
@@ -96,6 +97,7 @@
 		B7F80A6E205943AB00AAF2E3 /* ListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingViewController.swift; sourceTree = "<group>"; };
 		BF12A9E0208EA233003EB56D /* CartItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemModel.swift; sourceTree = "<group>"; };
 		BF12A9E2208EA725003EB56D /* CartItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemDetailViewController.swift; sourceTree = "<group>"; };
+		BF12A9E4208ECB5A003EB56D /* sendEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sendEmailViewController.swift; sourceTree = "<group>"; };
 		BF87A930208E205F00E62361 /* CheckOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutViewController.swift; sourceTree = "<group>"; };
 		BFA229E220487B4000AEAEAF /* learnios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = learnios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFA229E520487B4000AEAEAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				B7F553E8207AFBAE00A96D75 /* ConfirmationViewController.swift */,
 				B7F553EA207AFCA100A96D75 /* CameraViewController.swift */,
 				BF12A9E2208EA725003EB56D /* CartItemDetailViewController.swift */,
+				BF12A9E4208ECB5A003EB56D /* sendEmailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -382,7 +385,7 @@
 					BFA229E120487B4000AEAEAF = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0930;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					BFA229F520487B4000AEAEAF = {
 						CreatedOnToolsVersion = 9.2;
@@ -624,6 +627,7 @@
 				B7075C092061E79E008C1BCF /* TabBarViewController.swift in Sources */,
 				D75388582064402200768855 /* MyListingsViewController.swift in Sources */,
 				B7F553E9207AFBAE00A96D75 /* ConfirmationViewController.swift in Sources */,
+				BF12A9E5208ECB5A003EB56D /* sendEmailViewController.swift in Sources */,
 				BFA229E820487B4000AEAEAF /* CartViewController.swift in Sources */,
 				B7A2CF2D2062BF2D0053AB79 /* CardViewCell.swift in Sources */,
 				B7075C0B2061E8B1008C1BCF /* LogInViewController.swift in Sources */,
@@ -811,8 +815,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 85C7V5K59R;
 				INFOPLIST_FILE = "$(SRCROOT)/learnios/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = T.learnios;
@@ -832,8 +836,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 85C7V5K59R;
 				INFOPLIST_FILE = "$(SRCROOT)/learnios/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = T.learnios;
