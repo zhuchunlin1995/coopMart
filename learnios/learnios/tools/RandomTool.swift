@@ -2,7 +2,7 @@
 //  RandomTool.swift
 //  learnios
 //
-//  Created by Jin on 4/24/18.
+//  Created by Jin Yan on 4/24/18.
 //
 
 import Foundation
