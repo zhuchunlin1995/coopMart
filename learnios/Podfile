@@ -10,16 +10,19 @@ target 'learnios' do
   pod 'Firebase/Storage'
   pod 'AnimatedCollectionViewLayout'
   pod 'Firebase/Firestore'
+  pod ‘FMDB’,’~> 2.6.2’
   # Pods for learnios
 
   target 'learniosTests' do
     inherit! :search_paths
     # Pods for testing
+    pod ‘FMDB’,’~> 2.6.2’
   end
 
   target 'learniosUITests' do
     inherit! :search_paths
     # Pods for testing
+    pod ‘FMDB’,’~> 2.6.2’
   end
 
 end

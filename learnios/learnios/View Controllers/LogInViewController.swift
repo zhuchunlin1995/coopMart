@@ -1,4 +1,4 @@
-//
+///
 //  LogInViewController.swift
 //  learnios
 //
@@ -9,6 +9,7 @@ import UIKit
 import Firebase
 import FirebaseAuth
 import FirebaseStorage
+
 
 class LoginController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     // restrict to only portrait version on iphone devices
@@ -29,7 +30,6 @@ class LoginController: UIViewController, UIImagePickerControllerDelegate, UINavi
         view.layer.masksToBounds = true
         return view
     }()
-    
     // instantiate a button for login or register
     let loginRegisterButton: UIButton = {
         let button = UIButton(type: .system)
@@ -54,7 +54,7 @@ class LoginController: UIViewController, UIImagePickerControllerDelegate, UINavi
         }
     }
     
-    func handleLogin(test : Bool) -> String {
+    func handleLogin(test : Bool,callBack:((_ ret:String)->())?=nil) -> String {
         if self.emailTextField.text == "" || self.passwordTextField.text == "" {
             
             //Alert to tell the user that there was an error because they didn't fill anything in the textfields because they didn't fill anything in
@@ -65,6 +65,9 @@ class LoginController: UIViewController, UIImagePickerControllerDelegate, UINavi
             alertController.addAction(defaultAction)
             
             self.present(alertController, animated: true, completion: nil)
+            if let callBack = callBack{
+                callBack("fail")
+            }
             return "fail"
         } else {
             var result = ""
@@ -76,9 +79,13 @@ class LoginController: UIViewController, UIImagePickerControllerDelegate, UINavi
                     //Go to the HomeViewController if the login is sucessful
                     let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Home") as! UITabBarController
                     self.present(vc, animated: true, completion: nil)
-                    result = "success"
                     
-                 } else {
+                    result = "success"
+                    if let callBack = callBack{
+                        callBack(result)
+                    }
+                    
+                } else {
                     
                     //Tells the user that there is an error and then gets firebase to tell them the error
                     let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
@@ -88,13 +95,16 @@ class LoginController: UIViewController, UIImagePickerControllerDelegate, UINavi
                     
                     self.present(alertController, animated: true, completion: nil)
                     result = "failure"
+                    if let callBack = callBack{
+                        callBack(result)
+                    }
                 }
             }
             return result
         }
     }
     
-    func handleRegister(test : Bool) -> String {
+    func handleRegister(test : Bool,callBack:((_ ret:String)->())?=nil) -> String {
         var result = ""
         Auth.auth().createUser(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!) { (user, error) in
             if error == nil {
@@ -112,23 +122,30 @@ class LoginController: UIViewController, UIImagePickerControllerDelegate, UINavi
                         print("error")
                         return
                     }
-                    })
-            
+                })
+                
                 
                 // upload baisc user infor to database
                 let db = Firestore.firestore();
                 db.collection("users").document(self.emailTextField.text!).setData([
                     "name":self.nameTextField.text!,
                     "avatar":"gs://coopmart-1f06f.appspot.com/\(imageRef.fullPath)",
-                    "school": "Columbia University",
-                    ])
+                    "school": "middle of no where"])
                 
                 print("You have successfully signed up")
                 //Goes to the Setup page which lets the user take a photo for their profile picture and also chose a username
                 
                 let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Home") as! UITabBarController
                 self.present(vc, animated: true, completion: nil)
+                
+                let ap = AccountPassword(account: self.emailTextField.text!, password: self.passwordTextField.text!)
+                let dbTool = DbTool.sharInstance
+                _ = dbTool.addAcount(ap: ap)
+                
                 result = "success"
+                if let callBack = callBack{
+                    callBack(result)
+                }
                 
             } else {
                 let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
@@ -138,6 +155,9 @@ class LoginController: UIViewController, UIImagePickerControllerDelegate, UINavi
                 
                 self.present(alertController, animated: true, completion: nil)
                 result = "failure"
+                if let callBack = callBack{
+                    callBack(result)
+                }
             }
         }
         return result
@@ -162,11 +182,8 @@ class LoginController: UIViewController, UIImagePickerControllerDelegate, UINavi
         let tf = UITextField()
         tf.placeholder = "Email Address: jd2920@columbia.edu"
         tf.translatesAutoresizingMaskIntoConstraints = false
-        tf.autocapitalizationType = .none
         return tf
-        
     }()
-    
     // instantiate components in the input container : separator
     let emailSeparatorView: UIView = {
         let view = UIView()
@@ -182,9 +199,9 @@ class LoginController: UIViewController, UIImagePickerControllerDelegate, UINavi
         tf.isSecureTextEntry = true
         return tf
     }()
-
+    
     // "let" is substituted by "lazy var" for access to using "self" in addGestureRecognizer
-     lazy var profileImageView: UIImageView = {
+    lazy var profileImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "addProfile.png")
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -273,7 +290,7 @@ class LoginController: UIViewController, UIImagePickerControllerDelegate, UINavi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hideKeyboardWhenTappedAround()
+        
         assignBackground()
         
         view.addSubview(inputsContainerView)
@@ -445,3 +462,4 @@ extension UIColor {
         self.init(red: r/255, green: g/255, blue: b/255, alpha: 1)
     }
 }
+
