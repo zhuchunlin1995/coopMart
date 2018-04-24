@@ -20,6 +20,7 @@ class MyListingDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         displayInfo()
     }
     
@@ -38,7 +39,10 @@ class MyListingDetailViewController: UIViewController {
                 "description": listing.comment,
                 "price": listing.price,
             ])
-
+        let optionMenu = UIAlertController(title: "Item added to the cart", message: nil, preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
+        optionMenu.addAction(OKAction)
+        self.present(optionMenu, animated: true, completion: nil)
     }
     
     func displayInfo() {
