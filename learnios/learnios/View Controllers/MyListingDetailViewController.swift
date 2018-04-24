@@ -34,11 +34,12 @@ class MyListingDetailViewController: UIViewController {
         ]
         
         let db = Firestore.firestore()
-        db.collection("users").document((Auth.auth().currentUser?.email)!).collection("cartList").document(listing.caption).setData([
-                "name":listing.caption,
-                "description": listing.comment,
-                "price": listing.price,
-            ])
+    db.collection("users").document((Auth.auth().currentUser?.email)!).collection("cartList").document(listing.caption).setData([
+            "name":listing.caption,
+            "description": listing.comment,
+            "price": listing.price,
+            "email": listing.email
+        ])
         let optionMenu = UIAlertController(title: "Item added to the cart", message: nil, preferredStyle: .alert)
         let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
         optionMenu.addAction(OKAction)
