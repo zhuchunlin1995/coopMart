@@ -6,6 +6,9 @@
 
 import UIKit
 import AVFoundation
+import Firebase
+import FirebaseAuth
+import FirebaseStorage
 
 class ListingViewController: UICollectionViewController {
     let segueIdentifer = "listingSegue"
@@ -29,7 +32,36 @@ class ListingViewController: UICollectionViewController {
         imageView.clipsToBounds = true
         view.addSubview(imageView)
         self.view.sendSubview(toBack: imageView)
-        tableData = ListingModel.allListings()
+        let db = Firestore.firestore()
+        let collectRef = db.collection("items");
+        let storage = Storage.storage()
+        // retrieve all items in the item collections
+        collectRef.getDocuments(){ (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                var listings: [ListingModel] = []
+                for document in querySnapshot!.documents {
+                    let data = document.data()
+                    let URL = data["URL"] as! String
+                    print(URL)
+                    let httpsReference = storage.reference(forURL: URL)
+                        
+                    httpsReference.getData(maxSize: 10000 * 10000 * 10000){ imageData, error in
+                        if let error = error {
+                            print(error.localizedDescription)
+                        } else {
+                            // Data for "images/island.jpg" is returned
+                            let image = UIImage(data: imageData!)
+                            let item = ListingModel(caption: data["name"] as! String, comment: data["description"] as! String, price: (data["price"] as? String)!, image: image!)
+                            listings.append(item)
+                            self.tableData = listings
+                            self.collectionView?.reloadData()
+                        }
+                    }
+                }
+            }
+        }
         collectionView?.backgroundColor = .clear
         collectionView?.contentInset = UIEdgeInsets(top: 23, left: 16, bottom: 10, right: 16)
     }

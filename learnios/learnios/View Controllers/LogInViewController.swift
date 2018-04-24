@@ -120,9 +120,6 @@ class LoginController: UIViewController, UIImagePickerControllerDelegate, UINavi
                     "name":self.nameTextField.text!,
                     "avatar":"gs://coopmart-1f06f.appspot.com/\(imageRef.fullPath)",
                     "school": "Columbia University",
-//                    "cart lists": [
-//                        cartLists
-//                    ]
                     ])
                 
                 print("You have successfully signed up")

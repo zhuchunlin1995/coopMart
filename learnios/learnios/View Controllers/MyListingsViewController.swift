@@ -23,6 +23,7 @@ class MyListingsViewController: UIViewController {
         super.viewDidLoad()
         let background = UIImage(named: "Pattern")
         var imageView : UIImageView!
+        // Load Data Here
         imageView = UIImageView(frame: view.bounds)
         imageView.contentMode =  UIViewContentMode.scaleAspectFill
         imageView.clipsToBounds = true
@@ -32,9 +33,7 @@ class MyListingsViewController: UIViewController {
         view.addSubview(imageView)
         self.view.sendSubview(toBack: imageView)
         newPostingButton.addTarget(self, action: #selector(newPostingButtonTapped), for: .touchUpInside)
-        tableData = ListingModel.myListings()
         setUpAnimatedCollectionViewLayout()
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -56,7 +55,7 @@ extension MyListingsViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return tableData.count
-    }//:completeSettings = none
+    }
 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -73,15 +72,6 @@ extension MyListingsViewController: UICollectionViewDataSource {
         
         cell.button.tag = indexPath.row
         cell.button.addTarget(self, action: #selector(deleteButtonTapped), for: .touchUpInside)
-        
-//        let db = Firestore.firestore();
-//    db.collection("items").document(tableData[indexPath.item].caption).setData([
-//        "price":tableData[indexPath.item].price,
-//        "description":tableData[indexPath.item].comment,
-//        "image": tableData[indexPath.item].image,
-//        ])
-        
-        
         return cell
     }
     

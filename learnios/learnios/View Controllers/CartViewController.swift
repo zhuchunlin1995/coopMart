@@ -49,10 +49,6 @@ class CartViewController: UITableViewController {
         super.viewDidLoad()
         let background = UIImage(named: "Pattern")
         var imageView : UIImageView!
-//        mProfilePicture.layer.cornerRadius = 90
-//        mProfilePicture.layer.masksToBounds = true
-//        mProfilePicture.layer.borderWidth = 2
-//        mProfilePicture.layer.borderColor = UIColor.white.cgColor
         imageView = UIImageView(frame: view.bounds)
         imageView.contentMode =  UIViewContentMode.scaleAspectFill
         imageView.clipsToBounds = true
