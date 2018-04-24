@@ -23,7 +23,7 @@ class TabBarViewController: UITabBarController {
     }
     @objc func handleLogout() {
         try! Auth.auth().signOut()
-        let loginController = LoginController()        
+        let loginController = LoginController()
         self.present(loginController, animated:true, completion: nil)
     }
 }

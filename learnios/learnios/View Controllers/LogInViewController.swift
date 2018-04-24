@@ -117,19 +117,10 @@ class LoginController: UIViewController, UIImagePickerControllerDelegate, UINavi
                 
                 // upload baisc user infor to database
                 let db = Firestore.firestore();
-                let cartLists: [String: Any] = [
-                    "name":"new name",
-                    "description": "new discription",
-                    "price": "new price",
-                    "email": "seller's email"
-                ]
                 db.collection("users").document(self.emailTextField.text!).setData([
                     "name":self.nameTextField.text!,
                     "avatar":"gs://coopmart-1f06f.appspot.com/\(imageRef.fullPath)",
-                    "school": "null",
-//                    "cart lists": [
-//                        cartLists
-//                    ]
+                    "school": "Columbia University",
                     ])
                 
                 print("You have successfully signed up")

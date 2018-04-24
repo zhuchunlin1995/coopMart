@@ -1122,12 +1122,7 @@
                         <viewLayoutGuide key="safeArea" id="Ve5-ad-VY0"/>
                     </view>
                     <navigationItem key="navigationItem" id="Stk-nN-HTO">
-                        <barButtonItem key="rightBarButtonItem" title="contact seller" id="tKW-G1-HsG">
-                            <connections>
-                                <action selector="doBtnEmailWithSender:" destination="AFc-ft-mu1" id="A6Q-de-jHD"/>
-                                <segue destination="nad-HB-S5O" kind="show" id="3nE-ID-Yyq"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="checkout" id="tKW-G1-HsG"/>
                     </navigationItem>
                     <connections>
                         <outlet property="descriptionTextView" destination="byO-tB-S8K" id="iRK-lE-u4g"/>
@@ -1140,31 +1135,6 @@
             </objects>
             <point key="canvasLocation" x="2328" y="24"/>
         </scene>
-        <!--Send Email View Controller-->
-        <scene sceneID="3kx-c8-dHV">
-            <objects>
-                <viewController id="nad-HB-S5O" customClass="sendEmailViewController" customModule="learnios" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="m2n-dP-rlZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h25-Ak-Ht0">
-                                <rect key="frame" x="180" y="353" width="74" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="send email"/>
-                                <connections>
-                                    <action selector="doBtnEmailWithSender:" destination="nad-HB-S5O" eventType="touchUpInside" id="CsQ-Ds-tGf"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Ieg-pM-DR7"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bPQ-gM-dQs" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3014" y="22"/>
-        </scene>
     </scenes>
     <resources>
         <image name="addProfile" width="125" height="125"/>
@@ -1173,6 +1143,11 @@
         <image name="yellow_button" width="350" height="144"/>
     </resources>
     <inferredMetricsTieBreakers>
+<<<<<<< HEAD
+        <segue reference="LAn-fn-TYl"/>
+        <segue reference="iHx-Su-abY"/>
+=======
         <segue reference="aal-Vg-WPS"/>
+>>>>>>> master
     </inferredMetricsTieBreakers>
 </document>

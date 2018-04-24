@@ -72,6 +72,10 @@ extension MyListingsViewController: UICollectionViewDataSource {
         
         cell.button.tag = indexPath.row
         cell.button.addTarget(self, action: #selector(deleteButtonTapped), for: .touchUpInside)
+<<<<<<< HEAD
+=======
+        
+>>>>>>> master
         return cell
     }
     

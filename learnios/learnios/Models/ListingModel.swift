@@ -14,7 +14,6 @@ struct ListingModel {
     var price: String
     var image: UIImage
     
-    
     init(caption: String, comment: String, price: String, image: UIImage) {
         self.caption = caption
         self.comment = comment
@@ -29,16 +28,4 @@ struct ListingModel {
         }
         self.init(caption: caption, comment: comment, price: price, image: image)
     }
-    
-    static func myListings() -> [ListingModel] {
-        // Temporary Dummy Data
-        let listing = [ListingModel(caption: "item1", comment: "comment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhud", price: "$100", image: UIImage(named: "01")!), ListingModel(caption: "item2", comment: "comment2", price: "$200", image: UIImage(named: "02")!), ListingModel(caption: "item3", comment: "comment3", price: "$300", image: UIImage(named: "03")!)]
-        return listing
-    }
-    
-    static func allListings() -> [ListingModel] {
-        let listing = [ListingModel(caption: "item1", comment: "comment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhudcomment1dsassdasdasdahciuhhud", price: "$100", image: UIImage(named: "01")!), ListingModel(caption: "item2", comment: "comment2", price: "$200", image: UIImage(named: "02")!), ListingModel(caption: "item3", comment: "comment3", price: "$300", image: UIImage(named: "03")!)]
-        return listing
-    }
-    
 }
