@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "learnios/View Controllers/MyListingDetailViewController.swift"
-            timestampString = "546241799.480405"
+            timestampString = "546245033.1646039"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "14"
@@ -120,11 +120,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "learnios/View Controllers/MyListingDetailViewController.swift"
-            timestampString = "546241799.480479"
+            timestampString = "546245033.16592"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "displayInfo()"
             landmarkType = "7">
          </BreakpointContent>

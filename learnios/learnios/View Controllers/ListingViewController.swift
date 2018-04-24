@@ -55,6 +55,7 @@ class ListingViewController: UICollectionViewController {
                     let URL = data["URL"] as! String
                     print(URL)
                     let httpsReference = storage.reference(forURL: URL)
+                    
                         
                     httpsReference.getData(maxSize: 10000 * 10000 * 10000){ imageData, error in
                         if let error = error {
@@ -62,12 +63,12 @@ class ListingViewController: UICollectionViewController {
                         } else {
                             // Data for "images/island.jpg" is returned
                             let image = UIImage(data: imageData!)
-                            let item = ListingModel(caption: data["name"] as! String, comment: data["description"] as! String, price: (data["price"] as? String)!, image: image!)
-                            listings.append(item)
-                            self.tableData = listings
-                            self.collectionView?.reloadData()
                         }
                     }
+                    let item = ListingModel(caption: data["name"] as! String, comment: data["description"] as! String, price: (data["price"] as? String)!, image: UIImage(named: "02.png")!)
+                    listings.append(item)
+                    self.tableData = listings
+                    self.collectionView?.reloadData()
                 }
             }
         }
