@@ -130,7 +130,7 @@ class LoginController: UIViewController, UIImagePickerControllerDelegate, UINavi
                 db.collection("users").document(self.emailTextField.text!).setData([
                     "name":self.nameTextField.text!,
                     "avatar":"gs://coopmart-1f06f.appspot.com/\(imageRef.fullPath)",
-                    "school": "middle of no where"])
+                    "school": "Columbia Univeristy"])
                 
                 print("You have successfully signed up")
                 //Goes to the Setup page which lets the user take a photo for their profile picture and also chose a username
@@ -290,7 +290,7 @@ class LoginController: UIViewController, UIImagePickerControllerDelegate, UINavi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.hideKeyboardWhenTappedAround()
         assignBackground()
         
         view.addSubview(inputsContainerView)

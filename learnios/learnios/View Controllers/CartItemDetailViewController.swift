@@ -30,9 +30,19 @@ class CartItemDetailViewController: UIViewController {
     
     @IBAction func checkOutButtonTapped(_ sender: UIBarButtonItem) {
         guard let listing = listing else { return }
+        let composeVC = MFMailComposeViewController()
+        composeVC.mailComposeDelegate = self
+        composeVC.setToRecipients([listing.email!])
+        composeVC.setSubject(listing.caption!)
+        composeVC.setMessageBody("Hello I'm intersted in your product!", isHTML: false)
+        
+        // Present the view controller modally.
+        self.present(composeVC, animated: true, completion: nil)
     }
     
-    
+    public func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
+    }
     
     
     func displayInfo() {

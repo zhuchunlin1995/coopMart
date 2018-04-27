@@ -103,12 +103,12 @@ extension MyListingsViewController: UICollectionViewDataSource {
     
     @objc func newPostingButtonTapped(sender: UIButton) {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        let useExistingAction = UIAlertAction(title: "Use Existing", style: UIAlertActionStyle.default, handler: goToLibrary)
+        let useExistingAction = UIAlertAction(title: "Choose from Album", style: UIAlertActionStyle.default, handler: goToLibrary)
         let takePhotoAction = UIAlertAction(title: "Take Photo", style: UIAlertActionStyle.default, handler: takePhoto)
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel)
     
         alertController.addAction(useExistingAction)
-        alertController.addAction(takePhotoAction)
+//        alertController.addAction(takePhotoAction)
         alertController.addAction(cancelAction)
 
         self.present(alertController, animated: true, completion: nil)
