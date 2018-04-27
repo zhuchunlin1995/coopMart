@@ -1063,7 +1063,7 @@
                     <navigationItem key="navigationItem" id="Stk-nN-HTO">
                         <barButtonItem key="rightBarButtonItem" title="contact seller" id="tKW-G1-HsG">
                             <connections>
-                                <action selector="doBtnEmailWithSender:" destination="AFc-ft-mu1" id="A6Q-de-jHD"/>
+                                <action selector="checkOutButtonTapped:" destination="AFc-ft-mu1" id="kCp-QN-62Q"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
